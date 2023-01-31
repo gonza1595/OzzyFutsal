@@ -31,3 +31,28 @@ export function getSectionID(id) {
     }
   };
 }
+
+// Filtros por categoria
+
+export function filterByCategory(category) {
+  return async function (dispatch) {
+    try {
+      let filterByCategory = await axios.get(
+        `http://localhost:1337/api/sections?filters[category][$eq]=${category}&&populate=videos&&populate=images`
+      );
+
+      return dispatch({
+        type: "GET_FILTER_BY_CATEGORY",
+        payload: filterByCategory.data,
+      });
+    } catch (error) {
+      alert("No hay secciones con categoria Primera");
+    }
+  };
+}
+
+export function deleteCategory() {
+  return {
+    type: "DELETE_CATEGORY",
+  };
+}

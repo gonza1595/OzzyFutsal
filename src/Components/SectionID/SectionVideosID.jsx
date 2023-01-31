@@ -25,7 +25,6 @@ export default function SectionID() {
                 <a href={`http://localhost:1337${e.attributes.url}`}>
                   <video
                     src={`http://localhost:1337${e.attributes.url}`}
-                    alt="Image"
                     className="img-top"
                     style={{ width: "370px" }}
                   />

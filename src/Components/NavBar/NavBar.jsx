@@ -1,7 +1,19 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import ozzyfoto from "../assets/ozzy page.jpeg";
+import { filterByCategory, deleteCategory } from "../../Redux/Actions";
 
 export default function NavBar() {
+  const dispatch = useDispatch();
+
+  function handleFilterByCategory(e) {
+    if (e.target.value === "all") {
+      dispatch(deleteCategory());
+    } else {
+      dispatch(filterByCategory(e.target.value));
+    }
+  }
+
   return (
     <div>
       <img
@@ -10,10 +22,10 @@ export default function NavBar() {
         alt="No image"
         style={{ width: "100%", height: "300px" }}
       />
-      <nav class="navbar navbar-expand-lg bg-dark">
-        <div class="container-fluid">
+      <nav className="navbar navbar-expand-lg bg-dark">
+        <div className="container-fluid">
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarTogglerDemo01"
@@ -21,52 +33,35 @@ export default function NavBar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand text-white" href="/home">
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a className="navbar-brand text-white" href="/home">
               Home
             </a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a
-                  class="nav-link active text-white"
-                  aria-current="page"
-                  href="#"
-                >
-                  Primera
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#">
-                  C 20
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#">
-                  C 17
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#">
-                  C 15
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#">
-                  C 13
-                </a>
-              </li>
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <select
+                onChange={(e) => handleFilterByCategory(e)}
+                defaultValue="Filtrar por categoria"
+              >
+                <option disabled>Filtrar por categoria</option>
+                <option value="all">Todas las cateogiras</option>
+                <option value="Primera">Primera</option>
+                <option value="C20">C 20</option>
+                <option value="C17">C 17</option>
+                <option value="C15">C 15</option>
+                <option value="C13">C 13</option>
+              </select>
             </ul>
-            <form class="d-flex" role="search">
+            <form className="d-flex" role="search">
               <input
-                class="form-control me-2"
+                className="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
+              <button className="btn btn-outline-success" type="submit">
                 Search
               </button>
             </form>
