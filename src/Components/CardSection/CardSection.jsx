@@ -26,8 +26,8 @@ export default function CardSection({ title, description, image, id }) {
           >
             <MDBCardTitle>{title}</MDBCardTitle>
             <MDBCardText>{description}</MDBCardText>
-            <Link to={`/home/${id}`}>
-              <button className="btn btn-primary ">Ver fotos y videos</button>
+            <Link to={`/home/media/${id}`}>
+              <button className="btn btn-primary mr-2 ">Fotos y Videos</button>
             </Link>
           </MDBCardBody>
         </MDBCard>

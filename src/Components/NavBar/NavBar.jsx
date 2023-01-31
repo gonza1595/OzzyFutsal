@@ -25,7 +25,7 @@ export default function NavBar() {
           </button>
 
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand text-white" href="#">
+            <a class="navbar-brand text-white" href="/home">
               Home
             </a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
