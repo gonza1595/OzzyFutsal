@@ -1,19 +1,8 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+
 import ozzyfoto from "../assets/ozzy page.jpeg";
-import { filterByCategory, deleteCategory } from "../../Redux/Actions";
 
 export default function NavBar() {
-  const dispatch = useDispatch();
-
-  function handleFilterByCategory(e) {
-    if (e.target.value === "all") {
-      dispatch(deleteCategory());
-    } else {
-      dispatch(filterByCategory(e.target.value));
-    }
-  }
-
   return (
     <div>
       <img
@@ -40,28 +29,44 @@ export default function NavBar() {
             <a className="navbar-brand text-white" href="/home">
               Home
             </a>
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <select
-                onChange={(e) => handleFilterByCategory(e)}
-                defaultValue="Filtrar por categoria"
-              >
-                <option disabled>Filtrar por categoria</option>
-                <option value="all">Todas las cateogiras</option>
-                <option value="Primera">Primera</option>
-                <option value="C20">C 20</option>
-                <option value="C17">C 17</option>
-                <option value="C15">C 15</option>
-                <option value="C13">C 13</option>
-              </select>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="navbar-brand text-white"
+                  href="/home/category/Primera"
+                >
+                  Primera
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand text-white" href="/home/category/C20">
+                  C 20
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand text-white" href="/home/category/C17">
+                  C 17
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand text-white" href="/home/category/C15">
+                  C 15
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand text-white" href="/home/category/C13">
+                  C 13
+                </a>
+              </li>
             </ul>
-            <form className="d-flex" role="search">
+            <form class="d-flex" role="search">
               <input
-                className="form-control me-2"
+                class="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button class="btn btn-outline-success" type="submit">
                 Search
               </button>
             </form>

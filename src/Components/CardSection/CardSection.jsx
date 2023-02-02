@@ -18,7 +18,7 @@ export default function CardSection({ title, description, image, id }) {
           <MDBCardImage
             className="card-img-top "
             src={`http://localhost:1337${image[0]}`}
-            style={{ width: "100%", height: "400px" }}
+            style={{ width: "100%", height: "350px" }}
           />
           <MDBCardBody
             className="text-center bg-dark text-light"

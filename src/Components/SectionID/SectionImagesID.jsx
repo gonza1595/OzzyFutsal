@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getSectionID } from "../../Redux/Actions";
 import baguetteBox from "baguettebox.js";
 
-export default function SectionID({ title }) {
+export default function SectionID() {
   const dispatch = useDispatch();
   const sectionId = useSelector((state) => state.sectionID);
 

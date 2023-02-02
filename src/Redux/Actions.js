@@ -11,7 +11,7 @@ export function getSection() {
         payload: getSection.data,
       });
     } catch (error) {
-      alert("Sections not found");
+      alert("No hay secciones cargadas");
     }
   };
 }
@@ -27,7 +27,7 @@ export function getSectionID(id) {
         payload: getSectionId.data,
       });
     } catch (error) {
-      alert("Sections id not found");
+      alert("No se encuentra la seccion con ese ID");
     }
   };
 }
@@ -46,7 +46,7 @@ export function filterByCategory(category) {
         payload: filterByCategory.data,
       });
     } catch (error) {
-      alert("No hay secciones con categoria Primera");
+      alert("No hay secciones con la categoria seleccionada");
     }
   };
 }
