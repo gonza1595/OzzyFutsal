@@ -1,21 +1,34 @@
 import React, { useEffect } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getSection } from "../../Redux/Actions";
 import CardSection from "../CardSection/CardSection";
+import Pagination from "../Pagination/Pagination";
 
 export default function Home() {
   const dispatch = useDispatch();
-  const { sections } = useSelector((state) => state);
+  const getSections = useSelector((state) => state.sections);
 
   useEffect(() => {
     dispatch(getSection());
   }, []);
 
+  // pagination
+  const [page, setPage] = useState(1);
+  const showPerPage = 8;
+  const lastOnPage = page * showPerPage;
+  const firstOnPage = lastOnPage - showPerPage;
+  const showSections = getSections.data?.slice(firstOnPage, lastOnPage);
+
+  function pagination(pageNumber) {
+    setPage(pageNumber);
+  }
+
   return (
     <div className="bg-secondary">
       <div className="row">
-        {sections.data ? (
-          sections.data.map((e) => (
+        {showSections ? (
+          showSections.map((e) => (
             <div className="col-md-3 mt-4 p-4">
               <CardSection
                 key={e.id}
@@ -28,6 +41,18 @@ export default function Home() {
           ))
         ) : (
           <div>No hay nada</div>
+        )}
+      </div>
+      <div>
+        {!showSections ? null : (
+          <div>
+            <Pagination
+              showPerPage={showPerPage}
+              getSections={getSections.data.length}
+              pagination={pagination}
+              page={page}
+            ></Pagination>
+          </div>
         )}
       </div>
     </div>
