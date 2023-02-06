@@ -1,8 +1,14 @@
-import React from "react";
-
+import React, { useState } from "react";
 import ozzyfoto from "../assets/ozzy page.jpeg";
+import { getSectionTitle } from "../../Redux/Actions";
+import { useDispatch, useSelector } from "react-redux";
 
-export default function NavBar() {
+export default function NavBar({ setTitle }) {
+  function handleChange(e) {
+    e.preventDefault();
+    setTitle(e.target.value);
+  }
+
   return (
     <div>
       <img
@@ -29,47 +35,56 @@ export default function NavBar() {
             <a className="navbar-brand text-white" href="/home">
               Home
             </a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
                 <a
-                  class="navbar-brand text-white"
+                  className="navbar-brand text-white"
                   href="/home/category/Primera"
                 >
                   Primera
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="navbar-brand text-white" href="/home/category/C20">
+              <li className="nav-item">
+                <a
+                  className="navbar-brand text-white"
+                  href="/home/category/C20"
+                >
                   C 20
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="navbar-brand text-white" href="/home/category/C17">
+              <li className="nav-item">
+                <a
+                  className="navbar-brand text-white"
+                  href="/home/category/C17"
+                >
                   C 17
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="navbar-brand text-white" href="/home/category/C15">
+              <li className="nav-item">
+                <a
+                  className="navbar-brand text-white"
+                  href="/home/category/C15"
+                >
                   C 15
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="navbar-brand text-white" href="/home/category/C13">
+              <li className="nav-item">
+                <a
+                  className="navbar-brand text-white"
+                  href="/home/category/C13"
+                >
                   C 13
                 </a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
+            <div className="d-flex">
               <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
+                className="form-control me-2"
+                type="text"
+                placeholder="Buscar por nombre..."
+                onChange={(e) => handleChange(e)}
               />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+            </div>
           </div>
         </div>
       </nav>

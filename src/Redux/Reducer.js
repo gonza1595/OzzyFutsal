@@ -1,6 +1,6 @@
 const initialState = {
   sections: [],
-
+  allSections: [],
   sectionID: [],
   filterByCategory: [],
 };
@@ -11,6 +11,7 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         sections: action.payload,
+        allSections: action.payload,
       };
     case "GET_SECTION_ID":
       return {
@@ -26,6 +27,11 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         filterByCategory: [],
+      };
+    case "GET_SECTION_TITLE":
+      return {
+        ...state,
+        sections: action.payload,
       };
 
     default:

@@ -5,16 +5,16 @@ import { getSection } from "../../Redux/Actions";
 import CardSection from "../CardSection/CardSection";
 import Pagination from "../Pagination/Pagination";
 
-export default function Home() {
+export default function Sections({ title, page, setPage }) {
   const dispatch = useDispatch();
-  const getSections = useSelector((state) => state.sections);
+  const getSections = useSelector((state) => state.allSections);
 
   useEffect(() => {
     dispatch(getSection());
   }, []);
 
   // pagination
-  const [page, setPage] = useState(1);
+
   const showPerPage = 8;
   const lastOnPage = page * showPerPage;
   const firstOnPage = lastOnPage - showPerPage;
@@ -28,17 +28,31 @@ export default function Home() {
     <div className="bg-secondary">
       <div className="row">
         {showSections ? (
-          showSections.map((e) => (
-            <div className="col-md-3 mt-4 p-4">
-              <CardSection
-                key={e.id}
-                id={e.id}
-                title={e.attributes.title}
-                image={e.attributes.images?.data?.map((e) => e.attributes.url)}
-                description={e.attributes.description}
-              />
-            </div>
-          ))
+          showSections
+            .filter((value) => {
+              if (title === "") {
+                return value;
+              } else if (
+                value.attributes.title
+                  .toLowerCase()
+                  .includes(title.toLowerCase())
+              ) {
+                return value;
+              }
+            })
+            .map((e) => (
+              <div className="col-md-3 mt-4 p-4">
+                <CardSection
+                  key={e.id}
+                  id={e.id}
+                  title={e.attributes.title}
+                  image={e.attributes.images?.data?.map(
+                    (e) => e.attributes.url
+                  )}
+                  description={e.attributes.description}
+                />
+              </div>
+            ))
         ) : (
           <div>No hay nada</div>
         )}

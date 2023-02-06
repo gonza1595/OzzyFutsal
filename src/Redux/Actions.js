@@ -50,16 +50,16 @@ export function filterByCategory(category) {
     }
   };
 }
-export function getSectionName(title) {
+export function getSectionTitle(title) {
   return async function (dispatch) {
     try {
-      let getSectionName = await axios.get(
+      let getSectionTitle = await axios.get(
         `http://localhost:1337/api/sections?filters[title][$eq]=${title}&&populate=videos&&populate=images`
       );
 
       return dispatch({
-        type: "GET_SECTION_NAME",
-        payload: getSectionName.data,
+        type: "GET_SECTION_TITLE",
+        payload: getSectionTitle.data,
       });
     } catch (error) {
       alert("No hay secciones con el nombre buscado");
