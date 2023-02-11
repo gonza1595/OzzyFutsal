@@ -108,7 +108,7 @@ export default function SectionCategory() {
             }
           })
         ) : (
-          <div>No funca</div>
+          <div>Cargando...</div>
         )}
         <div>
           {!showSections ? null : (
