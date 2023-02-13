@@ -18,7 +18,16 @@ export default function Sections({ title, page, setPage }) {
   const showPerPage = 8;
   const lastOnPage = page * showPerPage;
   const firstOnPage = lastOnPage - showPerPage;
-  const showSections = getSections.data?.slice(firstOnPage, lastOnPage);
+  const sectionsToShow = getSections.data?.filter((value) => {
+    if (title === "") {
+      return value;
+    } else if (
+      value.attributes.title.toLowerCase().includes(title.toLowerCase())
+    ) {
+      return value;
+    }
+  });
+  const showSections = sectionsToShow?.slice(firstOnPage, lastOnPage);
 
   function pagination(pageNumber) {
     setPage(pageNumber);
@@ -28,31 +37,17 @@ export default function Sections({ title, page, setPage }) {
     <div className="bg-secondary">
       <div className="row">
         {showSections ? (
-          showSections
-            .filter((value) => {
-              if (title === "") {
-                return value;
-              } else if (
-                value.attributes.title
-                  .toLowerCase()
-                  .includes(title.toLowerCase())
-              ) {
-                return value;
-              }
-            })
-            .map((e) => (
-              <div className="col-md-3 mt-4 p-4">
-                <CardSection
-                  key={e.id}
-                  id={e.id}
-                  title={e.attributes.title}
-                  image={e.attributes.images?.data?.map(
-                    (e) => e.attributes.url
-                  )}
-                  description={e.attributes.description}
-                />
-              </div>
-            ))
+          showSections.map((e) => (
+            <div className="col-md-3 mt-4 p-4">
+              <CardSection
+                key={e.id}
+                id={e.id}
+                title={e.attributes.title}
+                image={e.attributes.images?.data?.map((e) => e.attributes.url)}
+                description={e.attributes.description}
+              />
+            </div>
+          ))
         ) : (
           <div>No hay nada</div>
         )}
@@ -62,7 +57,7 @@ export default function Sections({ title, page, setPage }) {
           <div>
             <Pagination
               showPerPage={showPerPage}
-              getSections={getSections.data.length}
+              getSections={sectionsToShow.length}
               pagination={pagination}
               page={page}
             ></Pagination>
