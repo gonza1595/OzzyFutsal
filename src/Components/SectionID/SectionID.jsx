@@ -11,12 +11,23 @@ import Footer from "../Footer/Footer";
 export default function SectionID() {
   const dispatch = useDispatch();
   const sectionId = useSelector((state) => state.sectionID);
-
   const { id } = useParams();
 
   useEffect(() => {
     dispatch(getSectionID(id));
   }, [id, dispatch]);
+
+  if (sectionId.loading) {
+    return <h1>Cargando...</h1>;
+  }
+
+  const sectionImages = sectionId.data?.attributes.images?.data?.map(
+    (e) => e.attributes.url
+  );
+
+  const sectionVideos = sectionId.data?.attributes.videos?.data?.map(
+    (e) => e.attributes.url
+  );
 
   return (
     <div className="bg-secondary">
@@ -28,20 +39,41 @@ export default function SectionID() {
       </h1>
 
       <hr className="hr hr-blurry" />
-      <h1 className="text-center text-black text-uppercase ">FOTOS</h1>
-      <hr className="hr hr-blurry" />
 
-      {sectionId.data ? (
+      {sectionImages ? (
         <div>
-          <SectionImagesID />
+          <h1 className="text-center text-black text-uppercase ">FOTOS</h1>
           <hr className="hr hr-blurry" />
+          <SectionImagesID />
+        </div>
+      ) : (
+        <div>
+          <hr className="hr hr-blurry" />
+          <h1 className="text-center text-black text-uppercase ">FOTOS</h1>
+          <hr className="hr hr-blurry" />
+          <h1>Esta seccion no ha sido cargada con imagenes</h1>
+        </div>
+      )}
+
+      {sectionVideos ? (
+        <div>
           <h1 className="text-center text-black text-uppercase ">VIDEOS</h1>
           <hr className="hr hr-blurry" />
           <SectionVideosID />
         </div>
       ) : (
-        <h1>Cargando...</h1>
+        <div>
+          <hr className="hr hr-blurry" />
+          <h1 className="text-center text-black text-uppercase ">VIDEOS</h1>
+          <hr className="hr hr-blurry" />
+          <h1>Esta seccion no ha sido cargada con videos</h1>
+        </div>
       )}
+
+      {!sectionImages && !sectionVideos && (
+        <h1>No hay contenido disponible para esta sección</h1>
+      )}
+
       <Footer />
     </div>
   );
