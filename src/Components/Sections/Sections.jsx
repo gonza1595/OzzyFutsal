@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getSection } from "../../Redux/Actions";
 import CardSection from "../CardSection/CardSection";
 import Pagination from "../Pagination/Pagination";
 
-export default function Sections({ title, page, setPage }) {
+export default function Sections({ page, setPage, searchTerm }) {
   const dispatch = useDispatch();
   const getSections = useSelector((state) => state.allSections);
 
@@ -13,21 +12,21 @@ export default function Sections({ title, page, setPage }) {
     dispatch(getSection());
   }, []);
 
-  // pagination
-
   const showPerPage = 8;
   const lastOnPage = page * showPerPage;
   const firstOnPage = lastOnPage - showPerPage;
-  const sectionsToShow = getSections.data?.filter((value) => {
-    if (title === "") {
+
+  const filteredSections = getSections.data?.filter((value) => {
+    if (searchTerm === "") {
       return value;
     } else if (
-      value.attributes.title.toLowerCase().includes(title.toLowerCase())
+      value.attributes.title.toLowerCase().includes(searchTerm.toLowerCase())
     ) {
       return value;
     }
   });
-  const showSections = sectionsToShow?.slice(firstOnPage, lastOnPage);
+
+  const sectionsToShow = filteredSections?.slice(firstOnPage, lastOnPage);
 
   function pagination(pageNumber) {
     setPage(pageNumber);
@@ -35,12 +34,12 @@ export default function Sections({ title, page, setPage }) {
 
   return (
     <div className="bg-secondary">
+      <div className="mb-4"></div>
       <div className="row">
-        {showSections ? (
-          showSections.map((e) => (
-            <div className="col-md-3 mt-4 p-4">
+        {sectionsToShow && sectionsToShow.length > 0 ? (
+          sectionsToShow.map((e) => (
+            <div key={e.id} className="col-md-3 mt-4 p-4">
               <CardSection
-                key={e.id}
                 id={e.id}
                 title={e.attributes.title}
                 image={e.attributes.images?.data?.map((e) => e.attributes.url)}
@@ -49,20 +48,20 @@ export default function Sections({ title, page, setPage }) {
             </div>
           ))
         ) : (
-          <div>No hay nada</div>
+          <div>No se encontraron secciones</div>
         )}
       </div>
       <div>
-        {!showSections ? null : (
+        {filteredSections && filteredSections.length > showPerPage ? (
           <div>
             <Pagination
               showPerPage={showPerPage}
-              getSections={sectionsToShow.length}
+              getSections={filteredSections.length}
               pagination={pagination}
               page={page}
-            ></Pagination>
+            />
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );

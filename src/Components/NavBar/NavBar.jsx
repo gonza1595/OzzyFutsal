@@ -3,12 +3,11 @@ import ozzyfoto from "../assets/ozzy page.jpeg";
 import { getSectionTitle } from "../../Redux/Actions";
 import { useDispatch, useSelector } from "react-redux";
 
-export default function NavBar({ setTitle }) {
-  function handleChange(e) {
-    e.preventDefault();
-    setTitle(e.target.value);
+export default function NavBar({ setPage, setSearchTerm }) {
+  function handleSearch(event) {
+    setSearchTerm(event.target.value);
+    setPage(1); // reset page to 1 when search term changes
   }
-
   return (
     <div>
       <img
@@ -82,7 +81,7 @@ export default function NavBar({ setTitle }) {
                 className="form-control me-2"
                 type="text"
                 placeholder="Buscar por nombre..."
-                onChange={(e) => handleChange(e)}
+                onChange={(event) => handleSearch(event)}
               />
             </div>
           </div>
