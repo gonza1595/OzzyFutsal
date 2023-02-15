@@ -4,12 +4,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { filterByCategory } from "../../Redux/Actions";
 import CardSection from "../CardSection/CardSection";
-import NavBar from "../NavBar/NavBar";
+import NavBarForCategory from "../NavBar/NavBarForCategory";
 import Footer from "../Footer/Footer";
 import PaginationForCategory from "../Pagination/PaginationForCategory";
 
 export default function SectionCategory() {
   const sectionCategory = useSelector((state) => state.filterByCategory);
+  const [searchTermCategory, setSearchTermCategory] = useState("");
 
   const dispatch = useDispatch();
   const { category } = useParams();
@@ -19,21 +20,36 @@ export default function SectionCategory() {
   }, [category, dispatch]);
 
   // pagination
-  const [page, setPage] = useState(1);
+  const [pageCategory, setPageCategory] = useState(1);
   const showPerPage = 8;
-  const lastOnPage = page * showPerPage;
+  const lastOnPage = pageCategory * showPerPage;
   const firstOnPage = lastOnPage - showPerPage;
-  const showSections = sectionCategory?.data?.slice(firstOnPage, lastOnPage);
+  const filteredSections = sectionCategory.data?.filter((value) => {
+    if (searchTermCategory === "") {
+      return value;
+    } else if (
+      value.attributes.title
+        .toLowerCase()
+        .includes(searchTermCategory.toLowerCase())
+    ) {
+      return value;
+    }
+  });
+
+  const showSections = filteredSections?.slice(firstOnPage, lastOnPage);
 
   function pagination(pageNumber) {
-    setPage(pageNumber);
+    setPageCategory(pageNumber);
   }
 
   return (
     <div className="bg-secondary">
-      <NavBar />
+      <NavBarForCategory
+        setSearchTermCategory={setSearchTermCategory}
+        setPageCategory={setPageCategory}
+      />
       <div className="row">
-        {showSections ? (
+        {showSections && showSections.length > 0 ? (
           showSections.map((e) => {
             if (e.attributes.category === "Primera") {
               return (
@@ -111,16 +127,16 @@ export default function SectionCategory() {
           <div>Cargando...</div>
         )}
         <div>
-          {!showSections ? null : (
+          {filteredSections && filteredSections.length > showPerPage ? (
             <div>
               <PaginationForCategory
                 showPerPage={showPerPage}
-                sectionCategory={sectionCategory.data.length}
+                sectionCategory={filteredSections.length}
                 pagination={pagination}
-                page={page}
-              ></PaginationForCategory>
+                pageCategory={pageCategory}
+              />
             </div>
-          )}
+          ) : null}
         </div>
         <Footer />
       </div>

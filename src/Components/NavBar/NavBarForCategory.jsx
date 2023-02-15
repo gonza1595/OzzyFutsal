@@ -3,14 +3,13 @@ import ozzyfoto from "../assets/ozzy page.jpeg";
 import { getSectionTitle } from "../../Redux/Actions";
 import { useDispatch, useSelector } from "react-redux";
 
-export default function NavBar({
-  setPage,
-  setSearchTerm,
+export default function NavBarForCategory({
+  setPageCategory,
   setSearchTermCategory,
 }) {
   function handleSearch(event) {
-    setSearchTerm(event.target.value);
-    setPage(1); // reset page to 1 when search term changes
+    setSearchTermCategory(event.target.value);
+    setPageCategory(1); // reset page to 1 when search term changes
   }
   return (
     <div>

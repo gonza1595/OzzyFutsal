@@ -4,7 +4,7 @@ export default function Pagination({
   showPerPage,
   sectionCategory,
   pagination,
-  page,
+  pageCategory,
 }) {
   const pageNumber = [];
   const total = Math.ceil(sectionCategory / showPerPage) + 1;
@@ -15,8 +15,8 @@ export default function Pagination({
   return (
     <div>
       <button
-        onClick={page > 1 ? () => pagination(page - 1) : null}
-        hidden={page === 1 ? true : false}
+        onClick={pageCategory > 1 ? () => pagination(pageCategory - 1) : null}
+        hidden={pageCategory === 1 ? true : false}
       >
         Prev
       </button>
@@ -29,8 +29,10 @@ export default function Pagination({
 
       <button
         className=""
-        onClick={page < total ? () => pagination(page + 1) : null}
-        hidden={page === total - 1 ? true : false}
+        onClick={
+          pageCategory < total ? () => pagination(pageCategory + 1) : null
+        }
+        hidden={pageCategory === total - 1 ? true : false}
       >
         Next
       </button>
