@@ -1,24 +1,34 @@
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 1910px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.video-container {
+  position: relative;
+width: 80%;
+height: 80%;
+}
+
+.video-container .react-player {
+  position: absolute;
   
-  .modal-content {
-    position: relative;
-    max-width: 800px;
-    max-height: 600px;
-    width: 80%;
-    height: 80%;
-    background-color: #fff;
-    padding: 20px;
-  }
-  
+}
