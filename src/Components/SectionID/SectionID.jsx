@@ -57,6 +57,7 @@ export default function SectionID() {
 
       {sectionVideos ? (
         <div>
+          <hr className="hr hr-blurry" />
           <h1 className="text-center text-black text-uppercase ">VIDEOS</h1>
           <hr className="hr hr-blurry" />
           <SectionVideosID />
