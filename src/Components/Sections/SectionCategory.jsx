@@ -53,7 +53,7 @@ export default function SectionCategory() {
           showSections.map((e) => {
             if (e.attributes.category === "Primera") {
               return (
-                <div className="col-md-3 mt-4 p-4">
+                <div className="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-5">
                   <CardSection
                     key={e.id}
                     id={e.id}
@@ -67,7 +67,7 @@ export default function SectionCategory() {
               );
             } else if (e.attributes.category === "C20") {
               return (
-                <div className="col-md-3 mt-4 p-4">
+                <div className="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-5">
                   <CardSection
                     key={e.id}
                     id={e.id}
@@ -81,7 +81,7 @@ export default function SectionCategory() {
               );
             } else if (e.attributes.category === "C17") {
               return (
-                <div className="col-md-3 mt-4 p-4">
+                <div className="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-5">
                   <CardSection
                     key={e.id}
                     id={e.id}
@@ -95,7 +95,7 @@ export default function SectionCategory() {
               );
             } else if (e.attributes.category === "C15") {
               return (
-                <div className="col-md-3 mt-4 p-4">
+                <div className="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-5">
                   <CardSection
                     key={e.id}
                     id={e.id}
@@ -109,7 +109,7 @@ export default function SectionCategory() {
               );
             } else if (e.attributes.category === "C13") {
               return (
-                <div className="col-md-3 mt-4 p-4">
+                <div className="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-5">
                   <CardSection
                     key={e.id}
                     id={e.id}

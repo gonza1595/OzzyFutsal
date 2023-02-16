@@ -33,12 +33,15 @@ export default function Sections({ page, setPage, searchTerm }) {
   }
 
   return (
-    <div className="bg-secondary">
+    <div className="bg-white">
       <div className="mb-4"></div>
       <div className="row">
         {sectionsToShow && sectionsToShow.length > 0 ? (
           sectionsToShow.map((e) => (
-            <div key={e.id} className="col-md-3 mt-4 p-4">
+            <div
+              key={e.id}
+              className="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-5"
+            >
               <CardSection
                 id={e.id}
                 title={e.attributes.title}

@@ -38,12 +38,12 @@ export default function SectionID() {
         {sectionId.data ? (
           sectionId.data.attributes.videos.data.map((e, index) => (
             <div className="col-lg-4 col-md-12 mb-4 mb-lg-0 " key={index}>
-              <div className="bg-image hover-zoom" style={{ width: "370px" }}>
+              <div className="bg-image hover-zoom">
                 <div onClick={() => handleVideoClick(index)}>
                   <video
                     src={`http://localhost:1337${e.attributes.url}`}
                     className="img-top"
-                    style={{ width: "370px" }}
+                    style={{ width: "350px", height: "100%" }}
                   />
                 </div>
               </div>
@@ -56,7 +56,7 @@ export default function SectionID() {
         {showVideo && (
           <div className="overlay modal" onClick={handleOverlayClick}>
             <button className="close-btn" onClick={handleButtonClick}>
-              X
+              <i class="bi bi-x-lg"></i>
             </button>
             <div className="video-container ">
               <ReactPlayer

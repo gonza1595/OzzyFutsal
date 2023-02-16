@@ -20,11 +20,11 @@ export default function SectionID() {
   });
 
   return (
-    <section className=" bg-secondary container ">
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 ">
+    <section className=" bg-secondary  p-5">
+      <div className="row row-cols-lg-4 g-3 g-lg">
         {sectionId.data ? (
           sectionId.data.attributes.images.data.map((e, id) => (
-            <div className="col-lg-4 col-md-12 mb-4 mb-lg-0 pt-4">
+            <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-5 col-sm-12 col-xs-12 p-3">
               <div className="bg-image hover-zoom" style={{ width: "370px" }}>
                 <a
                   href={`http://localhost:1337${e.attributes.url}`}

@@ -8,7 +8,7 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
-    <div className="bg-secondary">
+    <div className="bg-white">
       <NavBar setPage={setPage} setSearchTerm={setSearchTerm} />
       <Sections page={page} setPage={setPage} searchTerm={searchTerm} />
       <Footer />

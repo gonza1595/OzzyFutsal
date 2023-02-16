@@ -13,21 +13,23 @@ import {
 export default function CardSection({ title, description, image, id }) {
   return (
     <MDBRow>
-      <MDBCol style={{ width: "100%" }}>
+      <MDBCol>
         <MDBCard>
           <MDBCardImage
             className="card-img-top "
             src={`http://localhost:1337${image[0]}`}
-            style={{ width: "100%", height: "350px" }}
+            style={{ width: "100%", height: "360px" }}
           />
           <MDBCardBody
-            className="text-center bg-dark text-light"
+            className="text-center bg-secondary text-dark"
             style={{ height: "200px" }}
           >
             <MDBCardTitle>{title}</MDBCardTitle>
             <MDBCardText>{description}</MDBCardText>
             <Link to={`/home/media/${id}`}>
-              <button className="btn btn-primary mr-2 ">Fotos y Videos</button>
+              <button className="btn btn-secondary mr-2 ">
+                Fotos y Videos
+              </button>
             </Link>
           </MDBCardBody>
         </MDBCard>

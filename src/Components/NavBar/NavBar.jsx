@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import ozzyfoto from "../assets/ozzy page.jpeg";
-import { getSectionTitle } from "../../Redux/Actions";
-import { useDispatch, useSelector } from "react-redux";
 
-export default function NavBar({
-  setPage,
-  setSearchTerm,
-  setSearchTermCategory,
-}) {
+export default function NavBar({ setPage, setSearchTerm }) {
   function handleSearch(event) {
     setSearchTerm(event.target.value);
     setPage(1); // reset page to 1 when search term changes
@@ -18,7 +12,7 @@ export default function NavBar({
         className="img-fluid"
         src={ozzyfoto}
         alt="No image"
-        style={{ width: "100%", height: "300px" }}
+        style={{ width: "100%", height: "500px" }}
       />
       <nav className="navbar navbar-expand-lg bg-dark">
         <div className="container-fluid">
