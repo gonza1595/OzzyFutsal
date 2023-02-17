@@ -34,17 +34,23 @@ export default function SectionID() {
 
   return (
     <section className=" bg-secondary container ">
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 ">
+      <div className="row  ">
         {sectionId.data ? (
           sectionId.data.attributes.videos.data.map((e, index) => (
-            <div className="col-lg-4 col-md-12 mb-4 mb-lg-0 " key={index}>
-              <div className="bg-image hover-zoom">
-                <div onClick={() => handleVideoClick(index)}>
-                  <video
-                    src={`http://localhost:1337${e.attributes.url}`}
-                    className="img-top"
-                    style={{ width: "350px", height: "100%" }}
-                  />
+            <div
+              className="col-xxl-4 col-lg-4 col-md-12 mb-4 mb-lg-0 p-3"
+              key={index}
+            >
+              <div className="card " style={{ width: "100%", height: "100%" }}>
+                <div>
+                  <div onClick={() => handleVideoClick(index)}>
+                    <video src={`http://localhost:1337${e.attributes.url}`} />
+                  </div>
+                  <div className="card-body">
+                    <p className="card-text text-center">
+                      {e.attributes.alternativeText}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
