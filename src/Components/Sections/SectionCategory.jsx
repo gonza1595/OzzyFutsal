@@ -43,17 +43,17 @@ export default function SectionCategory() {
   }
 
   return (
-    <div className="bg-secondary">
+    <div className="bg-white ">
       <NavBarForCategory
         setSearchTermCategory={setSearchTermCategory}
         setPageCategory={setPageCategory}
       />
-      <div className="row">
+      <div className="row noMargin">
         {showSections && showSections.length > 0 ? (
           showSections.map((e) => {
             if (e.attributes.category === "Primera") {
               return (
-                <div className="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-5">
+                <div className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 sectionPadding">
                   <CardSection
                     key={e.id}
                     id={e.id}
@@ -67,7 +67,7 @@ export default function SectionCategory() {
               );
             } else if (e.attributes.category === "C20") {
               return (
-                <div className="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-5">
+                <div className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 sectionPadding">
                   <CardSection
                     key={e.id}
                     id={e.id}
@@ -81,7 +81,7 @@ export default function SectionCategory() {
               );
             } else if (e.attributes.category === "C17") {
               return (
-                <div className="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-5">
+                <div className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 sectionPadding">
                   <CardSection
                     key={e.id}
                     id={e.id}
@@ -95,7 +95,7 @@ export default function SectionCategory() {
               );
             } else if (e.attributes.category === "C15") {
               return (
-                <div className="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-5">
+                <div className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 sectionPadding">
                   <CardSection
                     key={e.id}
                     id={e.id}
@@ -109,7 +109,7 @@ export default function SectionCategory() {
               );
             } else if (e.attributes.category === "C13") {
               return (
-                <div className="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-5">
+                <div className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 sectionPadding">
                   <CardSection
                     key={e.id}
                     id={e.id}
@@ -128,7 +128,7 @@ export default function SectionCategory() {
         )}
         <div>
           {filteredSections && filteredSections.length > showPerPage ? (
-            <div>
+            <div className="mt-3">
               <PaginationForCategory
                 showPerPage={showPerPage}
                 sectionCategory={filteredSections.length}
@@ -138,8 +138,8 @@ export default function SectionCategory() {
             </div>
           ) : null}
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
