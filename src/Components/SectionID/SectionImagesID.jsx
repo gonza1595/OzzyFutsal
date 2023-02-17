@@ -21,11 +21,11 @@ export default function SectionID() {
   });
 
   return (
-    <section className=" bg-secondary container px-5 p-5">
+    <section className=" bg-white  px-5 p-5">
       <div className="row gx-1">
         {sectionId.data ? (
           sectionId.data.attributes.images.data.map((e, id) => (
-            <div className="col-xxl-4 col-xl-3 col-lg-4 col-md-4 col-sm-12 col-xs-12 p-3">
+            <div className="col-xxl-3 col-xl-5 col-lg-6 col-md-12 col-sm-12 col-xs-12 p-3">
               <div
                 className="rounded-3 bg-image hover-zoom "
                 style={{ width: "370px" }}

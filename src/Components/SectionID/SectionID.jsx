@@ -30,8 +30,9 @@ export default function SectionID() {
   );
 
   return (
-    <div className="bg-secondary ">
+    <div className="bg-white container-fluid">
       <NavBar />
+
       <h1 className="text-black text-uppercase pt-4">
         <font>
           <strong>{sectionId.data?.attributes.title}</strong>

@@ -33,7 +33,7 @@ export default function SectionID() {
   };
 
   return (
-    <section className=" bg-secondary container ">
+    <section className=" bg-white container ">
       <div className="row  ">
         {sectionId.data ? (
           sectionId.data.attributes.videos.data.map((e, index) => (
@@ -41,19 +41,17 @@ export default function SectionID() {
               className="col-xxl-4 col-lg-4 col-md-12 mb-4 mb-lg-0 p-3"
               key={index}
             >
-              <div
-                className="card cardID "
-                style={{ width: "100%", height: "100%" }}
-              >
-                <div>
-                  <div onClick={() => handleVideoClick(index)}>
-                    <video src={`http://localhost:1337${e.attributes.url}`} />
-                  </div>
-                  <div className="card-body">
-                    <p className="card-text text-center">
-                      {e.attributes.alternativeText}
-                    </p>
-                  </div>
+              <div className="cardID" style={{ width: "100%", height: "100%" }}>
+                <div onClick={() => handleVideoClick(index)}>
+                  <video
+                    className="videoSize"
+                    src={`http://localhost:1337${e.attributes.url}`}
+                  />
+                </div>
+                <div className="card-body">
+                  <p className="card-text text-black text-center">
+                    {e.attributes.alternativeText}
+                  </p>
                 </div>
               </div>
             </div>

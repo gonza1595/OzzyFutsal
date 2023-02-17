@@ -40,11 +40,12 @@ height: 80%;
 }
 
 .cardID:hover {
-  box-shadow: 5px 6px 6px 2px #e9ecef;
     transform: scale(1.1);
 }
 
-video {
+.videoSize {
   width: 100% !important;
-  height: auto !important;
+  height: 200px !important;
+  
 }
+
