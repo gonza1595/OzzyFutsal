@@ -14,6 +14,7 @@ export default function SectionID() {
 
   const [showVideo, setShowVideo] = useState(false);
   const [selectedVideoIndex, setSelectedVideoIndex] = useState(0); // índice del video seleccionado
+  const [liked, setLiked] = useState(false);
 
   useEffect(() => {
     dispatch(getSectionID(id));
