@@ -33,7 +33,7 @@ export default function SectionID() {
     <div className="bg-white ">
       <NavBar />
 
-      <h1 className="text-black text-uppercase pt-4">
+      <h1 className="text-black text-uppercase p-3 pt-4">
         <font>
           <strong>{sectionId.data?.attributes.title}</strong>
         </font>
@@ -75,7 +75,6 @@ export default function SectionID() {
       {!sectionImages && !sectionVideos && (
         <h1>No hay contenido disponible para esta sección</h1>
       )}
-
       <Footer />
     </div>
   );

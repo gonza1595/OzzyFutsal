@@ -37,6 +37,7 @@ height: 80%;
   transition: all 0.2s ease;
   cursor: pointer;
   
+  
 }
 
 .cardID:hover {
@@ -46,6 +47,19 @@ height: 80%;
 .videoSize {
   width: 100% !important;
   height: 200px !important;
+}
+
+.videoBorder {
+ border-radius: 3.6rem / 1.5rem;
+}
+
+.videoPadding {
+  padding: 10px;
   
 }
 
+.textPosition {
+  margin-top: -33px;
+  margin-left: -15px;
+  font-weight: bold;
+}

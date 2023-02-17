@@ -38,18 +38,21 @@ export default function SectionID() {
         {sectionId.data ? (
           sectionId.data.attributes.videos.data.map((e, index) => (
             <div
-              className="col-xxl-4 col-lg-4 col-md-12 mb-4 mb-lg-0 p-3"
+              className="col-xxl-3 col-lg-4 col-md-6 videoPadding"
               key={index}
             >
-              <div className="cardID" style={{ width: "100%", height: "100%" }}>
+              <div
+                className="cardID "
+                style={{ width: "100%", height: "100%" }}
+              >
                 <div onClick={() => handleVideoClick(index)}>
                   <video
-                    className="videoSize"
+                    className="videoSize videoBorder"
                     src={`http://localhost:1337${e.attributes.url}`}
                   />
                 </div>
                 <div className="card-body">
-                  <p className="card-text text-black text-center">
+                  <p className="card-text text-black text-center textPosition">
                     {e.attributes.alternativeText}
                   </p>
                 </div>
