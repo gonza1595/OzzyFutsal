@@ -21,14 +21,14 @@ export default function SectionID() {
   });
 
   return (
-    <section className=" bg-white  px-5 p-5">
+    <section className=" bg-white container px-5 p-5">
       <div className="row gx-1">
         {sectionId.data ? (
           sectionId.data.attributes.images.data.map((e, id) => (
-            <div className="col-xxl-3 col-xl-5 col-lg-6 col-md-12 col-sm-12 col-xs-12 p-3">
+            <div className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 imagePadding">
               <div
-                className="rounded-3 bg-image hover-zoom "
-                style={{ width: "370px" }}
+                className="imageBorder bg-image hover-zoom "
+                style={{ width: "100%" }}
               >
                 <a
                   href={`http://localhost:1337${e.attributes.url}`}
@@ -38,7 +38,7 @@ export default function SectionID() {
                     src={`http://localhost:1337${e.attributes.url}`}
                     alt="Image"
                     className="img-top"
-                    style={{ width: "100%", height: "370px" }}
+                    style={{ width: "100%", height: "300px" }}
                   />
                 </a>
               </div>
