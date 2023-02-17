@@ -41,7 +41,10 @@ export default function SectionID() {
               className="col-xxl-4 col-lg-4 col-md-12 mb-4 mb-lg-0 p-3"
               key={index}
             >
-              <div className="card " style={{ width: "100%", height: "100%" }}>
+              <div
+                className="card cardID "
+                style={{ width: "100%", height: "100%" }}
+              >
                 <div>
                   <div onClick={() => handleVideoClick(index)}>
                     <video src={`http://localhost:1337${e.attributes.url}`} />
