@@ -41,7 +41,7 @@ export default function Sections({ page, setPage, searchTerm }) {
           sectionsToShow.map((e) => (
             <div
               key={e.id}
-              className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 sectionPadding"
+              className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 sectionPadding "
             >
               <CardSection
                 id={e.id}
