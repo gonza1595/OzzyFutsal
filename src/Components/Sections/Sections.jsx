@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getSection } from "../../Redux/Actions";
 import CardSection from "../CardSection/CardSection";
 import Pagination from "../Pagination/Pagination";
+import "./Sections.css";
 
 export default function Sections({ page, setPage, searchTerm }) {
   const dispatch = useDispatch();
@@ -33,14 +34,14 @@ export default function Sections({ page, setPage, searchTerm }) {
   }
 
   return (
-    <div className="bg-white">
+    <div className="bg-white ">
       <div className="mb-4"></div>
-      <div className="row">
+      <div className="row noMargin" style={{ width: "auto" }}>
         {sectionsToShow && sectionsToShow.length > 0 ? (
           sectionsToShow.map((e) => (
             <div
               key={e.id}
-              className="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-5"
+              className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 sectionPadding "
             >
               <CardSection
                 id={e.id}

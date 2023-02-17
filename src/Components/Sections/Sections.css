@@ -1,0 +1,50 @@
+.sectionPadding {
+    padding: 25px;
+}
+
+
+.col{
+    display: flex;
+    justify-content: center !important;
+    
+    
+}
+
+.noMargin {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+@media screen and (max-width: 576px) {
+    .noMargin {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+  }
+
+
+@media screen and (max-width: 768px) {
+    .noMargin {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+  }
+@media screen and (max-width: 992px) {
+    .noMargin {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+  }
+@media screen and (max-width: 1200px) {
+    .noMargin {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+  }
+@media screen and (max-width: 1400px) {
+    .noMargin {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+  }

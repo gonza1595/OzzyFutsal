@@ -14,7 +14,7 @@ export default function CardSection({ title, description, image, id }) {
   return (
     <MDBRow>
       <MDBCol>
-        <MDBCard>
+        <MDBCard style={{ width: "370px" }}>
           <MDBCardImage
             className="card-img-top "
             src={`http://localhost:1337${image[0]}`}

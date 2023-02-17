@@ -52,7 +52,9 @@ export default function SectionID() {
           <hr className="hr hr-blurry" />
           <h1 className="text-center text-black text-uppercase ">FOTOS</h1>
           <hr className="hr hr-blurry" />
-          <h1>Esta seccion no ha sido cargada con imagenes</h1>
+          <h1 className="text-center text-black pt-4 pb-4">
+            Esta seccion no ha sido cargada con imagenes
+          </h1>
         </div>
       )}
 
@@ -68,12 +70,16 @@ export default function SectionID() {
           <hr className="hr hr-blurry" />
           <h1 className="text-center text-black text-uppercase ">VIDEOS</h1>
           <hr className="hr hr-blurry" />
-          <h1>Esta seccion no ha sido cargada con videos</h1>
+          <h1 className="text-center text-black pt-4 pb-4">
+            Esta seccion no ha sido cargada con videos
+          </h1>
         </div>
       )}
 
       {!sectionImages && !sectionVideos && (
-        <h1>No hay contenido disponible para esta sección</h1>
+        <h1 className="text-center text-black pt-4 pb-4">
+          No hay contenido disponible para esta sección
+        </h1>
       )}
       <Footer />
     </div>
