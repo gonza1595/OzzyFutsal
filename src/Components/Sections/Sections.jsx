@@ -52,7 +52,11 @@ export default function Sections({ page, setPage, searchTerm }) {
             </div>
           ))
         ) : (
-          <div>No se encontraron secciones</div>
+          <div>
+            <h1 className="text-center text-black pt-4 pb-4">
+              No hay secciones disponibles en este momento
+            </h1>
+          </div>
         )}
       </div>
       <div>
