@@ -4,7 +4,7 @@ import ozzyfoto from "../assets/ozzy page.jpeg";
 export default function NavBar({ setPage, setSearchTerm }) {
   function handleSearch(event) {
     setSearchTerm(event.target.value);
-    setPage(1); // reset page to 1 when search term changes
+    setPage(1);
   }
   return (
     <div>

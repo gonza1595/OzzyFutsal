@@ -48,7 +48,7 @@ export default function SectionID() {
               >
                 <div onClick={() => handleVideoClick(index)}>
                   <video
-                    className="videoSize videoBorder"
+                    className="videoSize videoBorder "
                     src={`http://localhost:1337${e.attributes.url}`}
                   />
                 </div>

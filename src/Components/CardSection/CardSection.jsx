@@ -18,16 +18,16 @@ export default function CardSection({ title, description, image, id }) {
           <MDBCardImage
             className="card-img-top "
             src={`http://localhost:1337${image[0]}`}
-            style={{ width: "100%", height: "360px" }}
+            style={{ width: "100%", height: "240px" }}
           />
           <MDBCardBody
-            className="text-center bg-secondary text-dark"
-            style={{ height: "200px" }}
+            className="text-center  text-dark"
+            style={{ height: "170px" }}
           >
             <MDBCardTitle>{title}</MDBCardTitle>
             <MDBCardText>{description}</MDBCardText>
-            <Link to={`/home/media/${id}`}>
-              <button className="btn btn-secondary mr-2 ">
+            <Link className="stretched-link" to={`/home/media/${id}`}>
+              <button className="btn btn-secondary mr-2 stretched-link">
                 Fotos y Videos
               </button>
             </Link>

@@ -48,7 +48,7 @@ export default function SectionCategory() {
         setSearchTermCategory={setSearchTermCategory}
         setPageCategory={setPageCategory}
       />
-      <div className="row noMargin">
+      <div className="row noMargin mt-4">
         {showSections && showSections.length > 0 ? (
           showSections.map((e) => {
             if (e.attributes.category === "Primera") {
