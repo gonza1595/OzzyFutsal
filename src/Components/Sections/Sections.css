@@ -9,8 +9,8 @@
 }
 
 .noMargin {
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
 @media screen and (max-width: 576px) {

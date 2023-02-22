@@ -14,7 +14,7 @@ export default function CardSection({ title, description, image, id }) {
   return (
     <MDBRow>
       <MDBCol>
-        <MDBCard style={{ width: "370px" }}>
+        <MDBCard style={{ width: "300px" }}>
           <MDBCardImage
             className="card-img-top "
             src={`http://localhost:1337${image[0]}`}
@@ -26,8 +26,11 @@ export default function CardSection({ title, description, image, id }) {
           >
             <MDBCardTitle>{title}</MDBCardTitle>
             <MDBCardText>{description}</MDBCardText>
-            <Link className="stretched-link" to={`/home/media/${id}`}>
-              <button className="btn btn-secondary mr-2 stretched-link">
+            <Link
+              className="stretched-link position-absolute bottom-0 start-50 translate-middle-x"
+              to={`/home/media/${id}`}
+            >
+              <button className="btn btn-secondary mr-2 ">
                 Fotos y Videos
               </button>
             </Link>
