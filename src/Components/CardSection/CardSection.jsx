@@ -14,7 +14,7 @@ export default function CardSection({ title, description, image, id }) {
   return (
     <MDBRow>
       <MDBCol>
-        <Link to={`/home/media/${id}`}>
+        <Link className="text-decoration-none" to={`/home/media/${id}`}>
           <MDBCard style={{ width: "300px" }}>
             <MDBCardImage
               className="card-img-top "
