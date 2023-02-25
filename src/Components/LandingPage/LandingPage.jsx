@@ -23,7 +23,7 @@ export default function LandingPage() {
             </h3>
           </div>
           <div>
-            <img src={ozzyfoto} alt="No image" />
+            <img className="img-fluid" src={ozzyfoto} alt="No image" />
           </div>
         </section>
       </div>
