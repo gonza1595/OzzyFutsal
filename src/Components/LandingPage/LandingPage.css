@@ -12,7 +12,10 @@
     ); 
 }
 
-.mainBg {
-    height: 100vh;
-    width: 100%;
+.paddingSection {
+    padding-top: 80px;
+}
+
+.article:hover {
+    transform: scale(1.1);
 }

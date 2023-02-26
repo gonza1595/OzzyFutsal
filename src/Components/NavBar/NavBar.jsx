@@ -37,7 +37,7 @@ export default function NavBar() {
             </li>
             <li className="nav-item">
               <a className="nav-link active fs-4 text-uppercase" href="/home">
-                Partidos
+                Categorias
               </a>
             </li>
           </ul>
