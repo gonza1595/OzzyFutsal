@@ -2,6 +2,9 @@ import React from "react";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import ozzyfoto from "../assets/ozzy page.jpeg";
+import primera from "../assets/PRIMERA.jpeg";
+import c20 from "../assets/C20.jpeg";
+import c17 from "../assets/C17.jpeg";
 import "./LandingPage.css";
 
 export default function LandingPage() {
@@ -29,13 +32,13 @@ export default function LandingPage() {
               />
             </article>
           </section>
-          <section className="row">
-            <article className="col-12 col-lg-6 paddingSection">
+          <section className="row justify-content-lg-center paddingSection ">
+            <article className="col-12 col-lg-6 pt-4 pe-lg-4">
               <a href="/home/category/Primera">
-                <div className="card text-bg-dark">
+                <div className="card text-bg-dark border-0 hover-zoom ">
                   <img
-                    src={ozzyfoto}
-                    style={{ width: "auto", height: "515px" }}
+                    src={primera}
+                    style={{ width: "auto", height: "618px" }}
                     className="card-img"
                     alt="..."
                   />
@@ -45,12 +48,12 @@ export default function LandingPage() {
                 </div>
               </a>
             </article>
-            <article className="col-12 col-lg-6 paddingSection ">
+            <article className="col-12 col-lg-6 pt-4">
               <a href="/home/category/C20">
-                <div className="card text-bg-dark">
+                <div className="card text-bg-dark border-0 hover-zoom">
                   <img
-                    src={ozzyfoto}
-                    style={{ width: "auto", height: "245px" }}
+                    src={c20}
+                    style={{ width: "auto", height: "295px" }}
                     className="card-img"
                     alt="..."
                   />
@@ -59,12 +62,12 @@ export default function LandingPage() {
                   </div>
                 </div>
               </a>
-              <article className="col-12 col-lg-12 pt-4">
+              <article className="col-12 col-lg-12 paddingTopArticles">
                 <a href="/home/category/C17">
-                  <div className="card text-bg-dark">
+                  <div className="card text-bg-dark border-0 hover-zoom">
                     <img
-                      src={ozzyfoto}
-                      style={{ width: "auto", height: "245px" }}
+                      src={c17}
+                      style={{ width: "auto", height: "295px" }}
                       className="card-img"
                       alt="..."
                     />
@@ -75,13 +78,13 @@ export default function LandingPage() {
                 </a>
               </article>
             </article>
-            <article className="col-12 col-lg-6 pt-4">
+            <article className="col-12 col-lg-6 paddingTopArticles pe-lg-4">
               <a href="/home/category/C15">
-                <div className="card text-bg-dark">
+                <div className="card text-bg-dark border-0 hover-zoom">
                   <img
                     src={ozzyfoto}
-                    style={{ width: "auto", height: "245px" }}
-                    className="card-img"
+                    style={{ width: "auto", height: "295px" }}
+                    className="card-img "
                     alt="..."
                   />
                   <div className="card-img-overlay">
@@ -90,12 +93,12 @@ export default function LandingPage() {
                 </div>
               </a>
             </article>
-            <article className="col-12 col-lg-6 pt-4">
+            <article className="col-12 col-lg-6 paddingTopArticles">
               <a href="/home/category/C13">
-                <div className="card text-bg-dark">
+                <div className="card text-bg-dark border-0 hover-zoom">
                   <img
                     src={ozzyfoto}
-                    style={{ width: "auto", height: "245px" }}
+                    style={{ width: "auto", height: "295px" }}
                     className="card-img"
                     alt="..."
                   />

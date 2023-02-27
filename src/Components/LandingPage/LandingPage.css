@@ -13,9 +13,44 @@
 }
 
 .paddingSection {
-    padding-top: 80px;
+    padding-top: 45px;
 }
 
 .article:hover {
     transform: scale(1.1);
 }
+
+.paddingTopArticles {
+    padding-top: 28px;
+}
+
+
+@media screen and (max-width: 576px) {
+    .paddingSection {
+        padding-top: 10px;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    .paddingSection {
+        padding-top: 10px;
+    }
+  }
+
+@media screen and (max-width: 992px) {
+    .paddingSection {
+        padding-top: 10px;
+    }
+  }
+
+@media screen and (max-width: 1200px) {
+    .paddingSection {
+        padding-top: 10px;
+    }
+  }
+
+@media screen and (max-width: 1400px) {
+    .paddingSection {
+        padding-top: 10px;
+    }
+  }
