@@ -16,7 +16,7 @@ export default function Pagination({
     <div className="btn-toolbar justify-content-center">
       <div className="pagination">
         <button
-          className="page-link"
+          className="page-link text-dark fw-bold"
           onClick={page > 1 ? () => pagination(page - 1) : null}
           hidden={page === 1 ? true : false}
         >
@@ -24,13 +24,17 @@ export default function Pagination({
         </button>
         {pageNumber &&
           pageNumber.map((n) => (
-            <button className="page-link" key={n} onClick={() => pagination(n)}>
+            <button
+              className="page-link text-dark fw-bold"
+              key={n}
+              onClick={() => pagination(n)}
+            >
               {n}{" "}
             </button>
           ))}
 
         <button
-          className="page-link"
+          className="page-link text-dark fw-bold"
           onClick={page < total ? () => pagination(page + 1) : null}
           hidden={page === total - 1 ? true : false}
         >

@@ -17,8 +17,8 @@ export default function CardSection({ title, description, image, id }) {
             className="card-body text-center text-dark"
             style={{ height: "160px" }}
           >
-            <h5 className="card-title pt-3">{title}</h5>
-            <p className="card-text pt-2">{description}</p>
+            <h5 className="card-title fw-bold pt-3">{title}</h5>
+            <p className="card-text fw-normal pt-2">{description}</p>
           </div>
         </div>
       </Link>

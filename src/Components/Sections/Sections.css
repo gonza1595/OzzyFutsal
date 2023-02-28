@@ -1,8 +1,19 @@
 
-.col{
-    display: flex;
-    justify-content: center !important;
+.colorBgSection {
+    background-color: rgba(83, 184, 152, 1);
+    background-image: linear-gradient(
+        135deg,
+        rgba(47, 145, 224, 0.91)
+        rgba(7, 31, 51, 0.97) 79%
+    );
+    background-image: linear-gradient(
+        131deg,
+        rgba(235, 229, 229, 0.92),
+        rgb(185, 192, 192) 
+    ); 
 }
+
+
 
 
 
