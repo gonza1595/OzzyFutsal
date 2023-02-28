@@ -24,6 +24,11 @@
     padding-top: 28px;
 }
 
+.styleImage {
+    background-color: hsla(0, 0%, 98%, 0.2);
+}
+
+
 
 @media screen and (max-width: 576px) {
     .paddingSection {

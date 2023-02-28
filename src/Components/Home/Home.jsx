@@ -8,10 +8,16 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
-    <div className="bg-white">
-      <NavBar setPage={setPage} setSearchTerm={setSearchTerm} />
-      <Sections page={page} setPage={setPage} searchTerm={searchTerm} />
-      <Footer />
+    <div>
+      <div>
+        <NavBar setPage={setPage} setSearchTerm={setSearchTerm} />
+      </div>
+      <main className="colorBg pt-5 pb-5">
+        <Sections page={page} setPage={setPage} searchTerm={searchTerm} />
+      </main>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

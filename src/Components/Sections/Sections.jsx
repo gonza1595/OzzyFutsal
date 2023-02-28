@@ -34,14 +34,13 @@ export default function Sections({ page, setPage, searchTerm }) {
   }
 
   return (
-    <div className="bg-white ">
-      <div className="mb-4"></div>
-      <div className="row noMargin" style={{ width: "auto" }}>
+    <div className="container">
+      <div className="row pb-4">
         {sectionsToShow && sectionsToShow.length > 0 ? (
           sectionsToShow.map((e) => (
-            <div
+            <article
               key={e.id}
-              className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-xs-12 sectionPadding "
+              className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mb-4"
             >
               <CardSection
                 id={e.id}
@@ -49,7 +48,7 @@ export default function Sections({ page, setPage, searchTerm }) {
                 image={e.attributes.images?.data?.map((e) => e.attributes.url)}
                 description={e.attributes.description}
               />
-            </div>
+            </article>
           ))
         ) : (
           <div>
@@ -61,7 +60,7 @@ export default function Sections({ page, setPage, searchTerm }) {
       </div>
       <div>
         {filteredSections && filteredSections.length > showPerPage ? (
-          <div className="mt-3">
+          <div>
             <Pagination
               showPerPage={showPerPage}
               getSections={filteredSections.length}

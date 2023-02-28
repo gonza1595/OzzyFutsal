@@ -1,0 +1,13 @@
+.bgCard {
+    background-color: gainsboro !important;
+}
+
+.cardWidth {
+    width: 18rem;
+}
+
+@media screen and (max-width: 318px) {
+    .cardWidth {
+        width: auto !important;
+    }
+}
