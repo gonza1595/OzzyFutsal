@@ -13,7 +13,7 @@ export default function Sections({ page, setPage, searchTerm }) {
     dispatch(getSection());
   }, []);
 
-  const showPerPage = 8;
+  const showPerPage = 12;
   const lastOnPage = page * showPerPage;
   const firstOnPage = lastOnPage - showPerPage;
 
@@ -35,12 +35,12 @@ export default function Sections({ page, setPage, searchTerm }) {
 
   return (
     <div className="container">
-      <div className="row pb-4">
+      <div className="row pt-5">
         {sectionsToShow && sectionsToShow.length > 0 ? (
           sectionsToShow.map((e) => (
             <article
               key={e.id}
-              className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mb-4"
+              className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards"
             >
               <CardSection
                 id={e.id}
@@ -60,7 +60,7 @@ export default function Sections({ page, setPage, searchTerm }) {
       </div>
       <div>
         {filteredSections && filteredSections.length > showPerPage ? (
-          <div>
+          <div className="pt-4 paddingSectionPaginate">
             <Pagination
               showPerPage={showPerPage}
               getSections={filteredSections.length}

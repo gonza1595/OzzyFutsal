@@ -3,18 +3,59 @@
     background-color: rgba(83, 184, 152, 1);
     background-image: linear-gradient(
         135deg,
-        rgba(47, 145, 224, 0.91)
+        rgba(221, 224, 47, 0.91)
         rgba(7, 31, 51, 0.97) 79%
     );
     background-image: linear-gradient(
         131deg,
-        rgba(235, 229, 229, 0.92),
-        rgb(185, 192, 192) 
+        rgba(235, 222, 222, 0.92),
+        rgb(151, 179, 179) 
     ); 
 }
 
+.paddingSectionsCards {
+    padding-bottom: 45px;
+    
+}
 
+.paddingSectionPaginate {
+    padding-bottom: 31px;
+}
 
+@media screen and (max-width: 576px) {
+    .paddingSectionPaginate {
+        padding-bottom: 10px;
+        
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    .paddingSectionPaginate {
+        padding-bottom: 10px;
+        
+    }
+  }
+
+@media screen and (max-width: 992px) {
+    .paddingSectionPaginate {
+        padding-bottom: 10px;
+        
+    }
+  }
+
+@media screen and (max-width: 1200px) {
+    .paddingSectionPaginate {
+       padding-bottom: 10px;
+      
+    }
+  }
+
+@media screen and (max-width: 1400px) {
+    .paddingSectionPaginate {
+        padding-bottom: 10px;
+        
+    }
+  }
 
 
 
