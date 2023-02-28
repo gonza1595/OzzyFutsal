@@ -25,24 +25,3 @@ export default function CardSection({ title, description, image, id }) {
     </div>
   );
 }
-
-// <MDBRow>
-// <MDBCol>
-//   <Link className="text-decoration-none" to={`/home/media/${id}`}>
-//     <MDBCard className="card mx-auto" style={{ width: "18rem" }}>
-//       <MDBCardImage
-//         className="card-img-top "
-//         src={`http://localhost:1337${image[0]}`}
-//         style={{ width: "100%", height: "240px" }}
-//       />
-//       <MDBCardBody
-//         className="text-center text-dark"
-//         style={{ height: "170px" }}
-//       >
-//         <MDBCardTitle>{title}</MDBCardTitle>
-//         <MDBCardText>{description}</MDBCardText>
-//       </MDBCardBody>
-//     </MDBCard>
-//   </Link>
-// </MDBCol>
-// </MDBRow>
