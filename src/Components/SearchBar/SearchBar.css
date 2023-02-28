@@ -1,0 +1,9 @@
+.styleSearchBar {
+    width: 350px !important;
+} 
+
+@media screen and (max-width: 390px) {
+    .styleSearchBar {
+        width: auto !important;
+    }
+}

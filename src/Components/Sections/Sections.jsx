@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getSection } from "../../Redux/Actions";
 import CardSection from "../CardSection/CardSection";
 import Pagination from "../Pagination/Pagination";
+import SearchBar from "../SearchBar/SearchBar";
 import "./Sections.css";
 
 export default function Sections({ page, setPage, searchTerm }) {
@@ -35,7 +36,10 @@ export default function Sections({ page, setPage, searchTerm }) {
 
   return (
     <div className="container">
-      <div className="row pt-5">
+      <div className="row ">
+        <div>
+          <SearchBar />
+        </div>
         {sectionsToShow && sectionsToShow.length > 0 ? (
           sectionsToShow.map((e) => (
             <article
