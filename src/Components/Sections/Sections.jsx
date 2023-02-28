@@ -6,27 +6,30 @@ import Pagination from "../Pagination/Pagination";
 import SearchBar from "../SearchBar/SearchBar";
 import "./Sections.css";
 
-export default function Sections({ page, setPage, searchTerm }) {
+export default function Sections({ page, setPage }) {
   const dispatch = useDispatch();
   const getSections = useSelector((state) => state.allSections);
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [nameSearch, setNameSearch] = useState("");
 
   useEffect(() => {
     dispatch(getSection());
   }, []);
 
+  // pagination
   const showPerPage = 12;
   const lastOnPage = page * showPerPage;
   const firstOnPage = lastOnPage - showPerPage;
 
-  const filteredSections = getSections.data?.filter((value) => {
-    if (searchTerm === "") {
-      return value;
-    } else if (
-      value.attributes.title.toLowerCase().includes(searchTerm.toLowerCase())
-    ) {
-      return value;
-    }
-  });
+  //searchBar filter
+  const filteredSections = nameSearch
+    ? getSections.data?.filter((section) =>
+        section.attributes.title
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase())
+      )
+    : getSections.data;
 
   const sectionsToShow = filteredSections?.slice(firstOnPage, lastOnPage);
 
@@ -38,7 +41,12 @@ export default function Sections({ page, setPage, searchTerm }) {
     <div className="container">
       <div className="row ">
         <div>
-          <SearchBar />
+          <SearchBar
+            nameSearch={nameSearch}
+            setNameSearch={setNameSearch}
+            setSearchTerm={setSearchTerm}
+            setPage={setPage}
+          />
         </div>
         {sectionsToShow && sectionsToShow.length > 0 ? (
           sectionsToShow.map((e) => (

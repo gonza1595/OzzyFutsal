@@ -5,15 +5,14 @@ import Footer from "../Footer/Footer";
 
 export default function Home() {
   const [page, setPage] = useState(1);
-  const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <div>
       <div>
-        <NavBar setPage={setPage} setSearchTerm={setSearchTerm} />
+        <NavBar />
       </div>
       <main className="colorBgSection pt-5 pb-5">
-        <Sections page={page} setPage={setPage} searchTerm={searchTerm} />
+        <Sections page={page} setPage={setPage} />
       </main>
       <div>
         <Footer />
