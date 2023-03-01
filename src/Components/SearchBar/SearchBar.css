@@ -2,6 +2,12 @@
     width: 350px !important;
 } 
 
+.form-control:focus {
+    border-color: black !important;
+    box-shadow: none !important;
+  }
+  
+
 @media screen and (max-width: 390px) {
     .styleSearchBar {
         width: auto !important;

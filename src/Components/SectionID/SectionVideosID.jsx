@@ -34,7 +34,7 @@ export default function SectionID() {
   };
 
   return (
-    <section className=" bg-white container ">
+    <section className=" bgSectionColor container ">
       <div className="row  ">
         {sectionId.data ? (
           sectionId.data.attributes.videos.data.map((e, index) => (

@@ -21,7 +21,7 @@ export default function SectionID() {
   });
 
   return (
-    <section className=" bg-white container px-5 p-5">
+    <section className=" bgSectionColor container px-5 p-5">
       <div className="row gx-1">
         {sectionId.data ? (
           sectionId.data.attributes.images.data.map((e, id) => (

@@ -30,7 +30,7 @@ export default function SectionID() {
   );
 
   return (
-    <div className="bg-white ">
+    <div className="bgSectionColor">
       <NavBar />
 
       <h1 className="text-black text-uppercase p-3 pt-4">

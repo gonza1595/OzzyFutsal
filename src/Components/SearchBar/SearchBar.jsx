@@ -21,7 +21,7 @@ export default function SearchBar({
     <div className="input-group pb-5 mx-auto styleSearchBar">
       <input
         type="search"
-        className="form-control"
+        className="form-control "
         placeholder="Buscar..."
         onChange={(event) => handleSearch(event)}
       />
