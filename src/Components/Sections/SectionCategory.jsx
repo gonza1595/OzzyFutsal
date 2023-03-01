@@ -4,13 +4,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { filterByCategory } from "../../Redux/Actions";
 import CardSection from "../CardSection/CardSection";
-import NavBarForCategory from "../NavBar/NavBarForCategory";
+import NavBar from "../NavBar/NavBar";
+import SearchBar from "../SearchBar/SearchBar";
+import Pagination from "../Pagination/Pagination";
 import Footer from "../Footer/Footer";
-import PaginationForCategory from "../Pagination/PaginationForCategory";
+import "./Sections.css";
 
 export default function SectionCategory() {
   const sectionCategory = useSelector((state) => state.filterByCategory);
-  const [searchTermCategory, setSearchTermCategory] = useState("");
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [nameSearch, setNameSearch] = useState("");
 
   const dispatch = useDispatch();
   const { category } = useParams();
@@ -20,125 +24,144 @@ export default function SectionCategory() {
   }, [category, dispatch]);
 
   // pagination
-  const [pageCategory, setPageCategory] = useState(1);
-  const showPerPage = 8;
-  const lastOnPage = pageCategory * showPerPage;
+  const [page, setPage] = useState(1);
+  const showPerPage = 12;
+  const lastOnPage = page * showPerPage;
   const firstOnPage = lastOnPage - showPerPage;
-  const filteredSections = sectionCategory.data?.filter((value) => {
-    if (searchTermCategory === "") {
-      return value;
-    } else if (
-      value.attributes.title
-        .toLowerCase()
-        .includes(searchTermCategory.toLowerCase())
-    ) {
-      return value;
-    }
-  });
 
-  const showSections = filteredSections?.slice(firstOnPage, lastOnPage);
+  //searchBar filter
+  const filteredSections = nameSearch
+    ? sectionCategory?.data?.filter((section) =>
+        section.attributes.title
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase())
+      )
+    : sectionCategory.data;
+
+  const sectionsToShowCategory = filteredSections?.slice(
+    firstOnPage,
+    lastOnPage
+  );
 
   function pagination(pageNumber) {
-    setPageCategory(pageNumber);
+    setPage(pageNumber);
   }
 
   return (
-    <div className="bg-white ">
-      <NavBarForCategory
-        setSearchTermCategory={setSearchTermCategory}
-        setPageCategory={setPageCategory}
-      />
-      <div className="row noMargin mt-4">
-        {showSections && showSections.length > 0 ? (
-          showSections.map((e) => {
-            if (e.attributes.category === "Primera") {
-              return (
-                <div className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 sectionPadding">
-                  <CardSection
-                    key={e.id}
-                    id={e.id}
-                    title={e.attributes.title}
-                    image={e.attributes.images?.data?.map(
-                      (e) => e.attributes.url
-                    )}
-                    description={e.attributes.description}
+    <div className="colorBgSection ">
+      <div>
+        <NavBar />
+      </div>
+      {sectionsToShowCategory && sectionsToShowCategory.length > 0 ? (
+        <div className="pt-5">
+          <SearchBar
+            nameSearch={nameSearch}
+            setNameSearch={setNameSearch}
+            setSearchTerm={setSearchTerm}
+            setPage={setPage}
+          />
+        </div>
+      ) : null}
+      <div className="container pt-1 pb-5">
+        <div className="row">
+          {sectionsToShowCategory && sectionsToShowCategory.length > 0 ? (
+            sectionsToShowCategory.map((e) => {
+              if (e.attributes.category === "Primera") {
+                return (
+                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                    <CardSection
+                      key={e.id}
+                      id={e.id}
+                      title={e.attributes.title}
+                      image={e.attributes.images?.data?.map(
+                        (e) => e.attributes.url
+                      )}
+                      description={e.attributes.description}
+                    />
+                  </article>
+                );
+              } else if (e.attributes.category === "C20") {
+                return (
+                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                    <CardSection
+                      key={e.id}
+                      id={e.id}
+                      title={e.attributes.title}
+                      image={e.attributes.images?.data?.map(
+                        (e) => e.attributes.url
+                      )}
+                      description={e.attributes.description}
+                    />
+                  </article>
+                );
+              } else if (e.attributes.category === "C17") {
+                return (
+                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                    <CardSection
+                      key={e.id}
+                      id={e.id}
+                      title={e.attributes.title}
+                      image={e.attributes.images?.data?.map(
+                        (e) => e.attributes.url
+                      )}
+                      description={e.attributes.description}
+                    />
+                  </article>
+                );
+              } else if (e.attributes.category === "C15") {
+                return (
+                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                    <CardSection
+                      key={e.id}
+                      id={e.id}
+                      title={e.attributes.title}
+                      image={e.attributes.images?.data?.map(
+                        (e) => e.attributes.url
+                      )}
+                      description={e.attributes.description}
+                    />
+                  </article>
+                );
+              } else if (e.attributes.category === "C13") {
+                return (
+                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                    <CardSection
+                      key={e.id}
+                      id={e.id}
+                      title={e.attributes.title}
+                      image={e.attributes.images?.data?.map(
+                        (e) => e.attributes.url
+                      )}
+                      description={e.attributes.description}
+                    />
+                  </article>
+                );
+              }
+            })
+          ) : (
+            <article className="col-12 col-lg-12">
+              <h1 className="text-center text-black paddingSectionNull">
+                No hay secciones de esta categoria disponible en este momento
+              </h1>
+            </article>
+          )}
+          <div>
+            {sectionsToShowCategory && sectionsToShowCategory.length > 0 ? (
+              filteredSections ? (
+                <div className="pt-4 paddingSectionPaginate">
+                  <Pagination
+                    showPerPage={showPerPage}
+                    getSections={filteredSections.length}
+                    pagination={pagination}
+                    page={page}
                   />
                 </div>
-              );
-            } else if (e.attributes.category === "C20") {
-              return (
-                <div className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 sectionPadding">
-                  <CardSection
-                    key={e.id}
-                    id={e.id}
-                    title={e.attributes.title}
-                    image={e.attributes.images?.data?.map(
-                      (e) => e.attributes.url
-                    )}
-                    description={e.attributes.description}
-                  />
-                </div>
-              );
-            } else if (e.attributes.category === "C17") {
-              return (
-                <div className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 sectionPadding">
-                  <CardSection
-                    key={e.id}
-                    id={e.id}
-                    title={e.attributes.title}
-                    image={e.attributes.images?.data?.map(
-                      (e) => e.attributes.url
-                    )}
-                    description={e.attributes.description}
-                  />
-                </div>
-              );
-            } else if (e.attributes.category === "C15") {
-              return (
-                <div className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 sectionPadding">
-                  <CardSection
-                    key={e.id}
-                    id={e.id}
-                    title={e.attributes.title}
-                    image={e.attributes.images?.data?.map(
-                      (e) => e.attributes.url
-                    )}
-                    description={e.attributes.description}
-                  />
-                </div>
-              );
-            } else if (e.attributes.category === "C13") {
-              return (
-                <div className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 sectionPadding">
-                  <CardSection
-                    key={e.id}
-                    id={e.id}
-                    title={e.attributes.title}
-                    image={e.attributes.images?.data?.map(
-                      (e) => e.attributes.url
-                    )}
-                    description={e.attributes.description}
-                  />
-                </div>
-              );
-            }
-          })
-        ) : (
-          <div>Cargando...</div>
-        )}
-        <div>
-          {filteredSections && filteredSections.length > showPerPage ? (
-            <div className="mt-3">
-              <PaginationForCategory
-                showPerPage={showPerPage}
-                sectionCategory={filteredSections.length}
-                pagination={pagination}
-                pageCategory={pageCategory}
-              />
-            </div>
-          ) : null}
+              ) : null
+            ) : null}
+          </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

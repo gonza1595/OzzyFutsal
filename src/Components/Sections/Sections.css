@@ -22,39 +22,59 @@
     padding-bottom: 31px;
 }
 
+.paddingSectionNull {
+    padding-top: 287px;
+    padding-bottom: 287px;
+}
+
 @media screen and (max-width: 576px) {
     .paddingSectionPaginate {
         padding-bottom: 10px;
-        
+    }
+    .paddingSectionNull {
+    padding-top: 150px;
+    padding-bottom: 150px;
     }
   }
 
 @media screen and (max-width: 768px) {
     .paddingSectionPaginate {
         padding-bottom: 10px;
-        
     }
+    .paddingSectionNull {
+        padding-top: 150px;
+        padding-bottom: 150px;
+        }
   }
 
 @media screen and (max-width: 992px) {
     .paddingSectionPaginate {
-        padding-bottom: 10px;
-        
+        padding-bottom: 10px; 
     }
+    .paddingSectionNull {
+        padding-top: 150px;
+        padding-bottom: 150px;
+        }
   }
 
 @media screen and (max-width: 1200px) {
     .paddingSectionPaginate {
        padding-bottom: 10px;
-      
     }
+    .paddingSectionNull {
+        padding-top: 150px;
+        padding-bottom: 150px;
+        }
   }
 
 @media screen and (max-width: 1400px) {
     .paddingSectionPaginate {
-        padding-bottom: 10px;
-        
+        padding-bottom: 10px; 
     }
+    .paddingSectionNull {
+        padding-top: 150px;
+        padding-bottom: 150px;
+        }
   }
 
 

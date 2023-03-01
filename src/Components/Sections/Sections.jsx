@@ -40,14 +40,17 @@ export default function Sections({ page, setPage }) {
   return (
     <div className="container">
       <div className="row ">
-        <div>
-          <SearchBar
-            nameSearch={nameSearch}
-            setNameSearch={setNameSearch}
-            setSearchTerm={setSearchTerm}
-            setPage={setPage}
-          />
-        </div>
+        {sectionsToShow && sectionsToShow.length > 0 ? (
+          <div>
+            <SearchBar
+              nameSearch={nameSearch}
+              setNameSearch={setNameSearch}
+              setSearchTerm={setSearchTerm}
+              setPage={setPage}
+            />
+          </div>
+        ) : null}
+
         {sectionsToShow && sectionsToShow.length > 0 ? (
           sectionsToShow.map((e) => (
             <article
@@ -63,23 +66,25 @@ export default function Sections({ page, setPage }) {
             </article>
           ))
         ) : (
-          <div>
-            <h1 className="text-center text-black pt-4 pb-4">
+          <article className="col-12 col-lg-12">
+            <h1 className="text-center text-black paddingSectionNull">
               No hay secciones disponibles en este momento
             </h1>
-          </div>
+          </article>
         )}
       </div>
       <div>
-        {filteredSections && filteredSections.length > showPerPage ? (
-          <div className="pt-4 paddingSectionPaginate">
-            <Pagination
-              showPerPage={showPerPage}
-              getSections={filteredSections.length}
-              pagination={pagination}
-              page={page}
-            />
-          </div>
+        {sectionsToShow && sectionsToShow.length > 0 ? (
+          filteredSections ? (
+            <div className="pt-4 paddingSectionPaginate">
+              <Pagination
+                showPerPage={showPerPage}
+                getSections={filteredSections.length}
+                pagination={pagination}
+                page={page}
+              />
+            </div>
+          ) : null
         ) : null}
       </div>
     </div>
