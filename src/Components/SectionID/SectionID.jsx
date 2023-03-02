@@ -3,10 +3,12 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getSectionID } from "../../Redux/Actions";
+import { Link } from "react-router-dom";
 import SectionImagesID from "./SectionImagesID";
 import SectionVideosID from "./SectionVideosID";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
+import "./SectionID.css";
 
 export default function SectionID() {
   const dispatch = useDispatch();
@@ -32,56 +34,45 @@ export default function SectionID() {
   return (
     <div className="bgSectionColor">
       <NavBar />
-
-      <h1 className="text-black text-uppercase p-3 pt-4">
-        <font>
-          <strong>{sectionId.data?.attributes.title}</strong>
-        </font>
-      </h1>
-
-      <hr className="hr hr-blurry" />
-
-      {sectionImages ? (
-        <div>
-          <h1 className="text-center text-black text-uppercase ">FOTOS</h1>
-          <hr className="hr hr-blurry" />
-          <SectionImagesID />
-        </div>
-      ) : (
-        <div>
-          <hr className="hr hr-blurry" />
-          <h1 className="text-center text-black text-uppercase ">FOTOS</h1>
-          <hr className="hr hr-blurry" />
-          <h1 className="text-center text-black pt-4 pb-4">
-            Esta seccion no ha sido cargada con imagenes
-          </h1>
-        </div>
-      )}
-
-      {sectionVideos ? (
-        <div>
-          <hr className="hr hr-blurry" />
-          <h1 className="text-center text-black text-uppercase ">VIDEOS</h1>
-          <hr className="hr hr-blurry" />
-          <SectionVideosID />
-        </div>
-      ) : (
-        <div>
-          <hr className="hr hr-blurry" />
-          <h1 className="text-center text-black text-uppercase ">VIDEOS</h1>
-          <hr className="hr hr-blurry" />
-          <h1 className="text-center text-black pt-4 pb-4">
-            Esta seccion no ha sido cargada con videos
-          </h1>
-        </div>
-      )}
-
-      {!sectionImages && !sectionVideos && (
-        <h1 className="text-center text-black pt-4 pb-4">
-          No hay contenido disponible para esta sección
+      <div>
+        <h1 className="text-black text-uppercase p-3 pt-4 pb-5 text-center">
+          <font>
+            <strong>{sectionId.data?.attributes.title}</strong>
+          </font>
         </h1>
-      )}
-      <Footer />
+
+        <div className="row justify-content-evenly">
+          <article className="col-6 col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2">
+            <Link
+              to={`/home/media/${id}/fotos`}
+              className="text-decoration-none text-dark"
+            >
+              <p className="fs-4 text-end">Fotos</p>
+            </Link>
+          </article>
+          <article className="col-6 col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2">
+            <Link
+              to={`/home/media/${id}/videos`}
+              className="text-decoration-none text-dark"
+            >
+              <p className="fs-4 ">Videos</p>
+            </Link>
+          </article>
+        </div>
+
+        <hr className="hr hr-blurry" />
+        <div className="pt-5">
+          <Footer />
+        </div>
+      </div>
     </div>
   );
+}
+
+{
+  /* {!sectionImages && !sectionVideos && (
+  <h1 className="text-center text-black pt-4 pb-4">
+    No hay contenido disponible para esta sección
+  </h1>
+)} */
 }
