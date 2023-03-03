@@ -65,6 +65,13 @@ height: 800px;
 
 }
 
+@media screen and (max-width: 280px) {
+  .textPosition {
+    margin-top: -40px;
+    margin-left: -5px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .textPosition {
     margin-top: -5px;
@@ -72,9 +79,21 @@ height: 800px;
   }
 }
 
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 768px) {
   .textPosition {
-    margin-top: -40px;
-    margin-left: -5px;
+    margin-top: -5px;
+    margin-left: -8px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .textPosition {
+    margin-top: -5px;
+    margin-left: -8px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .textPosition {
+    margin-top: -5px;
+    margin-left: -8px;
   }
 }
