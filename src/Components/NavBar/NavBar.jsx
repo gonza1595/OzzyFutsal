@@ -30,7 +30,7 @@ export default function NavBar() {
               <a
                 className="nav-link active fs-4 text-uppercase"
                 aria-current="page"
-                href="#"
+                href="/landingpage"
               >
                 Inicio
               </a>
