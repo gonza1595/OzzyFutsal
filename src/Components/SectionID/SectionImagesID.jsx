@@ -23,6 +23,10 @@ export default function SectionID() {
     captions: true,
   });
 
+  const sectionImages = sectionId.data?.attributes.images?.data?.map(
+    (e) => e.attributes.url
+  );
+
   return (
     <div className="bgSectionColor">
       <NavBar />
@@ -52,31 +56,39 @@ export default function SectionID() {
         </div>
         <hr className="hr hr-blurry" />
 
-        <article className="container px-5 p-5">
-          <div className="row gx-1">
-            {sectionId.data ? (
-              sectionId.data.attributes.images.data.map((e, id) => (
-                <div className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 imagePadding pe-3">
-                  <div className="imageBorder bg-image hover-zoom ">
-                    <a
-                      href={`http://localhost:1337${e.attributes.url}`}
-                      data-caption={e.attributes.alternativeText}
-                    >
-                      <img
-                        src={`http://localhost:1337${e.attributes.url}`}
-                        alt="Image"
-                        className="img-top"
-                        style={{ width: "100%", height: "300px" }}
-                      />
-                    </a>
+        {sectionImages ? (
+          <article className="container px-5 p-5">
+            <div className="row gx-1">
+              {sectionId.data ? (
+                sectionId.data.attributes.images.data.map((e, id) => (
+                  <div className="col-xxl-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 imagePadding pe-3">
+                    <div className="imageBorder bg-image hover-zoom ">
+                      <a
+                        href={`http://localhost:1337${e.attributes.url}`}
+                        data-caption={e.attributes.alternativeText}
+                      >
+                        <img
+                          src={`http://localhost:1337${e.attributes.url}`}
+                          alt="Image"
+                          className="img-top"
+                          style={{ width: "100%", height: "300px" }}
+                        />
+                      </a>
+                    </div>
                   </div>
-                </div>
-              ))
-            ) : (
-              <h1> Esta seccion no ha sido cargada con imagenes</h1>
-            )}
+                ))
+              ) : (
+                <h1> Esta seccion no ha sido cargada con imagenes</h1>
+              )}
+            </div>
+          </article>
+        ) : (
+          <div className="paddingSectionVideoNull">
+            <h1 className="text-center">
+              Todavia no hay imagenes cargadas de este partido
+            </h1>
           </div>
-        </article>
+        )}
 
         <div className="pt-5">
           <Footer />

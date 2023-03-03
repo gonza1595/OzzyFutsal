@@ -59,6 +59,11 @@ height: 800px;
   font-weight: bold;
 }
 
+.paddingSectionVideoNull {
+  padding-top: 175px;
+  padding-bottom: 175px;
+
+}
 
 @media screen and (max-width: 576px) {
   .textPosition {

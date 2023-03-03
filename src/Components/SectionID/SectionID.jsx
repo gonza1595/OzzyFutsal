@@ -23,14 +23,6 @@ export default function SectionID() {
     return <h1>Cargando...</h1>;
   }
 
-  const sectionImages = sectionId.data?.attributes.images?.data?.map(
-    (e) => e.attributes.url
-  );
-
-  const sectionVideos = sectionId.data?.attributes.videos?.data?.map(
-    (e) => e.attributes.url
-  );
-
   return (
     <div className="bgSectionColor">
       <NavBar />
