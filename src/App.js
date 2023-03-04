@@ -8,6 +8,7 @@ import SectionCategory from "./Components/Sections/SectionCategory";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import SectionImagesID from "./Components/SectionID/SectionImagesID";
 import SectionVideosID from "./Components/SectionID/SectionVideosID";
+import Gallery from "./Components/Gallery/Gallery";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           path="/home/media/:id/videos"
           element={<SectionVideosID />}
         />
+        <Route path="/test" element={<Gallery />} />
       </Routes>
     </div>
   );

@@ -45,55 +45,35 @@ height: 800px;
 
 .videoSize {
   width: 100% !important;
-  height: 200px !important;
-}
-
-.videoPadding {
-  padding: 10px;
-
+  height: 100% !important;
 }
 
 .textPosition {
-  margin-top: -18px;
-  margin-left: -10px;
+  margin-top: -30px;
   font-weight: bold;
 }
 
 .paddingSectionVideoNull {
   padding-top: 175px;
   padding-bottom: 175px;
-
 }
 
-@media screen and (max-width: 280px) {
-  .textPosition {
-    margin-top: -40px;
-    margin-left: -5px;
-  }
+.video-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 0.5rem;
 }
 
-@media screen and (max-width: 576px) {
-  .textPosition {
-    margin-top: -5px;
-    margin-left: -8px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .textPosition {
-    margin-top: -5px;
-    margin-left: -8px;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .textPosition {
-    margin-top: -5px;
-    margin-left: -8px;
-  }
-}
-@media screen and (max-width: 1400px) {
-  .textPosition {
-    margin-top: -5px;
-    margin-left: -8px;
-  }
+.video-title-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 0.5rem;
 }

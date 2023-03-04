@@ -20,7 +20,7 @@
     "react-image-gallery": "^1.2.11",
     "react-player": "^2.11.2",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.6.1",
+    "react-router-dom": "^6.8.2",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.2",
     "web-vitals": "^2.1.4"

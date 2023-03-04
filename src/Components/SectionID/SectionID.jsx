@@ -26,45 +26,27 @@ export default function SectionID() {
   return (
     <div className="bgSectionColor">
       <NavBar />
-      <div>
-        <h1 className="text-black text-uppercase p-3 pt-4 pb-5 text-center">
-          <font>
-            <strong>{sectionId.data?.attributes.title}</strong>
-          </font>
-        </h1>
-
-        <div className="row justify-content-evenly">
-          <article className="col-6 col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2">
-            <Link
-              to={`/home/media/${id}/fotos`}
-              className="text-decoration-none text-dark"
-            >
-              <p className="fs-4 text-end">Fotos</p>
-            </Link>
-          </article>
-          <article className="col-6 col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2">
-            <Link
-              to={`/home/media/${id}/videos`}
-              className="text-decoration-none text-dark"
-            >
-              <p className="fs-4 ">Videos</p>
-            </Link>
-          </article>
+      <h1 className="text-black text-uppercase p-3 pt-4 pb-4 text-center">
+        <font>
+          <strong>{sectionId.data?.attributes.title}</strong>
+        </font>
+      </h1>
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-xxl-6">
+            <h1 className="text-center pb-2">Fotos</h1>
+            <SectionImagesID />
+          </div>
+          <div className="col-12 col-xxl-12">
+            <h1 className="text-center pb-3">Videos</h1>
+            <SectionVideosID />
+          </div>
         </div>
+      </div>
 
-        <hr className="hr hr-blurry" />
-        <div className="pt-5">
-          <Footer />
-        </div>
+      <div className="pt-5">
+        <Footer />
       </div>
     </div>
   );
-}
-
-{
-  /* {!sectionImages && !sectionVideos && (
-  <h1 className="text-center text-black pt-4 pb-4">
-    No hay contenido disponible para esta sección
-  </h1>
-)} */
 }
