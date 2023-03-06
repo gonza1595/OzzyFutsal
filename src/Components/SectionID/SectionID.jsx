@@ -33,11 +33,11 @@ export default function SectionID() {
       </h1>
       <div className="container">
         <div className="row">
-          <div className="col-12 col-xxl-6">
+          <div className="col-12 col-xxl-12 pt-4">
             <h1 className="text-center pb-2">Fotos</h1>
             <SectionImagesID />
           </div>
-          <div className="col-12 col-xxl-12">
+          <div className="col-12 col-xxl-12 pt-5">
             <h1 className="text-center pb-3">Videos</h1>
             <SectionVideosID />
           </div>

@@ -34,7 +34,7 @@ export default function SectionID() {
           <div className="row">
             {sectionId.data ? (
               sectionId.data.attributes.images.data.map((e, id) => (
-                <div className="col-xxl-6 col-xl-4 col-lg-4 col-md-6 col-sm-12 imagePadding pe-3 ">
+                <div className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 imagePadding pe-3">
                   <div className="imageBorder bg-image hover-zoom ">
                     <a
                       href={`http://localhost:1337${e.attributes.url}`}

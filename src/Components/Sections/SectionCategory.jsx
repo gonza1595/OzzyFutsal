@@ -136,12 +136,54 @@ export default function SectionCategory() {
                     />
                   </article>
                 );
+              } else if (e.attributes.category === "C11") {
+                return (
+                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                    <CardSection
+                      key={e.id}
+                      id={e.id}
+                      title={e.attributes.title}
+                      image={e.attributes.images?.data?.map(
+                        (e) => e.attributes.url
+                      )}
+                      description={e.attributes.description}
+                    />
+                  </article>
+                );
+              } else if (e.attributes.category === "C9") {
+                return (
+                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                    <CardSection
+                      key={e.id}
+                      id={e.id}
+                      title={e.attributes.title}
+                      image={e.attributes.images?.data?.map(
+                        (e) => e.attributes.url
+                      )}
+                      description={e.attributes.description}
+                    />
+                  </article>
+                );
+              } else if (e.attributes.category === "C7") {
+                return (
+                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                    <CardSection
+                      key={e.id}
+                      id={e.id}
+                      title={e.attributes.title}
+                      image={e.attributes.images?.data?.map(
+                        (e) => e.attributes.url
+                      )}
+                      description={e.attributes.description}
+                    />
+                  </article>
+                );
               }
             })
           ) : (
             <article className="col-12 col-lg-12">
               <h1 className="text-center text-black paddingSectionNull">
-                No hay secciones de esta categoria disponible en este momento
+                No hay partidos de esta categoria disponible en este momento
               </h1>
             </article>
           )}

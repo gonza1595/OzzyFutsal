@@ -39,7 +39,7 @@ export default function Sections({ page, setPage }) {
 
   return (
     <div className="container">
-      <div className="row ">
+      <div className="row">
         {sectionsToShow && sectionsToShow.length > 0 ? (
           <div>
             <SearchBar
@@ -55,7 +55,7 @@ export default function Sections({ page, setPage }) {
           sectionsToShow.map((e) => (
             <article
               key={e.id}
-              className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards"
+              className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards "
             >
               <CardSection
                 id={e.id}
