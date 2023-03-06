@@ -1,9 +1,8 @@
 import React from "react";
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getSectionID } from "../../Redux/Actions";
-import { Link } from "react-router-dom";
 import SectionImagesID from "./SectionImagesID";
 import SectionVideosID from "./SectionVideosID";
 import NavBar from "../NavBar/NavBar";
@@ -14,32 +13,55 @@ export default function SectionID() {
   const dispatch = useDispatch();
   const sectionId = useSelector((state) => state.sectionID);
   const { id } = useParams();
+  const navigate = useNavigate();
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [paginaActual, setPaginaActual] = useState(1);
 
   useEffect(() => {
     dispatch(getSectionID(id));
   }, [id, dispatch]);
 
-  if (sectionId.loading) {
-    return <h1>Cargando...</h1>;
+  function handleGoBack() {
+    navigate(-1, { state: { scrollPosition, paginaActual } });
   }
+
+  function handleScroll() {
+    setScrollPosition(window.pageYOffset);
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.history.state?.scrollPosition) {
+      window.scrollTo(0, window.history.state.scrollPosition);
+    }
+  }, []);
 
   return (
     <div className="bgSectionColor">
       <NavBar />
-      <h1 className="text-black text-uppercase p-3 pt-4 pb-4 text-center">
-        <font>
-          <strong>{sectionId.data?.attributes.title}</strong>
-        </font>
-      </h1>
+      <div>
+        <button onClick={handleGoBack}>Volver</button>
+        <h1 className="text-black text-uppercase p-3 pt-4 pb-4 text-center">
+          <font>
+            <strong>{sectionId.data?.attributes.title}</strong>
+          </font>
+        </h1>
+      </div>
       <div className="container">
         <div className="row">
           <div className="col-12 col-xxl-12 pt-4">
             <h1 className="text-center pb-2">Fotos</h1>
-            <SectionImagesID />
+            <SectionImagesID paginaActual={paginaActual} />
           </div>
           <div className="col-12 col-xxl-12 pt-5">
             <h1 className="text-center pb-3">Videos</h1>
-            <SectionVideosID />
+            <SectionVideosID paginaActual={paginaActual} />
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ import Pagination from "../Pagination/Pagination";
 import SearchBar from "../SearchBar/SearchBar";
 import "./Sections.css";
 
-export default function Sections({ page, setPage }) {
+export default function Sections({ page, setPage, setPaginaActual }) {
   const dispatch = useDispatch();
   const getSections = useSelector((state) => state.allSections);
 
