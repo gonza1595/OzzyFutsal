@@ -6,7 +6,7 @@ export default function CardSection({ title, description, image, id }) {
   return (
     <div>
       <Link className="text-decoration-none" to={`/home/media/${id}`}>
-        <div className="card border border-0 mx-auto bgCard cardWidth ">
+        <div className="card border border-0 mx-auto bg-white cardWidth ">
           <img
             src={`http://localhost:1337${image[0]}`}
             className="card-img-top"
