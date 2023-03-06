@@ -15,14 +15,15 @@ export default function SectionID() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [paginaActual, setPaginaActual] = useState(1);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     dispatch(getSectionID(id));
   }, [id, dispatch]);
 
   function handleGoBack() {
-    navigate(-1, { state: { scrollPosition, paginaActual } });
+    navigate(-1, { state: { scrollPosition, page } });
+    setPage();
   }
 
   function handleScroll() {
@@ -46,7 +47,9 @@ export default function SectionID() {
     <div className="bgSectionColor">
       <NavBar />
       <div>
-        <button onClick={handleGoBack}>Volver</button>
+        <button onClick={handleGoBack} setPage={setPage}>
+          Volver
+        </button>
         <h1 className="text-black text-uppercase p-3 pt-4 pb-4 text-center">
           <font>
             <strong>{sectionId.data?.attributes.title}</strong>
@@ -57,11 +60,11 @@ export default function SectionID() {
         <div className="row">
           <div className="col-12 col-xxl-12 pt-4">
             <h1 className="text-center pb-2">Fotos</h1>
-            <SectionImagesID paginaActual={paginaActual} />
+            <SectionImagesID page={page} />
           </div>
           <div className="col-12 col-xxl-12 pt-5">
             <h1 className="text-center pb-3">Videos</h1>
-            <SectionVideosID paginaActual={paginaActual} />
+            <SectionVideosID page={page} />
           </div>
         </div>
       </div>
