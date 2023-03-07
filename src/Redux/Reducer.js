@@ -3,6 +3,7 @@ const initialState = {
   allSections: [],
   sectionID: [],
   filterByCategory: [],
+  currentPage: 1,
 };
 
 function rootReducer(state = initialState, action) {
@@ -32,6 +33,11 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         sections: action.payload,
+      };
+    case "CHANGE_PAGE":
+      return {
+        ...state,
+        currentPage: action.payload,
       };
 
     default:

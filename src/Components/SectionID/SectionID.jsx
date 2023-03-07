@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getSectionID } from "../../Redux/Actions";
 import SectionImagesID from "./SectionImagesID";
@@ -12,44 +12,51 @@ import "./SectionID.css";
 export default function SectionID() {
   const dispatch = useDispatch();
   const sectionId = useSelector((state) => state.sectionID);
+  const currentPage = useSelector((state) => state.currentPage);
   const { id } = useParams();
   const navigate = useNavigate();
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [page, setPage] = useState(1);
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const page = queryParams.get("page") || 1;
 
   useEffect(() => {
     dispatch(getSectionID(id));
-  }, [id, dispatch]);
+  }, [id]);
+
+  useEffect(() => {
+    queryParams.set("page", currentPage);
+    navigate(`${location.pathname}?${queryParams.toString()}`, {
+      replace: true,
+    });
+  }, [currentPage]);
 
   function handleGoBack() {
-    navigate(-1, { state: { scrollPosition, page } });
-    setPage();
+    dispatch(setCurrentPage(page));
+    navigate(-1);
   }
 
-  function handleScroll() {
-    setScrollPosition(window.pageYOffset);
-  }
+  // function handleScroll() {
+  //   setScrollPosition(window.pageYOffset);
+  // }
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.history.state?.scrollPosition) {
-      window.scrollTo(0, window.history.state.scrollPosition);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined" && location.state?.scrollPosition) {
+  //     window.scrollTo(0, location.state.scrollPosition);
+  //   }
+  // }, [location.state]);
 
   return (
     <div className="bgSectionColor">
       <NavBar />
       <div>
-        <button onClick={handleGoBack} setPage={setPage}>
-          Volver
-        </button>
+        <button onClick={handleGoBack}>Volver</button>
         <h1 className="text-black text-uppercase p-3 pt-4 pb-4 text-center">
           <font>
             <strong>{sectionId.data?.attributes.title}</strong>
@@ -60,11 +67,11 @@ export default function SectionID() {
         <div className="row">
           <div className="col-12 col-xxl-12 pt-4">
             <h1 className="text-center pb-2">Fotos</h1>
-            <SectionImagesID page={page} />
+            <SectionImagesID />
           </div>
           <div className="col-12 col-xxl-12 pt-5">
             <h1 className="text-center pb-3">Videos</h1>
-            <SectionVideosID page={page} />
+            <SectionVideosID />
           </div>
         </div>
       </div>

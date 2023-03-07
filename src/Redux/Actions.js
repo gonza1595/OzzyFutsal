@@ -72,3 +72,10 @@ export function deleteCategory() {
     type: "DELETE_CATEGORY",
   };
 }
+
+export function changePage(page) {
+  return {
+    type: "CHANGE_PAGE",
+    payload: page,
+  };
+}

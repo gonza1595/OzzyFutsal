@@ -6,7 +6,7 @@ import Pagination from "../Pagination/Pagination";
 import SearchBar from "../SearchBar/SearchBar";
 import "./Sections.css";
 
-export default function Sections({ page, setPage, setPaginaActual }) {
+export default function Sections({ page, setPage }) {
   const dispatch = useDispatch();
   const getSections = useSelector((state) => state.allSections);
 
@@ -62,6 +62,7 @@ export default function Sections({ page, setPage, setPaginaActual }) {
                 title={e.attributes.title}
                 image={e.attributes.images?.data?.map((e) => e.attributes.url)}
                 description={e.attributes.description}
+                page={page}
               />
             </article>
           ))
