@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import ozzyfoto from "../assets/ozzy page.jpeg";
 import "./NavBar.css";
 
-export default function NavBar() {
+export default function NavBar({ page }) {
+  const handleCategoriasClick = () => {
+    localStorage.setItem("currentPage", page); // Guardamos la página actual en el localStorage
+  };
+
   return (
     <nav className="navbar navbar-expand-lg ">
       <div className="container">
@@ -36,7 +40,11 @@ export default function NavBar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active fs-4 text-uppercase" href="/home">
+              <a
+                className="nav-link active fs-4 text-uppercase"
+                href="/home"
+                onClick={handleCategoriasClick}
+              >
                 Categorias
               </a>
             </li>

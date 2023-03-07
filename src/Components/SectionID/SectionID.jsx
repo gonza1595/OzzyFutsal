@@ -12,13 +12,11 @@ import "./SectionID.css";
 export default function SectionID() {
   const dispatch = useDispatch();
   const sectionId = useSelector((state) => state.sectionID);
-  const currentPage = useSelector((state) => state.currentPage);
   const { id } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const page = queryParams.get("page") || 1;
-  console.log(page);
 
   useEffect(() => {
     dispatch(getSectionID(id));
@@ -26,25 +24,8 @@ export default function SectionID() {
 
   function handleGoBack() {
     dispatch(changePage(page));
+    navigate(-1);
   }
-
-  // function handleScroll() {
-  //   setScrollPosition(window.pageYOffset);
-  // }
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   if (typeof window !== "undefined" && location.state?.scrollPosition) {
-  //     window.scrollTo(0, location.state.scrollPosition);
-  //   }
-  // }, [location.state]);
-
   return (
     <div className="bgSectionColor">
       <NavBar />
