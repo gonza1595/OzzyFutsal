@@ -2,29 +2,15 @@ import React from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { changePage } from "../../Redux/Actions";
 import "./CardSections.css";
 
-export default function CardSection({
-  title,
-  description,
-  image,
-  id,
-  page,
-  setPage,
-}) {
-  const dispatch = useDispatch(); // obtener la función dispatch del store
-  const currentPage = useSelector((state) => state.currentPage); // obtener la página actual del store
-
-  function handlePageChange(newPage) {
-    dispatch(changePage(newPage)); // enviar la nueva página al store
-    setPage(newPage);
-  }
+export default function CardSection({ title, description, image, id, page }) {
   return (
     <div>
       <Link
         className="text-decoration-none"
-        to={`/home/media/${id}?page=${page}&currentPage=${currentPage}`}
-        onClick={handlePageChange}
+        to={`/home/media/${id}?page=${page}`}
       >
         <div className="card border border-0 mx-auto bg-white cardWidth ">
           <img

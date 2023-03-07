@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getSectionID } from "../../Redux/Actions";
+import { getSectionID, changePage } from "../../Redux/Actions";
 import SectionImagesID from "./SectionImagesID";
 import SectionVideosID from "./SectionVideosID";
 import NavBar from "../NavBar/NavBar";
@@ -18,21 +18,14 @@ export default function SectionID() {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const page = queryParams.get("page") || 1;
+  console.log(page);
 
   useEffect(() => {
     dispatch(getSectionID(id));
   }, [id]);
 
-  useEffect(() => {
-    queryParams.set("page", currentPage);
-    navigate(`${location.pathname}?${queryParams.toString()}`, {
-      replace: true,
-    });
-  }, [currentPage]);
-
   function handleGoBack() {
-    dispatch(setCurrentPage(page));
-    navigate(-1);
+    dispatch(changePage(page));
   }
 
   // function handleScroll() {
