@@ -6,7 +6,7 @@ import Pagination from "../Pagination/Pagination";
 import SearchBar from "../SearchBar/SearchBar";
 import "./Sections.css";
 
-export default function Sections({ page, setPage }) {
+export default function Sections() {
   const dispatch = useDispatch();
   const getSections = useSelector((state) => state.allSections);
 
@@ -14,10 +14,15 @@ export default function Sections({ page, setPage }) {
   const [nameSearch, setNameSearch] = useState("");
 
   useEffect(() => {
+    const currentPage = localStorage.getItem("currentPage");
+    if (currentPage) {
+      setPage(parseInt(currentPage));
+    }
     dispatch(getSection());
   }, []);
 
   // pagination
+  const [page, setPage] = useState(1);
   const showPerPage = 12;
   const lastOnPage = page * showPerPage;
   const firstOnPage = lastOnPage - showPerPage;
@@ -35,6 +40,7 @@ export default function Sections({ page, setPage }) {
 
   function pagination(pageNumber) {
     setPage(pageNumber);
+    localStorage.setItem("currentPage", pageNumber);
   }
 
   return (
@@ -51,7 +57,7 @@ export default function Sections({ page, setPage }) {
           </div>
         ) : null}
 
-        {sectionsToShow && sectionsToShow.length > 0 ? (
+        {getSections.data && sectionsToShow && sectionsToShow.length > 0 ? (
           sectionsToShow.map((e) => (
             <article
               key={e.id}
@@ -75,7 +81,7 @@ export default function Sections({ page, setPage }) {
         )}
       </div>
       <div>
-        {sectionsToShow && sectionsToShow.length > 0 ? (
+        {getSections.data && sectionsToShow && sectionsToShow.length > 0 ? (
           filteredSections ? (
             <div className="pt-4 paddingSectionPaginate">
               <Pagination

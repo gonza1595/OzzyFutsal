@@ -17,16 +17,16 @@ export default function SectionID() {
 
   // guarda el objeto que representa la ubicación actual
   // de la página.
-  const location = useLocation();
+  // const location = useLocation();
 
   // crea un objeto URLSearchParams a partir de la cadena de consulta
   //   ( query string ) de la URL actual, que permite obtener los valores
   //   de los parámetros en la cadena de consulta.
-  const queryParams = new URLSearchParams(location.search);
+  // const queryParams = new URLSearchParams(location.search);
 
   // busca el valor del parámetro "page" en la cadena de consulta,
   // y si no se encuentra, asigna el valor predeterminado 1 a la variable page.
-  const page = queryParams.get("page") || 1;
+  // const page = queryParams.get("page") || 1;
 
   useEffect(() => {
     dispatch(getSectionID(id));
@@ -35,14 +35,14 @@ export default function SectionID() {
   // se utiliza para navegar hacia atrás en el historial del navegador
   // y actualizar la página actual en el estado global de la aplicación.
   function handleGoBack() {
-    dispatch(changePage(page));
+    // dispatch(changePage(page));
     navigate(-1);
   }
   return (
     <div className="bgSectionColor">
       <NavBar />
       <div>
-        <button onClick={handleGoBack}>Volver</button>
+        <a className="bi bi-arrow-left-square-fill" onClick={handleGoBack}></a>
         <h1 className="text-black text-uppercase p-3 pt-4 pb-4 text-center">
           <font>
             <strong>{sectionId.data?.attributes.title}</strong>
