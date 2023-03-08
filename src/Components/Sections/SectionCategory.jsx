@@ -20,6 +20,10 @@ export default function SectionCategory() {
   const { category } = useParams();
 
   useEffect(() => {
+    const currentPage = localStorage.getItem("currentPage");
+    if (currentPage) {
+      setPage(parseInt(currentPage));
+    }
     dispatch(filterByCategory(category));
   }, [category, dispatch]);
 
@@ -45,6 +49,7 @@ export default function SectionCategory() {
 
   function pagination(pageNumber) {
     setPage(pageNumber);
+    localStorage.setItem("currentPage", pageNumber);
   }
 
   return (

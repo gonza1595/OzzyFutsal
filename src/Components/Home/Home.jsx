@@ -6,22 +6,6 @@ import Footer from "../Footer/Footer";
 import { changePage } from "../../Redux/Actions";
 
 export default function Home() {
-  const dispatch = useDispatch();
-
-  // Define el estado para guardar la página actual
-  const [currentPage, setCurrentPage] = useState(1);
-
-  useEffect(() => {
-    // Cuando el componente se monte, busca en el localStorage el valor de la última página visitada
-    const lastPageVisited = localStorage.getItem("lastPageVisited");
-    if (lastPageVisited) {
-      setCurrentPage(parseInt(lastPageVisited));
-      dispatch(changePage(parseInt(lastPageVisited))); // actualiza el estado en redux
-    } else {
-      dispatch(changePage(1)); // si no hay valor en localStorage, se define la página 1 como página inicial
-    }
-  }, [dispatch]);
-
   return (
     <div>
       <div>
