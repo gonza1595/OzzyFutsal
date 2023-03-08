@@ -29,13 +29,14 @@ export default function Home() {
   return (
     <div>
       <div>
-        <NavBar page={page} /> // Renderiza la barra de navegación, recibe como
-        prop la página actual
+        {/* Renderiza la barra de navegación, recibe como prop la página actual */}
+        <NavBar page={page} />
       </div>
       <main className="colorBgSection pt-5 pb-5">
-        <Sections page={page} setPage={setPage} /> // Renderiza las secciones de
+        {/* Renderiza las secciones de
         la página actual, recibe como props la página actual y una función para
-        cambiarla
+        cambiarla */}
+        <Sections page={page} setPage={setPage} />
       </main>
       <div>
         <Footer /> // Renderiza el footer
