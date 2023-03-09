@@ -5,6 +5,7 @@
 
 .categoryColor {
     color: rgb(84, 33, 107);
+    font-weight: bold;
 }
 
 @media screen and (max-width: 318px) {

@@ -14,15 +14,14 @@ export default function CardSection({
   category,
 }) {
   return (
-    <div>
+    <div className="hover-overlay">
       <Link
         className="text-decoration-none"
         to={`/home/media/${id}?page=${page}`}
       >
-        <div className="card border border-0 mx-auto bg-white cardWidth bg-image hover-overlay">
+        <div className="card border border border-dark border-0 mx-auto bg-white cardWidth bg-image rounded-0">
           <img
             src={`http://localhost:1337${image[0]}`}
-            className="card-img-top"
             alt="Images"
             style={{ width: "100%", height: "240px" }}
           />
