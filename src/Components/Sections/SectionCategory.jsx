@@ -82,6 +82,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      category={e.attributes.category}
                       page={page}
                     />
                   </article>
@@ -97,6 +98,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      category={e.attributes.category}
                       page={page}
                     />
                   </article>
@@ -112,6 +114,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      category={e.attributes.category}
                       page={page}
                     />
                   </article>
@@ -127,6 +130,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      category={e.attributes.category}
                       page={page}
                     />
                   </article>
@@ -142,6 +146,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      category={e.attributes.category}
                       page={page}
                     />
                   </article>
@@ -157,6 +162,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      category={e.attributes.category}
                       page={page}
                     />
                   </article>
@@ -172,6 +178,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      category={e.attributes.category}
                       page={page}
                     />
                   </article>
@@ -187,6 +194,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      category={e.attributes.category}
                       page={page}
                     />
                   </article>

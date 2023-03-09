@@ -68,6 +68,7 @@ export default function Sections() {
                 title={e.attributes.title}
                 image={e.attributes.images?.data?.map((e) => e.attributes.url)}
                 description={e.attributes.description}
+                category={e.attributes.category}
                 page={page}
               />
             </article>

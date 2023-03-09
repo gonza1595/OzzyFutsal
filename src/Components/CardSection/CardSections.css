@@ -3,6 +3,10 @@
     width: 18rem;
 }
 
+.categoryColor {
+    color: rgb(84, 33, 107);
+}
+
 @media screen and (max-width: 318px) {
     .cardWidth {
         width: auto !important;
