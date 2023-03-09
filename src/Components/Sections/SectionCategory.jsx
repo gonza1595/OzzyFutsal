@@ -82,6 +82,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      page={page}
                     />
                   </article>
                 );
@@ -96,6 +97,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      page={page}
                     />
                   </article>
                 );
@@ -110,6 +112,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      page={page}
                     />
                   </article>
                 );
@@ -124,6 +127,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      page={page}
                     />
                   </article>
                 );
@@ -138,6 +142,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      page={page}
                     />
                   </article>
                 );
@@ -152,6 +157,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      page={page}
                     />
                   </article>
                 );
@@ -166,6 +172,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      page={page}
                     />
                   </article>
                 );
@@ -180,6 +187,7 @@ export default function SectionCategory() {
                         (e) => e.attributes.url
                       )}
                       description={e.attributes.description}
+                      page={page}
                     />
                   </article>
                 );
