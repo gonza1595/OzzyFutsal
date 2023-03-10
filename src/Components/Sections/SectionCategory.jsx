@@ -203,7 +203,7 @@ export default function SectionCategory() {
             })
           ) : (
             <div className="paddingSectionNullCategory">
-              <div className="sectionCategory-container">
+              <div className="container sectionCategory-container">
                 <i className="bi bi-exclamation-square-fill fs-1"></i>
                 <h2 className="sectionCategory-title">
                   No hay partidos de esta categoria disponible en este momento
