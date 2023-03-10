@@ -202,11 +202,18 @@ export default function SectionCategory() {
               }
             })
           ) : (
-            <article className="col-12 col-lg-12">
-              <h1 className="text-center text-black paddingSectionNull">
-                No hay partidos de esta categoria disponible en este momento
-              </h1>
-            </article>
+            <div className="paddingSectionNullCategory">
+              <div className="sectionCategory-container">
+                <i className="bi bi-exclamation-square-fill fs-1"></i>
+                <h2 className="sectionCategory-title">
+                  No hay partidos de esta categoria disponible en este momento
+                </h2>
+                <p className="sectionCategory-description">
+                  Por favor, vuelva a intentarlo más tarde o contacte al
+                  administrador del sitio.
+                </p>
+              </div>
+            </div>
           )}
           <div>
             {sectionsToShowCategory && sectionsToShowCategory.length > 0 ? (

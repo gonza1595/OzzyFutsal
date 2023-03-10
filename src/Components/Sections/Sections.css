@@ -1,15 +1,9 @@
 
 .colorBgSection {
-    background-color: rgba(83, 184, 152, 1);
-    background-image: linear-gradient(
-        135deg,
-        rgba(221, 224, 47, 0.91)
-        rgba(7, 31, 51, 0.97) 79%
-    );
-    background-image: linear-gradient(
+    background: linear-gradient(
         131deg,
-        rgba(83, 184, 152, 1) ,
-        rgb(141, 202, 197) 
+        rgb(113, 223, 188) ,
+        rgb(128, 197, 191) 
     ); 
 }
 
@@ -22,18 +16,47 @@
     padding-bottom: 31px;
 }
 
-.paddingSectionNull {
-    padding-top: 287px;
-    padding-bottom: 287px;
+.paddingSectionNullCategory {
+    padding-top: 200px !important;
+    padding-bottom: 200px !important;
 }
+
+.sectionCategory-container {
+    background: linear-gradient(
+        131deg,
+        rgb(116, 206, 177) ,
+        rgb(151, 212, 207) 
+    ); 
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .sectionCategory-container img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 50px;
+  }
+  
+  .sectionCategory-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-top: 25px;
+  }
+  
+  .sectionCategory-description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 
 @media screen and (max-width: 576px) {
     .paddingSectionPaginate {
         padding-bottom: 10px;
     }
-    .paddingSectionNull {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    .paddingSectionNullCategory {
+    padding-top: 165px !important;
+    padding-bottom: 165px !important;
     }
   }
 
@@ -41,9 +64,9 @@
     .paddingSectionPaginate {
         padding-bottom: 10px;
     }
-    .paddingSectionNull {
-        padding-top: 150px;
-        padding-bottom: 150px;
+    .paddingSectionNullCategory {
+        padding-top: 165px !important;
+        padding-bottom: 165px !important;
         }
   }
 
@@ -51,9 +74,9 @@
     .paddingSectionPaginate {
         padding-bottom: 10px; 
     }
-    .paddingSectionNull {
-        padding-top: 150px;
-        padding-bottom: 150px;
+    .paddingSectionNullCategory {
+        padding-top: 170px !important;
+        padding-bottom: 170px !important;
         }
   }
 
@@ -61,9 +84,9 @@
     .paddingSectionPaginate {
        padding-bottom: 10px;
     }
-    .paddingSectionNull {
-        padding-top: 150px;
-        padding-bottom: 150px;
+    .paddingSectionNullCategory {
+        padding-top: 175px !important;
+        padding-bottom: 175px !important;
         }
   }
 
@@ -71,9 +94,9 @@
     .paddingSectionPaginate {
         padding-bottom: 10px; 
     }
-    .paddingSectionNull {
-        padding-top: 150px;
-        padding-bottom: 150px;
+    .paddingSectionNullCategory {
+        padding-top: 183px !important;
+        padding-bottom: 183px !important;
         }
   }
 
