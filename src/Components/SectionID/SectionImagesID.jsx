@@ -51,15 +51,20 @@ export default function SectionID() {
                 </div>
               ))
             ) : (
-              <h1> Esta seccion no ha sido cargada con imagenes</h1>
+              <h1>Cargando...</h1>
             )}
           </div>
         </article>
       ) : (
-        <div className="paddingSectionVideoNull">
-          <h1 className="text-center">
-            Todavia no hay imagenes cargadas de este partido
-          </h1>
+        <div className="no-videos-container">
+          <i className="bi bi-file-earmark-image-fill fs-1"></i>
+          <h2 className="no-videos-title">
+            Todavía no se han cargado fotos de este partido
+          </h2>
+          <p className="no-videos-description">
+            Por favor, vuelva a intentarlo más tarde o contacte al administrador
+            del sitio.
+          </p>
         </div>
       )}
     </div>
