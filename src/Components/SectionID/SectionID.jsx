@@ -27,15 +27,10 @@ export default function SectionID() {
   return (
     <div className="bgSectionColor">
       <NavBar />
-      <div className="container position-relative pt-4">
-        <article
-          className="cPointer ps-4 position-absolute top-0 start-0 bi bi-arrow-left-square-fill fs-2 pt-4 "
-          onClick={handleGoBack}
-        ></article>
-        <h1 className="text-black text-uppercase text-center">
-          <strong>{sectionId.data?.attributes.title}</strong>
-        </h1>
-      </div>
+      <h1 className="text-black text-uppercase text-center pt-5">
+        <strong>{sectionId.data?.attributes.title}</strong>
+      </h1>
+
       <div className="container">
         <div className="row">
           <div className="col-12 col-xxl-12 pt-4">
