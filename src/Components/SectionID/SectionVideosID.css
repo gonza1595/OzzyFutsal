@@ -53,10 +53,33 @@ height: 800px;
   font-weight: bold;
 }
 
-.paddingSectionVideoNull {
-  padding-top: 175px;
-  padding-bottom: 175px;
+.no-videos-container {
+  background: linear-gradient(120deg, #c4cff8, #d4cfcf);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 50px;
+  text-align: center;
+  margin-top: 30px;
 }
+
+.no-videos-container img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 50px;
+}
+
+.no-videos-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-top: 25px;
+}
+
+.no-videos-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 
 .video-title {
   position: absolute;

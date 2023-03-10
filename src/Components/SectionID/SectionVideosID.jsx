@@ -3,9 +3,6 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getSectionID } from "../../Redux/Actions";
-import { Link } from "react-router-dom";
-import NavBar from "../NavBar/NavBar";
-import Footer from "../Footer/Footer";
 import ReactPlayer from "react-player";
 import "./SectionVideosID.css";
 
@@ -92,10 +89,15 @@ export default function SectionID() {
           </div>
         </article>
       ) : (
-        <div className="paddingSectionVideoNull">
-          <h1 className="text-center">
-            Todavia no hay videos cargados de este partido{" "}
-          </h1>
+        <div className="no-videos-container">
+          <i className="bi bi-camera-video-off-fill fs-1"></i>
+          <h2 className="no-videos-title">
+            Todavía no se han cargado videos de este partido
+          </h2>
+          <p className="no-videos-description">
+            Por favor, vuelva a intentarlo más tarde o contacte al administrador
+            del sitio.
+          </p>
         </div>
       )}
     </div>
