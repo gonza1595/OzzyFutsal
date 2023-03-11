@@ -5,7 +5,8 @@
 
 .categoryColor {
     color: rgb(84, 33, 107);
-    font-weight: bold;
+    font-family: 'Monofett', cursive;
+    font-size:30px;
 }
 
 @media screen and (max-width: 318px) {

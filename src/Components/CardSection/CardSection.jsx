@@ -1,8 +1,5 @@
 import React from "react";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { changePage } from "../../Redux/Actions";
 import "./CardSections.css";
 
 export default function CardSection({
@@ -32,9 +29,9 @@ export default function CardSection({
             <h5 className="card-title fw-bold pt-3">{title}</h5>
             <p className="card-text fw-normal pt-2">{description}</p>
             <div className="card-img-overlay mask">
-              <h8 className="card-title categoryColor position-absolute bottom-0 start-50 translate-middle-x">
-                Categoria: {category}
-              </h8>
+              <p className="card-title categoryColor position-absolute bottom-0 start-50 translate-middle-x">
+                {category}
+              </p>
             </div>
           </div>
         </div>
