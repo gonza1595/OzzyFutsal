@@ -20,11 +20,11 @@ export default function SectionCategory() {
   const { category } = useParams();
 
   useEffect(() => {
+    dispatch(filterByCategory(category));
     const currentPage = localStorage.getItem("currentPage");
     if (currentPage) {
       setPage(parseInt(currentPage));
     }
-    dispatch(filterByCategory(category));
   }, [category, dispatch]);
 
   // pagination
