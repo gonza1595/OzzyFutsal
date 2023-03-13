@@ -4,9 +4,10 @@
 }
 
 .categoryColor {
-    color: rgb(84, 33, 107);
-    font-family: 'Monofett', cursive;
-    font-size:30px;
+    color: rgb(55, 4, 102);
+    font-family: 'Rampart One';
+    font-weight: bold;
+    font-size:20px;
 }
 
 @media screen and (max-width: 318px) {
