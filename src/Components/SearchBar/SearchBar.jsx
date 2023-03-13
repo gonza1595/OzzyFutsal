@@ -18,7 +18,7 @@ export default function SearchBar({
     setSearchTerm(nameSearch);
   };
   return (
-    <div className="input-group pb-5 mx-auto styleSearchBar">
+    <div className="input-group pb-5 mx-auto styleSearchBar fontStyleText">
       <input
         type="search"
         className="form-control"

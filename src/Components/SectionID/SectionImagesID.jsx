@@ -58,10 +58,10 @@ export default function SectionID() {
       ) : (
         <div className="no-videos-container">
           <i className="bi bi-file-earmark-image-fill fs-1"></i>
-          <h2 className="no-videos-title">
+          <h2 className="no-videos-title fontStyleTitle">
             Todavía no se han cargado fotos de este partido
           </h2>
-          <p className="no-videos-description">
+          <p className="no-videos-description fontStyleText">
             Por favor, vuelva a intentarlo más tarde o contacte al administrador
             del sitio.
           </p>

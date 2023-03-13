@@ -205,10 +205,10 @@ export default function SectionCategory() {
             <div className="paddingSectionNullCategory">
               <div className="container sectionCategory-container">
                 <i className="bi bi-exclamation-square-fill fs-1"></i>
-                <h2 className="sectionCategory-title">
+                <h2 className="sectionCategory-title fontStyleTitle">
                   No hay partidos de esta categoria disponible en este momento
                 </h2>
-                <p className="sectionCategory-description">
+                <p className="sectionCategory-description fontStyleText">
                   Por favor, vuelva a intentarlo más tarde o contacte al
                   administrador del sitio.
                 </p>

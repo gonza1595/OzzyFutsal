@@ -12,6 +12,15 @@
     ); 
 }
 
+.fontStyleTitle {
+    font-family: 'Outfit', sans-serif;
+}
+
+.fontStyleText {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+}
+
 .paddingSection {
     padding-top: 45px;
 }

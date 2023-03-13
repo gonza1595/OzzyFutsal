@@ -13,10 +13,12 @@ export default function LandingPage() {
       <NavBar />
       <main className="pt-5 colorBg pb-5">
         <div className="container">
-          <section className="row text-white align-items-lg-center justify-content-lg-center">
+          <section className="row text-white align-items-lg-center justify-content-lg-center ">
             <article className="col-12 col-lg-6 pe-lg-4">
-              <h2>Bienvenido al lugar donde te ves mejor</h2>
-              <p className="fs-5">
+              <h2 className="fontStyleTitle">
+                Bienvenido al lugar donde te ves mejor
+              </h2>
+              <p className="fs-5 fontStyleText ">
                 {" "}
                 En esta pagina podras disfrutar de tus fotos, vas a poder ver
                 tus jugadas destacadas, tus goles, las polemicas y mucho mas...

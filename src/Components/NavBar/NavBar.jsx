@@ -28,7 +28,7 @@ export default function NavBar() {
           <ul className="navbar-nav ms-lg-auto">
             <li className="nav-item">
               <a
-                className="nav-link active fs-4 text-uppercase"
+                className="nav-link active fs-4 text-uppercase fontStyleTitle"
                 aria-current="page"
                 href="/landingpage"
               >
@@ -36,7 +36,10 @@ export default function NavBar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active fs-4 text-uppercase" href="/home">
+              <a
+                className="nav-link active fs-4 text-uppercase fontStyleTitle"
+                href="/home"
+              >
                 Categorias
               </a>
             </li>
