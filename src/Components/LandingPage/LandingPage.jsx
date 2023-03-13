@@ -45,7 +45,7 @@ export default function LandingPage() {
                     className="card-img w-100"
                     alt="..."
                   />
-                  <div className="card-img-overlay mask styleImage">
+                  <div className="card-img-overlay mask styleImage fontStyleTitle">
                     <h5 className="card-title">Primera</h5>
                   </div>
                 </div>
@@ -60,7 +60,7 @@ export default function LandingPage() {
                     className="card-img"
                     alt="..."
                   />
-                  <div className="card-img-overlay mask styleImage">
+                  <div className="card-img-overlay mask styleImage fontStyleTitle">
                     <h5 className="card-title">C 20</h5>
                   </div>
                 </div>
@@ -75,7 +75,7 @@ export default function LandingPage() {
                     className="card-img"
                     alt="..."
                   />
-                  <div className="card-img-overlay mask styleImage">
+                  <div className="card-img-overlay mask styleImage fontStyleTitle">
                     <h5 className="card-title">C 17</h5>
                   </div>
                 </div>
@@ -90,7 +90,7 @@ export default function LandingPage() {
                     className="card-img "
                     alt="..."
                   />
-                  <div className="card-img-overlay mask styleImage">
+                  <div className="card-img-overlay mask styleImage fontStyleTitle">
                     <h5 className="card-title">C 15</h5>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ export default function LandingPage() {
                     className="card-img"
                     alt="..."
                   />
-                  <div className="card-img-overlay mask styleImage">
+                  <div className="card-img-overlay mask styleImage fontStyleTitle">
                     <h5 className="card-title">C 13</h5>
                   </div>
                 </div>
@@ -120,7 +120,7 @@ export default function LandingPage() {
                     className="card-img"
                     alt="..."
                   />
-                  <div className="card-img-overlay mask styleImage">
+                  <div className="card-img-overlay mask styleImage fontStyleTitle">
                     <h5 className="card-title">C 11</h5>
                   </div>
                 </div>
@@ -135,7 +135,7 @@ export default function LandingPage() {
                     className="card-img"
                     alt="..."
                   />
-                  <div className="card-img-overlay mask styleImage">
+                  <div className="card-img-overlay mask styleImage fontStyleTitle">
                     <h5 className="card-title">C 9</h5>
                   </div>
                 </div>
@@ -150,7 +150,7 @@ export default function LandingPage() {
                     className="card-img"
                     alt="..."
                   />
-                  <div className="card-img-overlay mask styleImage">
+                  <div className="card-img-overlay mask styleImage fontStyleTitle">
                     <h5 className="card-title">C 7</h5>
                   </div>
                 </div>
