@@ -13,17 +13,11 @@ export default function SectionID() {
   const dispatch = useDispatch();
   const sectionId = useSelector((state) => state.sectionID);
   const { id } = useParams();
-  const navigate = useNavigate(); //guarda la función para navegar hacia atrás en el historial del navegador
 
   useEffect(() => {
     dispatch(getSectionID(id));
   }, [id]);
 
-  // se utiliza para navegar hacia atrás en el historial del navegador
-  // y actualizar la página actual en el estado global de la aplicación.
-  function handleGoBack() {
-    navigate(-1);
-  }
   return (
     <div className="bgSectionColor">
       <NavBar />

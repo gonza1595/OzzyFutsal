@@ -10,11 +10,16 @@ export default function CardSection({
   page,
   category,
 }) {
+  const handleLinkClick = () => {
+    localStorage.setItem("lastPageInSection", page);
+  };
+
   return (
     <div className="hover-overlay">
       <Link
         className="text-decoration-none"
         to={`/home/media/${id}?page=${page}`}
+        onClick={handleLinkClick}
       >
         <div className="card border border border-dark border-0 mx-auto bg-white cardWidth bg-image rounded-0">
           <img

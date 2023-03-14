@@ -25,7 +25,7 @@ export default function SectionCategory() {
     if (currentPage) {
       setPage(parseInt(currentPage));
     }
-  }, [category, dispatch]);
+  }, [category]);
 
   // pagination
   const [page, setPage] = useState(1);

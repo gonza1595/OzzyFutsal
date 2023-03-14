@@ -9,20 +9,23 @@ import "./Sections.css";
 export default function Sections() {
   const dispatch = useDispatch();
   const getSections = useSelector((state) => state.allSections);
-
   const [searchTerm, setSearchTerm] = useState("");
   const [nameSearch, setNameSearch] = useState("");
+  const [page, setPage] = useState(1);
 
-  useEffect(() => {
+  const getNumber = () => {
     const currentPage = localStorage.getItem("currentPage");
     if (currentPage) {
       setPage(parseInt(currentPage));
     }
+  };
+
+  useEffect(() => {
     dispatch(getSection());
+    getNumber();
   }, []);
 
   // pagination
-  const [page, setPage] = useState(1);
   const showPerPage = 12;
   const lastOnPage = page * showPerPage;
   const firstOnPage = lastOnPage - showPerPage;
