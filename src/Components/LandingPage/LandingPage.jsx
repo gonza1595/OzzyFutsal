@@ -36,12 +36,13 @@ export default function LandingPage() {
             </article>
           </section>
           <section className="row justify-content-lg-center paddingSection ">
-            <article className="col-12 col-lg-6 pt-4">
+            <h1>Busca por categoria</h1>
+            <article className="col-12 col-lg-7 pt-4">
               <a href="/home/category/Primera">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                   <img
                     src={primera}
-                    style={{ width: "auto", height: "350px" }}
+                    style={{ width: "auto", height: "380px" }}
                     className="card-img w-100"
                     alt="..."
                   />
@@ -51,12 +52,12 @@ export default function LandingPage() {
                 </div>
               </a>
             </article>
-            <article className="col-12 col-lg-6 pt-4">
+            <article className="col-12 col-lg-5 pt-4">
               <a href="/home/category/C20">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                   <img
                     src={c20}
-                    style={{ width: "auto", height: "350px" }}
+                    style={{ width: "auto", height: "380px" }}
                     className="card-img"
                     alt="..."
                   />
@@ -71,7 +72,7 @@ export default function LandingPage() {
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                   <img
                     src={c17}
-                    style={{ width: "auto", height: "350px" }}
+                    style={{ width: "auto", height: "280px" }}
                     className="card-img"
                     alt="..."
                   />
@@ -81,12 +82,12 @@ export default function LandingPage() {
                 </div>
               </a>
             </article>
-            <article className="col-12 col-lg-6 paddingTopArticles">
+            <article className="col-12 col-lg-3 paddingTopArticles">
               <a href="/home/category/C15">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                   <img
                     src={ozzyfoto}
-                    style={{ width: "auto", height: "350px" }}
+                    style={{ width: "auto", height: "280px" }}
                     className="card-img "
                     alt="..."
                   />
@@ -96,12 +97,12 @@ export default function LandingPage() {
                 </div>
               </a>
             </article>
-            <article className="col-12 col-lg-6 paddingTopArticles">
+            <article className="col-12 col-lg-3 paddingTopArticles">
               <a href="/home/category/C13">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                   <img
                     src={ozzyfoto}
-                    style={{ width: "auto", height: "350px" }}
+                    style={{ width: "auto", height: "280px" }}
                     className="card-img"
                     alt="..."
                   />
@@ -111,12 +112,12 @@ export default function LandingPage() {
                 </div>
               </a>
             </article>
-            <article className="col-12 col-lg-6 paddingTopArticles">
+            <article className="col-12 col-lg-5 paddingTopArticles">
               <a href="/home/category/C11">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                   <img
                     src={ozzyfoto}
-                    style={{ width: "auto", height: "350px" }}
+                    style={{ width: "auto", height: "280px" }}
                     className="card-img"
                     alt="..."
                   />
@@ -126,12 +127,12 @@ export default function LandingPage() {
                 </div>
               </a>
             </article>
-            <article className="col-12 col-lg-6 paddingTopArticles">
+            <article className="col-12 col-lg-3 paddingTopArticles">
               <a href="/home/category/C9">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                   <img
                     src={ozzyfoto}
-                    style={{ width: "auto", height: "350px" }}
+                    style={{ width: "auto", height: "280px" }}
                     className="card-img"
                     alt="..."
                   />
@@ -141,12 +142,12 @@ export default function LandingPage() {
                 </div>
               </a>
             </article>
-            <article className="col-12 col-lg-6 paddingTopArticles pb-4">
+            <article className="col-12 col-lg-4 paddingTopArticles pb-4">
               <a href="/home/category/C7">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                   <img
                     src={ozzyfoto}
-                    style={{ width: "auto", height: "350px" }}
+                    style={{ width: "auto", height: "280px" }}
                     className="card-img"
                     alt="..."
                   />
