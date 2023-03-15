@@ -23,16 +23,11 @@ export default function SectionCategory() {
   useEffect(() => {
     dispatch(filterByCategory(category));
     const currentPageCategory = localStorage.getItem("currentPageCategory");
-    const resetPage = 1;
-    console.log(currentPageCategory);
-    console.log(page, "aaaaaaaaaaaaaaaaaaaaaa");
     if (currentPageCategory) {
       setPage(parseInt(currentPageCategory));
       localStorage.removeItem("currentPageCategory");
     }
   }, [category]);
-
-  // localStorage.removeItem('currentPageCategory');
 
   // pagination
   const showPerPage = 12;
