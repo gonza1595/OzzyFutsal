@@ -13,7 +13,7 @@ export default function LandingPage() {
       <NavBar />
       <main className="pt-5 colorBg pb-5">
         <div className="container">
-          <section className="row text-white align-items-lg-center justify-content-lg-center ">
+          <section className="row text-white align-items-lg-center justify-content-lg-center pb-5">
             <article className="col-12 col-lg-6 pe-lg-4">
               <h2 className="fontStyleTitle">
                 Bienvenido al lugar donde te ves mejor
@@ -35,107 +35,72 @@ export default function LandingPage() {
               />
             </article>
           </section>
-          <section className="row justify-content-lg-center paddingSection ">
-            <h1>Busca por categoria</h1>
-            <article className="col-12 col-lg-7 pt-4">
-              <a href="/home/category/Primera">
-                <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img
-                    src={primera}
-                    style={{ width: "auto", height: "380px" }}
-                    className="card-img w-100"
-                    alt="..."
-                  />
-                  <div className="card-img-overlay mask styleImage fontStyleTitle">
-                    <h5 className="card-title">Primera</h5>
-                  </div>
-                </div>
-              </a>
-            </article>
-            <article className="col-12 col-lg-5 pt-4">
-              <a href="/home/category/C20">
-                <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img
-                    src={c20}
-                    style={{ width: "auto", height: "380px" }}
-                    className="card-img"
-                    alt="..."
-                  />
-                  <div className="card-img-overlay mask styleImage fontStyleTitle">
-                    <h5 className="card-title">C 20</h5>
-                  </div>
-                </div>
-              </a>
-            </article>
-            <article className="col-12 col-lg-6 paddingTopArticles">
+          <section className="grid-container row justify-content-lg-center paddingSection">
+            <article className="col-12 col-lg-4 paddingTopArticles">
               <a href="/home/category/C17">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img
-                    src={c17}
-                    style={{ width: "auto", height: "280px" }}
-                    className="card-img"
-                    alt="..."
-                  />
+                  <img src={c17} className="card-img" alt="..." />
                   <div className="card-img-overlay mask styleImage fontStyleTitle">
                     <h5 className="card-title">C 17</h5>
                   </div>
                 </div>
               </a>
             </article>
-            <article className="col-12 col-lg-3 paddingTopArticles">
+            <article className="col-12 col-lg-4 pt-4">
               <a href="/home/category/C15">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img
-                    src={ozzyfoto}
-                    style={{ width: "auto", height: "280px" }}
-                    className="card-img "
-                    alt="..."
-                  />
+                  <img src={primera} className="card-img w-100" alt="..." />
                   <div className="card-img-overlay mask styleImage fontStyleTitle">
                     <h5 className="card-title">C 15</h5>
                   </div>
                 </div>
               </a>
             </article>
-            <article className="col-12 col-lg-3 paddingTopArticles">
+            <article className="col-12 col-lg-4 pt-4">
               <a href="/home/category/C13">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img
-                    src={ozzyfoto}
-                    style={{ width: "auto", height: "280px" }}
-                    className="card-img"
-                    alt="..."
-                  />
+                  <img src={c20} className="card-img" alt="..." />
                   <div className="card-img-overlay mask styleImage fontStyleTitle">
                     <h5 className="card-title">C 13</h5>
                   </div>
                 </div>
               </a>
             </article>
-            <article className="col-12 col-lg-5 paddingTopArticles">
+            <article className="col-12 col-lg-6 paddingTopArticles">
+              <a href="/home/category/Primera">
+                <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
+                  <img src={primera} className="card-img" alt="..." />
+                  <div className="card-img-overlay mask styleImage fontStyleTitle">
+                    <h5 className="card-title">Primera</h5>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article className="col-12 col-lg-6 paddingTopArticles">
+              <a href="/home/category/C20">
+                <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
+                  <img src={c20} className="card-img " alt="..." />
+                  <div className="card-img-overlay mask styleImage fontStyleTitle">
+                    <h5 className="card-title">C 20</h5>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article className="col-12 col-lg-4 paddingTopArticles">
               <a href="/home/category/C11">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img
-                    src={ozzyfoto}
-                    style={{ width: "auto", height: "280px" }}
-                    className="card-img"
-                    alt="..."
-                  />
+                  <img src={ozzyfoto} className="card-img" alt="..." />
                   <div className="card-img-overlay mask styleImage fontStyleTitle">
                     <h5 className="card-title">C 11</h5>
                   </div>
                 </div>
               </a>
             </article>
-            <article className="col-12 col-lg-3 paddingTopArticles">
+            <article className="col-12 col-lg-4 paddingTopArticles">
               <a href="/home/category/C9">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img
-                    src={ozzyfoto}
-                    style={{ width: "auto", height: "280px" }}
-                    className="card-img"
-                    alt="..."
-                  />
+                  <img src={ozzyfoto} className="card-img" alt="..." />
                   <div className="card-img-overlay mask styleImage fontStyleTitle">
                     <h5 className="card-title">C 9</h5>
                   </div>
@@ -145,12 +110,7 @@ export default function LandingPage() {
             <article className="col-12 col-lg-4 paddingTopArticles pb-4">
               <a href="/home/category/C7">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img
-                    src={ozzyfoto}
-                    style={{ width: "auto", height: "280px" }}
-                    className="card-img"
-                    alt="..."
-                  />
+                  <img src={ozzyfoto} className="card-img" alt="..." />
                   <div className="card-img-overlay mask styleImage fontStyleTitle">
                     <h5 className="card-title">C 7</h5>
                   </div>
