@@ -42,7 +42,7 @@ export default function Footer() {
             color="light"
             floating
             className="m-1"
-            href="#!"
+            href="https://wa.me/5492613894469?text=Hola%20Ozzy%20!!%20Como%20estas%20?%20Me%20gustar%C3%ADa%20que%20me%20pasaras%20las%20fotos%20y%20los%20videos%20personalmente.%20Gracias%20!!"
             role="button"
           >
             <MDBIcon fab icon="whatsapp" />

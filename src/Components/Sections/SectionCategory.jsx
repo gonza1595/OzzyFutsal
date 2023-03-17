@@ -27,7 +27,7 @@ export default function SectionCategory() {
       setPage(parseInt(currentPageCategory));
       localStorage.removeItem("currentPageCategory");
     }
-  }, [category]);
+  }, [category, dispatch]);
 
   // pagination
   const showPerPage = 12;

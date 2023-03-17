@@ -13,7 +13,7 @@ export default function LandingPage() {
       <NavBar />
       <main className="pt-5 colorBg pb-5">
         <div className="container">
-          <section className="row text-white align-items-lg-center justify-content-lg-center pb-5">
+          <section className="row text-white align-items-lg-center justify-content-lg-center">
             <article className="col-12 col-lg-6 pe-lg-4">
               <h2 className="fontStyleTitle">
                 Bienvenido al lugar donde te ves mejor
@@ -35,7 +35,7 @@ export default function LandingPage() {
               />
             </article>
           </section>
-          <section className="grid-container row justify-content-lg-center paddingSection">
+          <section className="row justify-content-lg-center paddingSection mt-5">
             <article className="col-12 col-lg-4 paddingTopArticles">
               <a href="/home/category/C17">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">

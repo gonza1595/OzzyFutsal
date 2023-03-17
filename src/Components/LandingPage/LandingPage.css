@@ -37,24 +37,15 @@
     background-color: hsla(0, 0%, 98%, 0.2);
 }
 
-.grid-container {
-    background: linear-gradient(
-        131deg,
-        rgba(47, 139, 197, 0.92),
-        rgb(111, 226, 190) 
-    ); 
-    border-radius: 5px;
-    padding: 40px;
-  }
-  
-  .grid-container article:hover {
+
+.row article:hover {
     transform: translateY(-5px);
     transition: transform 0.2s ease-out;
   }
   
-  .grid-container img {
+  .row img {
     width: 100%;
-    height: 350px;
+    height: 380px;
   }
   
   
