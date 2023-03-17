@@ -22,7 +22,6 @@ export default function SectionCategory() {
   const { category } = useParams();
 
   const currentPageCategory = localStorage.getItem("currentPageCategory");
-  console.log(currentPageCategory);
 
   useEffect(() => {
     dispatch(filterByCategory(category));
