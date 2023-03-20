@@ -66,16 +66,14 @@ export default function SectionCategory() {
       <div>
         <NavBar />
       </div>
-      {sectionsToShowCategory && sectionsToShowCategory.length > 0 ? (
-        <div className="pt-5">
-          <SearchBar
-            nameSearch={nameSearch}
-            setNameSearch={setNameSearch}
-            setSearchTerm={setSearchTerm}
-            setPage={setPage}
-          />
-        </div>
-      ) : null}
+      <div className="pt-5">
+        <SearchBar
+          nameSearch={nameSearch}
+          setNameSearch={setNameSearch}
+          setSearchTerm={setSearchTerm}
+          setPage={setPage}
+        />
+      </div>
       <div className="container pt-1 pb-5">
         <div className="row grid-container">
           {sectionsToShowCategory && sectionsToShowCategory.length > 0 ? (

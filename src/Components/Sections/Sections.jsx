@@ -48,17 +48,15 @@ export default function Sections() {
 
   return (
     <div className="container">
-      <div className="row">
-        {sectionsToShow && sectionsToShow.length > 0 ? (
-          <div>
-            <SearchBar
-              nameSearch={nameSearch}
-              setNameSearch={setNameSearch}
-              setSearchTerm={setSearchTerm}
-              setPage={setPage}
-            />
-          </div>
-        ) : null}
+      <div className="row ">
+        <div>
+          <SearchBar
+            nameSearch={nameSearch}
+            setNameSearch={setNameSearch}
+            setSearchTerm={setSearchTerm}
+            setPage={setPage}
+          />
+        </div>
 
         {getSections.data && sectionsToShow && sectionsToShow.length > 0 ? (
           sectionsToShow.map((e) => (
