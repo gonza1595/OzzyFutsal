@@ -38,7 +38,7 @@ export default function LandingPage() {
               />
             </article>
           </section>
-          <section className="row justify-content-lg-center paddingSection mt-5">
+          <section className="row justify-content-lg-center paddingSection mt-5 grid-container">
             <article className="col-12 col-lg-4 paddingTopArticles">
               <a href="/home/category/C17">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">

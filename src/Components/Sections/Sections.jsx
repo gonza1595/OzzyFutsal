@@ -48,7 +48,7 @@ export default function Sections() {
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row grid-container">
         {sectionsToShow && sectionsToShow.length > 0 ? (
           <div>
             <SearchBar

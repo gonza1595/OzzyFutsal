@@ -77,7 +77,7 @@ export default function SectionCategory() {
         </div>
       ) : null}
       <div className="container pt-1 pb-5">
-        <div className="row">
+        <div className="row grid-container">
           {sectionsToShowCategory && sectionsToShowCategory.length > 0 ? (
             sectionsToShowCategory.map((e) => {
               if (e.attributes.category === "Primera") {
