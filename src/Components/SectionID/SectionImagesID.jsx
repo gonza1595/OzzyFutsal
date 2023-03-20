@@ -3,9 +3,6 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getSectionID } from "../../Redux/Actions";
-import { Link } from "react-router-dom";
-import NavBar from "../NavBar/NavBar";
-import Footer from "../Footer/Footer";
 import baguetteBox from "baguettebox.js";
 import "./SectionImagesID.css";
 
