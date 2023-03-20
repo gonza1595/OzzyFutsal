@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getSectionID } from "../../Redux/Actions";
 import SectionImagesID from "./SectionImagesID";
