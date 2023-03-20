@@ -47,7 +47,7 @@ export default function Sections() {
   }
 
   return (
-    <div className="container">
+    <div className="container grid-container">
       <div className="row ">
         <div>
           <SearchBar
