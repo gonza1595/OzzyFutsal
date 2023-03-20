@@ -19,7 +19,7 @@ export default function SectionID() {
     dispatch(getSectionID(id));
   }, [id, dispatch]);
 
-  baguetteBox.run(".container ", {
+  baguetteBox.run(".container-fluid", {
     captions: true,
   });
 
@@ -30,12 +30,15 @@ export default function SectionID() {
   return (
     <div>
       {sectionImages ? (
-        <article className="container">
+        <article className="container-fluid">
           <div className="row">
             {sectionId.data ? (
               sectionId.data.attributes.images.data.map((e, id) => (
-                <div className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 imagePadding pe-3">
-                  <div className="imageBorder bg-image hover-zoom ">
+                <div
+                  key={id}
+                  className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 imagePadding pe-3"
+                >
+                  <div className="imageBorder bg-image hover-zoom">
                     <a
                       href={`http://localhost:1337${e.attributes.url}`}
                       data-caption={e.attributes.alternativeText}

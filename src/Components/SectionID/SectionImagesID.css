@@ -1,9 +1,9 @@
 .imageBorder {
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 .imagePadding {
-    padding: 13px;
+    padding: 14px;
 }
 
 .bgSectionColor {
@@ -13,3 +13,4 @@
         rgb(117, 218, 51) 
     ); 
 }
+

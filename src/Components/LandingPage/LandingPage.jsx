@@ -8,9 +8,9 @@ import c17 from "../assets/C17.jpeg";
 import "./LandingPage.css";
 
 export default function LandingPage() {
-  const currentPageCategory = localStorage.getItem("currentPageCategory");
+  localStorage.getItem("currentPageCategory");
   localStorage.removeItem("currentPageCategory");
-  console.log(currentPageCategory);
+
   return (
     <div>
       <NavBar />

@@ -82,9 +82,11 @@ export default function SectionCategory() {
             sectionsToShowCategory.map((e) => {
               if (e.attributes.category === "Primera") {
                 return (
-                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                  <article
+                    key={e.id}
+                    className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards"
+                  >
                     <CardSection
-                      key={e.id}
                       id={e.id}
                       title={e.attributes.title}
                       image={e.attributes.images?.data?.map(
@@ -98,9 +100,11 @@ export default function SectionCategory() {
                 );
               } else if (e.attributes.category === "C20") {
                 return (
-                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                  <article
+                    key={e.id}
+                    className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards"
+                  >
                     <CardSection
-                      key={e.id}
                       id={e.id}
                       title={e.attributes.title}
                       image={e.attributes.images?.data?.map(
@@ -114,9 +118,11 @@ export default function SectionCategory() {
                 );
               } else if (e.attributes.category === "C17") {
                 return (
-                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                  <article
+                    key={e.id}
+                    className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards"
+                  >
                     <CardSection
-                      key={e.id}
                       id={e.id}
                       title={e.attributes.title}
                       image={e.attributes.images?.data?.map(
@@ -130,9 +136,11 @@ export default function SectionCategory() {
                 );
               } else if (e.attributes.category === "C15") {
                 return (
-                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                  <article
+                    key={e.id}
+                    className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards"
+                  >
                     <CardSection
-                      key={e.id}
                       id={e.id}
                       title={e.attributes.title}
                       image={e.attributes.images?.data?.map(
@@ -146,9 +154,11 @@ export default function SectionCategory() {
                 );
               } else if (e.attributes.category === "C13") {
                 return (
-                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                  <article
+                    key={e.id}
+                    className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards"
+                  >
                     <CardSection
-                      key={e.id}
                       id={e.id}
                       title={e.attributes.title}
                       image={e.attributes.images?.data?.map(
@@ -162,9 +172,11 @@ export default function SectionCategory() {
                 );
               } else if (e.attributes.category === "C11") {
                 return (
-                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                  <article
+                    key={e.id}
+                    className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards"
+                  >
                     <CardSection
-                      key={e.id}
                       id={e.id}
                       title={e.attributes.title}
                       image={e.attributes.images?.data?.map(
@@ -178,9 +190,11 @@ export default function SectionCategory() {
                 );
               } else if (e.attributes.category === "C9") {
                 return (
-                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                  <article
+                    key={e.id}
+                    className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards"
+                  >
                     <CardSection
-                      key={e.id}
                       id={e.id}
                       title={e.attributes.title}
                       image={e.attributes.images?.data?.map(
@@ -194,9 +208,11 @@ export default function SectionCategory() {
                 );
               } else if (e.attributes.category === "C7") {
                 return (
-                  <article className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards">
+                  <article
+                    key={e.id}
+                    className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards"
+                  >
                     <CardSection
-                      key={e.id}
                       id={e.id}
                       title={e.attributes.title}
                       image={e.attributes.images?.data?.map(
