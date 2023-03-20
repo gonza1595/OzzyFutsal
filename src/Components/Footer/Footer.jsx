@@ -1,14 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import logoOzzy from "../assets/ozzy page.jpeg";
-import {
-  MDBFooter,
-  MDBContainer,
-  MDBCol,
-  MDBRow,
-  MDBIcon,
-  MDBBtn,
-} from "mdb-react-ui-kit";
+import { MDBFooter, MDBContainer, MDBIcon, MDBBtn } from "mdb-react-ui-kit";
 
 export default function Footer() {
   return (
