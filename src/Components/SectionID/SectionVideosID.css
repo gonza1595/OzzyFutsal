@@ -40,17 +40,12 @@ height: 800px;
 }
 
 .cardID:hover {
-    transform: scale(1.1);
+    transform: scale(1.040);
 }
 
 .videoSize {
   width: 100% !important;
   height: 100% !important;
-}
-
-.textPosition {
-  margin-top: -30px;
-  font-weight: bold;
 }
 
 .no-videos-container {
@@ -78,7 +73,6 @@ height: 800px;
   font-size: 16px;
   line-height: 1.5;
 }
-
 
 .video-title {
   position: absolute;
