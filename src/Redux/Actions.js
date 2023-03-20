@@ -50,32 +50,3 @@ export function filterByCategory(category) {
     }
   };
 }
-export function getSectionTitle(title) {
-  return async function (dispatch) {
-    try {
-      let getSectionTitle = await axios.get(
-        `http://localhost:1337/api/sections?filters[title][$eq]=${title}&&populate=videos&&populate=images`
-      );
-
-      return dispatch({
-        type: "GET_SECTION_TITLE",
-        payload: getSectionTitle.data,
-      });
-    } catch (error) {
-      alert("No hay secciones con el nombre buscado");
-    }
-  };
-}
-
-export function deleteCategory() {
-  return {
-    type: "DELETE_CATEGORY",
-  };
-}
-
-export function changePage(page) {
-  return {
-    type: "CHANGE_PAGE",
-    payload: page,
-  };
-}
