@@ -16,7 +16,6 @@ export default function SectionCategory() {
   const [searchTerm, setSearchTerm] = useState("");
   const [nameSearch, setNameSearch] = useState("");
   const [page, setPage] = useState(1);
-  const [montado, setMontado] = useState(false);
 
   const dispatch = useDispatch();
   const { category } = useParams();
@@ -25,17 +24,10 @@ export default function SectionCategory() {
 
   useEffect(() => {
     dispatch(filterByCategory(category));
-    if (montado) {
-      setPage(parseInt(1));
-      localStorage.removeItem("currentPageCategory");
-      setMontado(true);
-    } else {
-      if (currentPageCategory) {
-        setPage(parseInt(currentPageCategory));
-        localStorage.removeItem("currentPageCategory");
-      }
+    if (currentPageCategory) {
+      setPage(parseInt(currentPageCategory));
     }
-  }, [category, montado]);
+  }, [category]);
 
   // pagination
   const showPerPage = 12;
