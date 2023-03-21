@@ -66,14 +66,17 @@ export default function SectionCategory() {
       <div>
         <NavBar />
       </div>
-      <div className="pt-5">
-        <SearchBar
-          nameSearch={nameSearch}
-          setNameSearch={setNameSearch}
-          setSearchTerm={setSearchTerm}
-          setPage={setPage}
-        />
-      </div>
+      {(sectionsToShowCategory && sectionsToShowCategory.length > 0) ||
+      nameSearch ? (
+        <div className="pt-5">
+          <SearchBar
+            nameSearch={nameSearch}
+            setNameSearch={setNameSearch}
+            setSearchTerm={setSearchTerm}
+            setPage={setPage}
+          />
+        </div>
+      ) : null}
       <div className="container pt-1 pb-5">
         <div className="row grid-container">
           {sectionsToShowCategory && sectionsToShowCategory.length > 0 ? (
@@ -228,13 +231,27 @@ export default function SectionCategory() {
             <div className="paddingSectionNullCategory">
               <div className="container sectionCategory-container">
                 <i className="bi bi-exclamation-square-fill fs-1"></i>
-                <h2 className="sectionCategory-title fontStyleTitle">
-                  No hay partidos de esta categoria disponible en este momento
-                </h2>
-                <p className="sectionCategory-description fontStyleText">
-                  Por favor, vuelva a intentarlo más tarde o contacte al
-                  administrador del sitio.
-                </p>
+                {nameSearch ? (
+                  <>
+                    <h2 className="sectionCategory-title fontStyleTitle">
+                      Ningun elemento coincide con el criterio de busqueda
+                    </h2>
+                    <p className="sectionCategory-description fontStyleText">
+                      Por favor, intente con otro nombre.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <h2 className="sectionCategory-title fontStyleTitle">
+                      No hay partidos de esta categoria disponibles en este
+                      momento
+                    </h2>
+                    <p className="sectionCategory-description fontStyleText">
+                      Por favor, vuelva a intentarlo más tarde o contacte al
+                      administrador del sitio.
+                    </p>
+                  </>
+                )}
               </div>
             </div>
           )}
@@ -254,7 +271,6 @@ export default function SectionCategory() {
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   );

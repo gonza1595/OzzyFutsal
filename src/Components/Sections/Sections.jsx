@@ -62,7 +62,7 @@ export default function Sections() {
           sectionsToShow.map((e) => (
             <article
               key={e.id}
-              className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards "
+              className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 paddingSectionsCards"
             >
               <CardSection
                 id={e.id}
@@ -78,13 +78,26 @@ export default function Sections() {
           <div className="paddingSectionNullCategory">
             <div className="container sectionCategory-container">
               <i className="bi bi-exclamation-square-fill fs-1"></i>
-              <h2 className="sectionCategory-title fontStyleTitle">
-                No hay partidos disponibles en este momento
-              </h2>
-              <p className="sectionCategory-description fontStyleText">
-                Por favor, vuelva a intentarlo más tarde o contacte al
-                administrador del sitio.
-              </p>
+              {nameSearch ? (
+                <>
+                  <h2 className="sectionCategory-title fontStyleTitle">
+                    Ningun elemento coincide con el criterio de busqueda
+                  </h2>
+                  <p className="sectionCategory-description fontStyleText">
+                    Por favor, intente con otro nombre.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <h2 className="sectionCategory-title fontStyleTitle">
+                    No hay partidos disponibles en este momento
+                  </h2>
+                  <p className="sectionCategory-description fontStyleText">
+                    Por favor, vuelva a intentarlo más tarde o contacte al
+                    administrador del sitio.
+                  </p>
+                </>
+              )}
             </div>
           </div>
         )}
