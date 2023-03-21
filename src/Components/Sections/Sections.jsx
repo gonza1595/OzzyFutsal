@@ -23,7 +23,7 @@ export default function Sections() {
   useEffect(() => {
     dispatch(getSection());
     getNumber();
-  }, []);
+  });
 
   // pagination
   const showPerPage = 12;
