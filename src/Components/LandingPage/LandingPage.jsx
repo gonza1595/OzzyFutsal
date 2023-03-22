@@ -19,7 +19,7 @@ export default function LandingPage() {
           <section className="row text-white">
             <article className="col-12 col-lg-12">
               <h2 className="fontSizeTitle text-center landingPaddingTitle fontStyleTitle">
-                Bienvenido al lugar donde te ves MEJOR
+                Bienvenido al lugar donde te ves MEJOR!!
               </h2>
               <p className="fontStyleText fontSizeText text-center pt-3">
                 {" "}
@@ -31,7 +31,17 @@ export default function LandingPage() {
                 </p>
               </p>
             </article>
-            <article className="col-12 col-lg-6">
+          </section>
+          <section className="row justify-content-center pt-5">
+            <article className="col-12 col-lg-5 pt-5">
+              <img
+                className="img-fluid"
+                style={{ width: "100%", height: "350px" }}
+                src={ozzyfoto}
+                alt="Bienvenido al lugar donde te ves mejor"
+              />
+            </article>
+            <article className="col-12 col-lg-5 pt-5">
               <img
                 className="img-fluid"
                 style={{ width: "100%", height: "350px" }}

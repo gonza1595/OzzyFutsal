@@ -61,38 +61,59 @@
     width: 100%;
     height: 350px;
   }
+
   
-  
-  @media screen and (max-width: 280px) {
-      .fontSizeTitle {
-          font-size: 52px !important;
-      }
-    }
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 395px) {
       .fontSizeTitle {
           font-size: 65px;
       }
+  }
+  @media screen and (max-width: 360px) {
+      .fontSizeTitle {
+            font-size: 62px;
+        }
+        .fontSizeText {
+            font-size: 25px;
+        }
+    }
+    @media screen and (max-width: 345px) {
+        .fontSizeTitle {
+            font-size: 62px !important;
+        }
+    }
+    @media screen and (max-width: 330px) {
+        .fontSizeTitle {
+            font-size: 59px !important;
+        }
+    }
+    
+    @media screen and (max-width: 315px) {
+        .fontSizeTitle {
+            font-size: 56px !important;
+        }
+    }
+    @media screen and (max-width: 300px) {
+        .fontSizeTitle {
+            font-size: 50px !important;
+        }
     }
 
-  @media screen and (max-width: 375px) {
-    .fontSizeTitle {
-        font-size: 65px;
+    @media screen and (max-width: 280px) {
+        .fontSizeTitle {
+            font-size: 42px !important;
+        }
+        .fontSizeText {
+            font-size: 22px;
+        }
     }
-  }
-@media screen and (max-width: 992px) {
-    .paddingSection {
-        padding-top: 10px;
+    @media screen and (max-width: 235px) {
+        .fontSizeTitle {
+            font-size: 35px !important;
+        }
+        .fontSizeText {
+            font-size: 18px;
+        }
     }
-  }
 
-@media screen and (max-width: 1200px) {
-    .paddingSection {
-        padding-top: 10px;
-    }
-  }
 
-@media screen and (max-width: 1400px) {
-    .paddingSection {
-        padding-top: 10px;
-    }
-  }
+    

@@ -21,7 +21,7 @@ export default function SectionID() {
   return (
     <div className="bgSectionColor">
       <NavBar />
-      <h1 className="text-uppercase text-center pt-5 fontSize">
+      <h1 className="text-uppercase text-center pt-5 fontSize fontStyleTitle">
         <strong>{sectionId.data?.attributes.title}</strong>
       </h1>
 
