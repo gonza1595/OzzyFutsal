@@ -26,7 +26,7 @@ export default function Sections() {
   });
 
   // pagination
-  const showPerPage = 12;
+  const showPerPage = 8;
   const lastOnPage = page * showPerPage;
   const firstOnPage = lastOnPage - showPerPage;
 
@@ -48,16 +48,15 @@ export default function Sections() {
 
   return (
     <div className="container grid-container">
-      <div className="row ">
-        <div>
-          <SearchBar
-            nameSearch={nameSearch}
-            setNameSearch={setNameSearch}
-            setSearchTerm={setSearchTerm}
-            setPage={setPage}
-          />
-        </div>
-
+      <div>
+        <SearchBar
+          nameSearch={nameSearch}
+          setNameSearch={setNameSearch}
+          setSearchTerm={setSearchTerm}
+          setPage={setPage}
+        />
+      </div>
+      <div className="row">
         {getSections.data && sectionsToShow && sectionsToShow.length > 0 ? (
           sectionsToShow.map((e) => (
             <article

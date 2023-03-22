@@ -30,7 +30,7 @@ export default function SectionCategory() {
   }, [category]);
 
   // pagination
-  const showPerPage = 12;
+  const showPerPage = 8;
   const lastOnPage = page * showPerPage;
   const firstOnPage = lastOnPage - showPerPage;
 
