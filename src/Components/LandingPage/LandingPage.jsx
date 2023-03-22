@@ -18,7 +18,7 @@ export default function LandingPage() {
         <div className="container">
           <section className="row text-white">
             <article className="col-12 col-lg-12">
-              <h2 className="fontSizeTitle text-center landingPaddingTitle">
+              <h2 className="fontSizeTitle text-center landingPaddingTitle fontStyleTitle">
                 Bienvenido al lugar donde te ves MEJOR
               </h2>
               <p className="fontStyleText fontSizeText text-center pt-3">

@@ -26,7 +26,7 @@
     
 }
 .fontSizeTitle {
-    font-size: 90px;
+    font-size: 75px;
 }
 
 .fontStyleText {
@@ -62,19 +62,23 @@
     height: 350px;
   }
   
+  
+  @media screen and (max-width: 280px) {
+      .fontSizeTitle {
+          font-size: 52px !important;
+      }
+    }
+  @media screen and (max-width: 360px) {
+      .fontSizeTitle {
+          font-size: 65px;
+      }
+    }
 
-@media screen and (max-width: 576px) {
-    .paddingSection {
-        padding-top: 10px;
+  @media screen and (max-width: 375px) {
+    .fontSizeTitle {
+        font-size: 65px;
     }
   }
-
-@media screen and (max-width: 768px) {
-    .paddingSection {
-        padding-top: 10px;
-    }
-  }
-
 @media screen and (max-width: 992px) {
     .paddingSection {
         padding-top: 10px;
