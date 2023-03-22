@@ -16,17 +16,19 @@ export default function LandingPage() {
       <NavBar />
       <main className="pt-5 colorBg pb-5">
         <div className="container">
-          <section className="row text-white align-items-lg-center justify-content-lg-center">
-            <article className="col-12 col-lg-6 pe-lg-4">
-              <h2 className="fontStyleTitle">
-                Bienvenido al lugar donde te ves mejor
+          <section className="row text-white">
+            <article className="col-12 col-lg-12">
+              <h2 className="fontSizeTitle text-center landingPaddingTitle">
+                Bienvenido al lugar donde te ves MEJOR
               </h2>
-              <p className="fs-5 fontStyleText ">
+              <p className="fontStyleText fontSizeText text-center pt-3">
                 {" "}
                 En esta pagina podras disfrutar de tus fotos, vas a poder ver
                 tus jugadas destacadas, tus goles, las polemicas y mucho mas...
-                Todo captado desde el magico celular del Ozzy!! Espero que los
-                disfruten
+                <p className="fontStyleText">
+                  Todo captado desde el magico celular del Ozzy!! Espero que los
+                  disfruten
+                </p>
               </p>
             </article>
             <article className="col-12 col-lg-6">

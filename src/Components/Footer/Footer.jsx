@@ -42,11 +42,11 @@ export default function Footer() {
       </MDBContainer>
 
       <div
-        className="text-center p-3 fontStyleTitle"
+        className="text-center p-3 fontStyleFooter"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
       >
         © 2023 Copyright:
-        <a className="text-white text-decoration-none fontStyleTitle">
+        <a className="text-white text-decoration-none fontStyleFooter">
           {" "}
           OzzyTioFutsal
         </a>
