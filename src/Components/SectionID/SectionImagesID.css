@@ -3,7 +3,7 @@
 }
 
 .imagePadding {
-    padding: 14px;
+    padding: 5px;
 }
 
 .bgSectionColor {
@@ -14,3 +14,8 @@
     ); 
 }
 
+.iconHearth {
+    width: auto;
+    height: 25px;
+   color: red;
+  }

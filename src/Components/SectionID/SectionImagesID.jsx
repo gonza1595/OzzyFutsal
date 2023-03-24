@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getSectionID } from "../../Redux/Actions";
 import baguetteBox from "baguettebox.js";
+import { ReactComponent as IconHearth } from "../assets/suit-heart.svg";
 import "./SectionImagesID.css";
 
 export default function SectionID() {
@@ -23,6 +24,12 @@ export default function SectionID() {
   const sectionImages = sectionId.data?.attributes.images?.data?.map(
     (e) => e.attributes.url
   );
+
+  function handleFavoriteClick(id) {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    favorites.push(id);
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }
 
   return (
     <div>
@@ -48,6 +55,11 @@ export default function SectionID() {
                       />
                     </a>
                   </div>
+
+                  <IconHearth
+                    className="iconHearth"
+                    onClick={() => handleFavoriteClick(e.id)}
+                  />
                 </div>
               ))
             ) : (

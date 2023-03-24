@@ -7,6 +7,7 @@ import SectionCategory from "./Components/Sections/SectionCategory";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import SectionImagesID from "./Components/SectionID/SectionImagesID";
 import SectionVideosID from "./Components/SectionID/SectionVideosID";
+import Favorites from "./Components/Favorites/Favorites";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           path="/home/media/:id/videos"
           element={<SectionVideosID />}
         />
+        <Route exact path="/landingpage/favorites" element={<Favorites />} />
       </Routes>
     </div>
   );

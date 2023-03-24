@@ -6,6 +6,7 @@ import primera from "../assets/PRIMERA.jpeg";
 import c20 from "../assets/C20.jpeg";
 import c17 from "../assets/C17.jpeg";
 import "./LandingPage.css";
+import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   localStorage.getItem("currentPageCategory");
@@ -133,6 +134,13 @@ export default function LandingPage() {
               </a>
             </article>
           </section>
+        </div>
+        <div>
+          <h1>Favoritos</h1>
+          <h2>Accede a tus fotos y videos favoritos</h2>
+          <Link to={"/landingpage/favorites"}>
+            <button>Entra Aqui</button>
+          </Link>
         </div>
       </main>
       <div>
