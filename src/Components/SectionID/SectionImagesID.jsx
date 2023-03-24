@@ -26,9 +26,10 @@ export default function SectionID() {
   );
 
   function handleFavoriteClick(id) {
-    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    favorites.push(id);
-    localStorage.setItem("favorites", JSON.stringify(favorites));
+    const favoritesImages =
+      JSON.parse(localStorage.getItem("favoritesImages")) || [];
+    favoritesImages.push(id);
+    localStorage.setItem("favoritesImages", JSON.stringify(favoritesImages));
   }
 
   return (
