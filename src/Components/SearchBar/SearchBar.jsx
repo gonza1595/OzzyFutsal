@@ -17,6 +17,13 @@ export default function SearchBar({
     event.preventDefault();
     setSearchTerm(nameSearch);
   };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleSubmit(event);
+    }
+  };
+
   return (
     <div className="input-group pb-5 mx-auto styleSearchBar fontStyleText">
       <input
@@ -24,6 +31,7 @@ export default function SearchBar({
         className="form-control"
         placeholder="Buscar..."
         onChange={(event) => handleSearch(event)}
+        onKeyPress={(event) => handleKeyPress(event)}
       />
       <button
         type="button"

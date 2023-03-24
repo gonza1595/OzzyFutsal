@@ -13,17 +13,14 @@ export default function Sections() {
   const [nameSearch, setNameSearch] = useState("");
   const [page, setPage] = useState(1);
 
-  const getNumber = () => {
-    const currentPage = localStorage.getItem("currentPage");
-    if (currentPage) {
-      setPage(parseInt(currentPage));
-    }
-  };
+  const currentPage = localStorage.getItem("currentPage");
 
   useEffect(() => {
     dispatch(getSection());
-    getNumber();
-  });
+    if (currentPage) {
+      setPage(parseInt(currentPage));
+    }
+  }, [dispatch]);
 
   // pagination
   const showPerPage = 8;
@@ -49,15 +46,19 @@ export default function Sections() {
   return (
     <div className="container grid-container">
       <div>
-        <SearchBar
-          nameSearch={nameSearch}
-          setNameSearch={setNameSearch}
-          setSearchTerm={setSearchTerm}
-          setPage={setPage}
-        />
+        {(sectionsToShow && sectionsToShow.length > 0) || nameSearch ? (
+          <div className="pt-5">
+            <SearchBar
+              nameSearch={nameSearch}
+              setNameSearch={setNameSearch}
+              setSearchTerm={setSearchTerm}
+              setPage={setPage}
+            />
+          </div>
+        ) : null}
       </div>
       <div className="row">
-        {getSections.data && sectionsToShow && sectionsToShow.length > 0 ? (
+        {sectionsToShow && sectionsToShow.length > 0 ? (
           sectionsToShow.map((e) => (
             <article
               key={e.id}
@@ -102,7 +103,7 @@ export default function Sections() {
         )}
       </div>
       <div>
-        {getSections.data && sectionsToShow && sectionsToShow.length > 0 ? (
+        {sectionsToShow && sectionsToShow.length > 0 ? (
           filteredSections ? (
             <div className="pt-4 paddingSectionPaginate">
               <Pagination
