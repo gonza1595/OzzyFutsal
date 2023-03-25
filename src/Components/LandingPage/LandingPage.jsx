@@ -20,7 +20,10 @@ export default function LandingPage() {
           <section className="row text-white">
             <article className="col-12 col-lg-12">
               <h2 className="fontSizeTitle text-center landingPaddingTitle fontStyleTitle">
-                Bienvenido al lugar donde te ves MEJOR!!
+                Bienvenido..!!!
+              </h2>
+              <h2 className="fontSizeTitle text-center fontStyleTitle">
+                al lugar donde MEJOR te ves
               </h2>
               <p className="fontStyleText fontSizeText text-center pt-3">
                 {" "}
