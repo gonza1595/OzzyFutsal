@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { getSection } from "../../Redux/Actions";
 import { useDispatch, useSelector } from "react-redux";
+import baguetteBox from "baguettebox.js";
 
 export default function FavoritesImages() {
   const favoritesImages =
@@ -12,46 +13,49 @@ export default function FavoritesImages() {
     dispatch(getSection());
   }, [getSection]);
 
-  const imageIds = getSections.data?.map((e) =>
-    e.attributes.images.data?.map((img) => img.id)
-  );
+  const imagesFavorites = getSections.data
+    ?.filter((section) =>
+      section.attributes.images.data.some((image) =>
+        favoritesImages.includes(image.id)
+      )
+    )
+    .map((section) =>
+      section.attributes.images.data.filter((image) =>
+        favoritesImages.includes(image.id)
+      )
+    )
+    .flat();
 
-  const imagesFavorites = getSections.data?.reduce((acc, section) => {
-    const sectionImages = section.attributes.images.data?.filter((image) =>
-      favoritesImages.includes(image.id)
-    );
-    if (sectionImages) {
-      acc.push(...sectionImages);
-    }
-    return acc;
-  }, []);
-
-  console.log(imagesFavorites);
+  baguetteBox.run(".container-fluid", {
+    captions: true,
+  });
 
   return (
-    <div>
+    <div className="container-fluid">
       <div>
-        {imagesFavorites.length > 0 ? (
+        {imagesFavorites ? (
           <article>
-            <div>
-              {imagesFavorites.map((e, id) => (
+            <div className="row">
+              {imagesFavorites?.map((e, id) => (
                 <div
                   key={id}
                   className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 imagePadding pe-3"
                 >
-                  <div className="imageBorder bg-image hover-zoom">
-                    <a
-                      href={`http://localhost:1337${e.attributes.url}`}
-                      data-caption={e.attributes.alternativeText}
-                    >
-                      <img
-                        src={`http://localhost:1337${e.attributes.url}`}
-                        alt="Image"
-                        className="img-top"
-                        style={{ width: "100%", height: "300px" }}
-                      />
-                    </a>
-                  </div>
+                  {e && e.attributes && e.attributes.url && (
+                    <div className="imageBorder bg-image hover-zoom">
+                      <a
+                        href={`http://localhost:1337${e.attributes.url}`}
+                        data-caption={e.attributes.alternativeText}
+                      >
+                        <img
+                          src={`http://localhost:1337${e.attributes.url}`}
+                          alt="Image"
+                          className="img-top"
+                          style={{ width: "100%", height: "300px" }}
+                        />
+                      </a>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

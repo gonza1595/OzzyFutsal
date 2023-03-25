@@ -24,7 +24,6 @@ export default function SectionID() {
       <h1 className="text-uppercase text-center pt-5 fontSize fontStyleTitle">
         <strong>{sectionId.data?.attributes.title}</strong>
       </h1>
-
       <div className="container">
         <div className="row">
           <div className="col-12 col-xxl-12 pt-4">
@@ -37,7 +36,6 @@ export default function SectionID() {
           </div>
         </div>
       </div>
-
       <div className="pt-5">
         <Footer />
       </div>
