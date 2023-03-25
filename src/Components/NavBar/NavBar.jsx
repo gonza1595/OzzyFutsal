@@ -43,6 +43,14 @@ export default function NavBar() {
                 Categorias
               </a>
             </li>
+            <li className="nav-item">
+              <a
+                className="nav-link active fs-4 text-uppercase fontStyleTitle"
+                href="/landingpage/favorites"
+              >
+                Favoritos
+              </a>
+            </li>
           </ul>
         </div>
       </div>
