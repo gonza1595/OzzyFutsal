@@ -14,8 +14,27 @@
     ); 
 }
 
-.iconHearth {
+.circle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .iconHearth {
     width: auto;
-    height: 25px;
-   color: red;
+    height: 20px;
+    color: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .circle:hover {
+    opacity: 0.7;
   }

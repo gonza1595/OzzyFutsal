@@ -23,7 +23,7 @@ export default function LandingPage() {
                 Bienvenido...!!!
               </h2>
               <h2 className="fontSizeTitle text-center fontStyleTitle">
-                al lugar donde MEJOR te ves
+                Al lugar donde MEJOR te ves
               </h2>
               <p className="fontStyleText fontSizeText text-center pt-3">
                 {" "}

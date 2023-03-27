@@ -43,7 +43,13 @@ export default function SectionID() {
                   key={id}
                   className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 imagePadding pe-3"
                 >
-                  <div className="imageBorder bg-image hover-zoom">
+                  <div className="imageBorder bg-image hover-zoom hover-overlay position-relative">
+                    <div className="circle card-img-overlay mask d-none d-md-block">
+                      <i
+                        className="iconHearth card-img-overlay mask"
+                        onClick={() => handleFavoriteClick(e.id)}
+                      ></i>
+                    </div>
                     <a
                       href={`http://localhost:1337${e.attributes.url}`}
                       data-caption={e.attributes.alternativeText}
@@ -56,11 +62,6 @@ export default function SectionID() {
                       />
                     </a>
                   </div>
-
-                  <IconHearth
-                    className="iconHearth"
-                    onClick={() => handleFavoriteClick(e.id)}
-                  />
                 </div>
               ))
             ) : (
