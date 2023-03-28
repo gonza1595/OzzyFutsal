@@ -23,6 +23,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 6px;
+    margin-right: 6px;
   }
   
   .iconHearth {
@@ -36,5 +38,5 @@
   }
 
   .circle:hover {
-    opacity: 0.7;
+    opacity: 0.8;
   }

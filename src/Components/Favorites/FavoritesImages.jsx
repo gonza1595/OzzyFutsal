@@ -26,6 +26,17 @@ export default function FavoritesImages() {
     )
     .flat();
 
+  const uniqueImages = [];
+
+  if (imagesFavorites && imagesFavorites.length) {
+    for (let i = 0; i < imagesFavorites.length; i++) {
+      const image = imagesFavorites[i];
+      if (!uniqueImages.find((item) => item.id === image.id)) {
+        uniqueImages.push(image);
+      }
+    }
+  }
+
   baguetteBox.run(".container-fluid", {
     captions: true,
   });
@@ -33,10 +44,10 @@ export default function FavoritesImages() {
   return (
     <div className="container-fluid">
       <div>
-        {imagesFavorites ? (
+        {uniqueImages.length > 0 ? (
           <article>
             <div className="row">
-              {imagesFavorites?.map((e, id) => (
+              {uniqueImages.map((e, id) => (
                 <div
                   key={id}
                   className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 imagePadding pe-3"
