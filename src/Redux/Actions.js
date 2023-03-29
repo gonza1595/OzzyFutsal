@@ -4,7 +4,7 @@ export function getSection() {
   return async function (dispatch) {
     try {
       let getSection = await axios.get(
-        "http://localhost:1337/api/sections?populate=videos&&populate=images"
+        "http://localhost:1337/api/sections?populate=videos&&populate=images&&pagination[page]=1&pagination[pageSize]=1000"
       );
       return dispatch({
         type: "GET_SECTION",

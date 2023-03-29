@@ -20,7 +20,7 @@ export default function SectionID() {
   const sectionImages = sectionId.data?.attributes.images?.data?.map(
     (e) => e.attributes.url
   );
-  console.log(sectionImages);
+
   const [imageFavorites, setImageFavorites] = useState({});
 
   useEffect(() => {
@@ -36,12 +36,6 @@ export default function SectionID() {
     // se actualiza el estado "imageFavorites" con el objeto "imageFavoriteState"
     setImageFavorites(imageFavoriteState);
   }, []);
-
-  const href = sectionId.data?.attributes.images.data?.map((e) => {
-    {
-      `http://localhost:1337${e.attributes.url}`;
-    }
-  });
 
   function handleFavoriteClick(id) {
     // leemos la lista de imagenes favoritas almacenadas en el localStorage
@@ -70,58 +64,46 @@ export default function SectionID() {
   return (
     <div>
       {sectionImages ? (
-        <div className="container-fluid">
+        <article className="container-fluid">
           <div className="row">
-            <article className="col-xxl-9 col-xl-8 col-lg-8">
-              <div className="row">
-                {sectionId.data ? (
-                  sectionId.data.attributes.images.data.map((e, id) => (
-                    <div
-                      key={id}
-                      className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 imagePadding pe-3"
+            {sectionId.data ? (
+              sectionId.data.attributes.images.data.map((e, id) => (
+                <div
+                  key={id}
+                  className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 imagePadding pe-3 hover-overlay"
+                >
+                  <div className="imageBorder bg-image position-relative">
+                    <a
+                      href={`http://localhost:1337${e.attributes.url}`}
+                      data-caption={e.attributes.alternativeText}
                     >
-                      <div className="imageBorder bg-image position-relative hover-overlay">
-                        <a
-                          href={`http://localhost:1337${e.attributes.url}`}
-                          data-caption={e.attributes.alternativeText}
-                        >
-                          <img
-                            src={`http://localhost:1337${e.attributes.url}`}
-                            alt="Image"
-                            className="img-top"
-                            style={{ width: "100%", height: "300px" }}
-                          />
-                        </a>
-                        {/* <div className="card-image-overlay mask">
-                          <div
-                            className="circle position-absolute top-0 end-0"
-                            onClick={() => handleFavoriteClick(e.id)}
-                          >
-                            {imageFavorites[e.id] ? (
-                              <IconHeartFill className="iconHeart" />
-                            ) : (
-                              <IconHeart className="iconHeart" />
-                            )}
-                          </div>
-                        </div> */}
-                        <div
-                          className="btn btn-outline-primary w-100 mt-3"
-                          onClick={() => handleFavoriteClick(e.id)}
-                        >
-                          {imageFavorites[e.id]
-                            ? "Eliminar de favoritos"
-                            : "Agregar a favoritos"}
-                        </div>
+                      <img
+                        src={`http://localhost:1337${e.attributes.url}`}
+                        alt="Image"
+                        className="img-top"
+                        style={{ width: "100%", height: "300px" }}
+                      />
+                    </a>
+                    <div className="">
+                      <div
+                        className="circle position-absolute top-0 end-0"
+                        onClick={() => handleFavoriteClick(e.id)}
+                      >
+                        {imageFavorites[e.id] ? (
+                          <IconHeartFill className="iconHeart" />
+                        ) : (
+                          <IconHeart className="iconHeart" />
+                        )}
                       </div>
                     </div>
-                  ))
-                ) : (
-                  <h1>Cargando...</h1>
-                )}
-              </div>
-            </article>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <h1>Cargando...</h1>
+            )}
           </div>
-        </div>
+        </article>
       ) : (
         <div className="no-videos-container">
           <i className="bi bi-file-earmark-image-fill fs-1"></i>

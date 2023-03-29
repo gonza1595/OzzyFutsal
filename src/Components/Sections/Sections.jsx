@@ -9,6 +9,7 @@ import "./Sections.css";
 export default function Sections() {
   const dispatch = useDispatch();
   const getSections = useSelector((state) => state.sections);
+  console.log(getSections);
   const [searchTerm, setSearchTerm] = useState("");
   const [nameSearch, setNameSearch] = useState("");
   const [page, setPage] = useState(1);
