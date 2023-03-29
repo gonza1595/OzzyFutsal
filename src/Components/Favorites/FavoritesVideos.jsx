@@ -105,11 +105,11 @@ export default function Favorites() {
           <div className="no-videos-container">
             <i className="bi bi-camera-video-off-fill fs-1"></i>
             <h2 className="no-videos-title fontStyleTitle">
-              Todavía no se han cargado videos de este partido
+              No has seleccionado ningun video como favorito
             </h2>
             <p className="no-videos-description fontStyleText">
-              Por favor, vuelva a intentarlo más tarde o contacte al
-              administrador del sitio.
+              Por favor, vuelve u elige las fotos que mas te gusten para poder
+              visualizarlas aqui.
             </p>
           </div>
         )}
