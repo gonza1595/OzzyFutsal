@@ -22,21 +22,14 @@
 
 .fontStyleTitle {
     font-family: 'Outfit', sans-serif;
-    font-weight: 600;
+    font-weight:bold !important;
     
-}
-.fontSizeTitle {
-    font-size: 75px;
 }
 
 .fontStyleText {
     font-family: 'Outfit', sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     
-}
-
-.fontSizeText {
-    font-size: 27px;
 }
 
 .paddingSection {
@@ -79,7 +72,7 @@
   }
 
   
-  @media screen and (max-width: 395px) {
+  /* @media screen and (max-width: 395px) {
       .fontSizeTitle {
           font-size: 65px;
       }
@@ -130,6 +123,6 @@
             font-size: 18px;
         }
     }
-
+ */
 
     

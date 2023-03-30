@@ -19,13 +19,13 @@ export default function LandingPage() {
         <div className="container">
           <section className="row text-white">
             <article className="col-12 col-lg-12">
-              <h2 className="fontSizeTitle text-center landingPaddingTitle fontStyleTitle">
+              <h2 className=" text-center display-1 landingPaddingTitle fontStyleTitle">
                 Bienvenido...!!!
               </h2>
-              <h2 className="fontSizeTitle text-center fontStyleTitle">
+              <h2 className="display-1 text-center fontStyleTitle">
                 Al lugar donde MEJOR te ves
               </h2>
-              <p className="fontStyleText fontSizeText text-center pt-3">
+              <p className="fs-3 fontStyleText text-center pt-3">
                 {" "}
                 En esta pagina podras disfrutar de tus fotos, vas a poder ver
                 tus jugadas destacadas, tus goles, las polemicas y mucho mas...
