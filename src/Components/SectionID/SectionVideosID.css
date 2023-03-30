@@ -43,6 +43,10 @@ height: 800px;
     transform: scale(1.040);
 }
 
+.cardID:hover .circle {
+  opacity: 1;
+}
+
 .videoSize {
   width: 100% !important;
   height: 100% !important;

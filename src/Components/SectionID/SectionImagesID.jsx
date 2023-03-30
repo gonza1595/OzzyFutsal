@@ -84,17 +84,15 @@ export default function SectionID() {
                         style={{ width: "100%", height: "300px" }}
                       />
                     </a>
-                    <div className="">
-                      <div
-                        className="circle position-absolute top-0 end-0"
-                        onClick={() => handleFavoriteClick(e.id)}
-                      >
-                        {imageFavorites[e.id] ? (
-                          <IconHeartFill className="iconHeart" />
-                        ) : (
-                          <IconHeart className="iconHeart" />
-                        )}
-                      </div>
+                    <div
+                      className="circle position-absolute top-0 end-0"
+                      onClick={() => handleFavoriteClick(e.id)}
+                    >
+                      {imageFavorites[e.id] ? (
+                        <IconHeartFill className="iconHeart" />
+                      ) : (
+                        <IconHeart className="iconHeart" />
+                      )}
                     </div>
                   </div>
                 </div>

@@ -85,25 +85,25 @@ export default function SectionID() {
                   className="col-xxl-6 col-xl-4 col-lg-4 col-md-6 col-sm-12 pe-4 pb-4"
                   key={index}
                 >
-                  <div className="cardID position-relative hover-overlay">
+                  <div className="cardID position-relative">
                     <div onClick={() => handleVideoClick(index)}>
                       <video
                         className="videoSize"
                         src={`http://localhost:1337${e.attributes.url}`}
                       />
                     </div>
-                    <div className="card-image-overlay mask">
-                      <div
-                        className="circle position-absolute top-0 end-0"
-                        onClick={() => handleFavoriteClick(e.id)}
-                      >
-                        {videoFavorites[e.id] ? (
-                          <IconHeartFill className="iconHeart" />
-                        ) : (
-                          <IconHeart className="iconHeart" />
-                        )}
-                      </div>
+
+                    <div
+                      className="circle position-absolute top-0 end-0"
+                      onClick={() => handleFavoriteClick(e.id)}
+                    >
+                      {videoFavorites[e.id] ? (
+                        <IconHeartFill className="iconHeart" />
+                      ) : (
+                        <IconHeart className="iconHeart" />
+                      )}
                     </div>
+
                     <p className="card-text text-center video-title">
                       {e.attributes.alternativeText}
                     </p>
