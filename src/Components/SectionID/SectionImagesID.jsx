@@ -70,7 +70,7 @@ export default function SectionID() {
               sectionId.data.attributes.images.data.map((e, id) => (
                 <div
                   key={id}
-                  className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 imagePadding pe-3 hover-overlay"
+                  className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 imagePadding pe-3"
                 >
                   <div className="imageBorder bg-image position-relative">
                     <a

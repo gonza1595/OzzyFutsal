@@ -1,6 +1,5 @@
 .imageBorder {
     border-radius: 2px;
-    
 }
 
 .imagePadding {
@@ -26,8 +25,18 @@
     align-items: center;
     margin-top: 6px;
     margin-right: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
-  
+
+  .imageBorder:hover .circle {
+    opacity: 1;
+  }
+
+  .circle:hover {
+    opacity: 0.75 !important;
+  }
+
   .iconHearth {
     width: auto;
     height: 20px;
@@ -38,6 +47,3 @@
     transform: translate(-50%, -50%);
   }
 
-  .circle:hover {
-    opacity: 0.8;
-  }
