@@ -11,7 +11,7 @@ export default function CardSection({
   category,
 }) {
   return (
-    <div className="hover-overlay">
+    <div>
       <Link
         className="text-decoration-none"
         to={`/home/media/${id}?page=${page}`}
@@ -30,7 +30,7 @@ export default function CardSection({
             <p className="card-text fw-normal pt-2 fontStyleText">
               {description}
             </p>
-            <div className="card-img-overlay mask">
+            <div>
               <p className="card-title categoryColor position-absolute bottom-0 start-50 translate-middle-x">
                 {category}
               </p>
