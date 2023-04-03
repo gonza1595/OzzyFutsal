@@ -137,17 +137,25 @@ export default function LandingPage() {
               </a>
             </article>
           </section>
-          <section className="row landingFavorites-container margin-container">
+          <section className="row">
             <article className="col-12 col-lg-12">
-              <h1 className="text-center fontStyleTitle">Favoritos</h1>
-              <h2 className="fontStyleText text-center fs-4 pt-3">
-                En la seccion de favoritos podras acceder a tu propia galeria de
-                imagenes y videos
-              </h2>
-              <div className="text-center pt-4">
-                <Link to={"/landingpage/favorites"}>
-                  <button>Entra Aqui</button>
-                </Link>
+              <div className="backgroundImage landingFavorites-container margin-container">
+                <div>
+                  <h1 className="text-center fontStyleTitle text-white">
+                    Favoritos
+                  </h1>
+                  <h2 className="fontStyleText text-center fs-4 pt-3 text-white">
+                    En la seccion de favoritos podras acceder a tu propia
+                    galeria de imagenes y videos
+                  </h2>
+                </div>
+                <div className="text-center pt-4">
+                  <Link to={"/landingpage/favorites"}>
+                    <button className="btn btn-light fw-bold">
+                      Presiona Aqui
+                    </button>
+                  </Link>
+                </div>
               </div>
             </article>
           </section>

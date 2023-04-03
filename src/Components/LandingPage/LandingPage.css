@@ -56,20 +56,22 @@
   }
 
   .landingFavorites-container {
-    background: linear-gradient(
-        131deg,
-        rgb(116, 206, 177) ,
-        rgb(151, 212, 207) 
-    ); 
     border-radius: 5px;
-    width: auto; 
-    height: 450px;
-    align-items: center;
+    height: 650px;
   }
 
   .margin-container {
     margin-top: 120px !important;
   }
 
+  .backgroundImage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../assets/bgImage-opacity.jpeg");
+    background-size: cover;
+   background-position-y: 45%;
+  }
   
     
