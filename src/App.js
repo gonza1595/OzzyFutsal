@@ -8,6 +8,7 @@ import LandingPage from "./Components/LandingPage/LandingPage";
 import SectionImagesID from "./Components/SectionID/SectionImagesID";
 import SectionVideosID from "./Components/SectionID/SectionVideosID";
 import Favorites from "./Components/Favorites/Favorites";
+import BestGoals from "./Components/BestGoals/BestGoals";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           element={<SectionVideosID />}
         />
         <Route exact path="/landingpage/favorites" element={<Favorites />} />
+        <Route exact path="/landingpage/bestgoals" element={<BestGoals />} />
       </Routes>
     </div>
   );
