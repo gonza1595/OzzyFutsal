@@ -251,7 +251,7 @@ export default function LandingPage() {
                   </h2>
                 </div>
                 <div className="text-center pt-4">
-                  <Link to={"/landingpage/favorites"}>
+                  <Link to={"/landingpage/bestgoals"}>
                     <button className="btn btn-light fw-bold">
                       Presiona Aqui
                     </button>
