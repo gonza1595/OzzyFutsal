@@ -146,7 +146,11 @@ export default function LandingPage() {
                   </h1>
                   <h2 className="fontStyleText text-center fs-4 pt-3 text-white">
                     En la seccion de favoritos podras acceder a tu propia
-                    galeria de imagenes y videos
+                    galeria de imagenes y videos, tendras las fotos
+                  </h2>
+                  <h2 className="fontStyleText text-center fs-4 text-white">
+                    y los videos que mas te gusten y los podras ver las veces
+                    que quieras!!!
                   </h2>
                 </div>
                 <div className="text-center pt-4">
