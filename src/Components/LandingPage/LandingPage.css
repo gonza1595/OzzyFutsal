@@ -78,4 +78,20 @@
    background-position-y: 45%;
   }
   
-    
+  .carousel-control-next-icon::after {
+    display: none;
+  }
+
+  .carousel-control-prev-icon::after {
+    display: none;
+  }
+
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+
+    display: inline-block !important; 
+    width: 8rem !important; 
+    height: 2rem !important;
+    background-repeat: no-repeat !important; 
+    background-position: 50% !important; 
+   background-size: 100% 100% !important;
+  }

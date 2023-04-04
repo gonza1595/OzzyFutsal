@@ -54,15 +54,20 @@ export default function LandingPage() {
               />
             </article>
           </section>
-          <section className="row pt-5">
+          <section className="row margin-container">
             <article className="col-12 col-lg-12">
+              <div className="">
+                <h1 className="fontStyleTitle text-center text-white pb-4 text-bold">
+                  Buscar por categoria
+                </h1>
+              </div>
               <div
                 id="carouselExampleControls"
                 className="carousel slide"
                 data-bs-ride="carousel"
               >
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
                     <a href="/home/category/Primera">
                       <div className="card border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                         <img
@@ -71,7 +76,9 @@ export default function LandingPage() {
                           alt="..."
                         />
                         <div className="card-img-overlay mask styleImage fontStyleTitle">
-                          <h5 className="card-title">Primera</h5>
+                          <h5 className="card-title display-5 text-white">
+                            Primera
+                          </h5>
                         </div>
                       </div>
                     </a>
@@ -85,7 +92,7 @@ export default function LandingPage() {
                           alt="..."
                         />
                         <div className="card-img-overlay mask styleImage fontStyleTitle">
-                          <h5 className="card-title">C 20</h5>
+                          <h5 className="card-title display-5">C20</h5>
                         </div>
                       </div>
                     </a>
@@ -99,7 +106,7 @@ export default function LandingPage() {
                           alt="..."
                         />
                         <div className="card-img-overlay mask styleImage fontStyleTitle">
-                          <h5 className="card-title">C 17</h5>
+                          <h5 className="card-title display-5">C17</h5>
                         </div>
                       </div>
                     </a>
@@ -113,7 +120,7 @@ export default function LandingPage() {
                           alt="..."
                         />
                         <div className="card-img-overlay mask styleImage fontStyleTitle">
-                          <h5 className="card-title">C 15</h5>
+                          <h5 className="card-title display-5">C15</h5>
                         </div>
                       </div>
                     </a>
@@ -127,7 +134,7 @@ export default function LandingPage() {
                           alt="..."
                         />
                         <div className="card-img-overlay mask styleImage fontStyleTitle">
-                          <h5 className="card-title">C 13</h5>
+                          <h5 className="card-title display-5">C13</h5>
                         </div>
                       </div>
                     </a>
@@ -141,7 +148,7 @@ export default function LandingPage() {
                           alt="..."
                         />
                         <div className="card-img-overlay mask styleImage fontStyleTitle">
-                          <h5 className="card-title">C 11</h5>
+                          <h5 className="card-title display-5">C11</h5>
                         </div>
                       </div>
                     </a>
@@ -155,7 +162,7 @@ export default function LandingPage() {
                           alt="..."
                         />
                         <div className="card-img-overlay mask styleImage fontStyleTitle">
-                          <h5 className="card-title">C 9</h5>
+                          <h5 className="card-title display-5">C9</h5>
                         </div>
                       </div>
                     </a>
@@ -169,36 +176,36 @@ export default function LandingPage() {
                           alt="..."
                         />
                         <div className="card-img-overlay mask styleImage fontStyleTitle">
-                          <h5 className="card-title">C 7</h5>
+                          <h5 className="card-title display-5">C7</h5>
                         </div>
                       </div>
                     </a>
                   </div>
+                  <button
+                    className="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      className="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span className="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    className="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      className="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span className="visually-hidden">Next</span>
+                  </button>
                 </div>
-                <button
-                  className="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#carouselExampleControls"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    className="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span className="visually-hidden">Previous</span>
-                </button>
-                <button
-                  className="carousel-control-next"
-                  type="button"
-                  data-bs-target="#carouselExampleControls"
-                  data-bs-slide="next"
-                >
-                  <span
-                    className="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span className="visually-hidden">Next</span>
-                </button>
               </div>
             </article>
           </section>
