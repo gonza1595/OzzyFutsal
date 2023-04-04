@@ -51,6 +51,14 @@ export default function NavBar() {
                 Favoritos
               </a>
             </li>
+            <li className="nav-item">
+              <a
+                className="nav-link active fs-4 text-uppercase fontStyleTitle"
+                href="/landingpage/bestgoals"
+              >
+                Mejores Goles
+              </a>
+            </li>
           </ul>
         </div>
       </div>
