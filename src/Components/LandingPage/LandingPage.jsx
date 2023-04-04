@@ -68,7 +68,7 @@ export default function LandingPage() {
               >
                 <div className="carousel-inner">
                   <div className="carousel-item active">
-                    <a href="/home/category/Primera">
+                    <a href="/landingpage/home/category/Primera">
                       <div className="card border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                         <img
                           src={primera}
@@ -84,7 +84,7 @@ export default function LandingPage() {
                     </a>
                   </div>
                   <div className="carousel-item">
-                    <a href="/home/category/C20">
+                    <a href="/landingpage/home/category/C20">
                       <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                         <img
                           src={c20}
@@ -98,7 +98,7 @@ export default function LandingPage() {
                     </a>
                   </div>
                   <div className="carousel-item">
-                    <a href="/home/category/C17">
+                    <a href="/landingpage/home/category/C17">
                       <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                         <img
                           src={c17}
@@ -112,7 +112,7 @@ export default function LandingPage() {
                     </a>
                   </div>
                   <div className="carousel-item">
-                    <a href="/home/category/C15">
+                    <a href="/landingpage/home/category/C15">
                       <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                         <img
                           src={primera}
@@ -126,7 +126,7 @@ export default function LandingPage() {
                     </a>
                   </div>
                   <div className="carousel-item">
-                    <a href="/home/category/C13">
+                    <a href="/landingpage/home/category/C13">
                       <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                         <img
                           src={c20}
@@ -140,7 +140,7 @@ export default function LandingPage() {
                     </a>
                   </div>
                   <div className="carousel-item">
-                    <a href="/home/category/C11">
+                    <a href="/landingpage/home/category/C11">
                       <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                         <img
                           src={ozzyfoto}
@@ -154,7 +154,7 @@ export default function LandingPage() {
                     </a>
                   </div>
                   <div className="carousel-item">
-                    <a href="/home/category/C9">
+                    <a href="/landingpage/home/category/C9">
                       <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                         <img
                           src={ozzyfoto}
@@ -168,7 +168,7 @@ export default function LandingPage() {
                     </a>
                   </div>
                   <div className="carousel-item">
-                    <a href="/home/category/C7">
+                    <a href="/landingpage/home/category/C7">
                       <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
                         <img
                           src={ozzyfoto}

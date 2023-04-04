@@ -46,7 +46,7 @@ export default function NavBar() {
             <li className="nav-item">
               <a
                 className="nav-link active fs-4 text-uppercase fontStyleTitle"
-                href="/landingpage/favorites"
+                href="/favorites"
               >
                 Favoritos
               </a>
@@ -54,7 +54,7 @@ export default function NavBar() {
             <li className="nav-item">
               <a
                 className="nav-link active fs-4 text-uppercase fontStyleTitle"
-                href="/landingpage/bestgoals"
+                href="/bestgoals"
               >
                 Mejores Goles
               </a>

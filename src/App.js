@@ -16,7 +16,10 @@ function App() {
       <Routes>
         <Route path="/landingpage" element={<LandingPage />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/home/category/:category" element={<SectionCategory />} />
+        <Route
+          path="/landingpage/home/category/:category"
+          element={<SectionCategory />}
+        />
         <Route path="/home/media/:id" element={<SectionID />} />
         <Route
           exact
@@ -29,7 +32,9 @@ function App() {
           element={<SectionVideosID />}
         />
         <Route exact path="/landingpage/favorites" element={<Favorites />} />
+        <Route exact path="/favorites" element={<Favorites />} />
         <Route exact path="/landingpage/bestgoals" element={<BestGoals />} />
+        <Route exact path="/bestgoals" element={<BestGoals />} />
       </Routes>
     </div>
   );
