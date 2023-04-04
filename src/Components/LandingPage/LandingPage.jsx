@@ -19,13 +19,13 @@ export default function LandingPage() {
         <div className="container">
           <section className="row text-white">
             <article className="col-12 col-lg-12">
-              <h2 className=" text-center display-1 landingPaddingTitle fontStyleTitle">
+              <h2 className=" text-center display-1 landingPaddingTitle fontStyleTitle text-dark">
                 Bienvenido...!!!
               </h2>
-              <h2 className="display-1 text-center fontStyleTitle">
+              <h2 className="display-1 text-center fontStyleTitle text-dark">
                 Al lugar donde MEJOR te ves
               </h2>
-              <p className="fs-3 fontStyleText text-center pt-3">
+              <p className="fs-3 fontStyleText text-center pt-3 text-dark">
                 {" "}
                 En esta pagina podras disfrutar de tus fotos, vas a poder ver
                 tus jugadas destacadas, tus goles, las polemicas y mucho mas...
@@ -57,7 +57,7 @@ export default function LandingPage() {
           <section className="row margin-container">
             <article className="col-12 col-lg-12">
               <div className="">
-                <h1 className="fontStyleTitle text-center text-white pb-4 text-bold">
+                <h1 className="fontStyleTitle text-center text-dark pb-4 text-bold">
                   Buscar por categoria
                 </h1>
               </div>
@@ -209,89 +209,6 @@ export default function LandingPage() {
               </div>
             </article>
           </section>
-          {/* <section className="row justify-content-lg-center paddingSection mt-5 grid-container">
-            <article className="col-12 col-lg-4 paddingTopArticles">
-              <a href="/home/category/C17">
-                <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img src={c17} className="card-img" alt="..." />
-                  <div className="card-img-overlay mask styleImage fontStyleTitle">
-                    <h5 className="card-title">C 17</h5>
-                  </div>
-                </div>
-              </a>
-            </article>
-            <article className="col-12 col-lg-4 pt-4">
-              <a href="/home/category/C15">
-                <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img src={primera} className="card-img w-100" alt="..." />
-                  <div className="card-img-overlay mask styleImage fontStyleTitle">
-                    <h5 className="card-title">C 15</h5>
-                  </div>
-                </div>
-              </a>
-            </article>
-            <article className="col-12 col-lg-4 pt-4">
-              <a href="/home/category/C13">
-                <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img src={c20} className="card-img" alt="..." />
-                  <div className="card-img-overlay mask styleImage fontStyleTitle">
-                    <h5 className="card-title">C 13</h5>
-                  </div>
-                </div>
-              </a>
-            </article>
-            <article className="col-12 col-lg-6 paddingTopArticles">
-              <a href="/home/category/Primera">
-                <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img src={primera} className="card-img" alt="..." />
-                  <div className="card-img-overlay mask styleImage fontStyleTitle">
-                    <h5 className="card-title">Primera</h5>
-                  </div>
-                </div>
-              </a>
-            </article>
-            <article className="col-12 col-lg-6 paddingTopArticles">
-              <a href="/home/category/C20">
-                <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img src={c20} className="card-img " alt="..." />
-                  <div className="card-img-overlay mask styleImage fontStyleTitle">
-                    <h5 className="card-title">C 20</h5>
-                  </div>
-                </div>
-              </a>
-            </article>
-
-            <article className="col-12 col-lg-4 paddingTopArticles">
-              <a href="/home/category/C11">
-                <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img src={ozzyfoto} className="card-img" alt="..." />
-                  <div className="card-img-overlay mask styleImage fontStyleTitle">
-                    <h5 className="card-title">C 11</h5>
-                  </div>
-                </div>
-              </a>
-            </article>
-            <article className="col-12 col-lg-4 paddingTopArticles">
-              <a href="/home/category/C9">
-                <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img src={ozzyfoto} className="card-img" alt="..." />
-                  <div className="card-img-overlay mask styleImage fontStyleTitle">
-                    <h5 className="card-title">C 9</h5>
-                  </div>
-                </div>
-              </a>
-            </article>
-            <article className="col-12 col-lg-4 paddingTopArticles pb-4">
-              <a href="/home/category/C7">
-                <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
-                  <img src={ozzyfoto} className="card-img" alt="..." />
-                  <div className="card-img-overlay mask styleImage fontStyleTitle">
-                    <h5 className="card-title">C 7</h5>
-                  </div>
-                </div>
-              </a>
-            </article>
-          </section> */}
           <section className="row">
             <article className="col-12 col-lg-12">
               <div className="backgroundImage landingFavorites-container margin-container">
@@ -306,6 +223,31 @@ export default function LandingPage() {
                   <h2 className="fontStyleText text-center fs-4 text-white">
                     y los videos que mas te gusten y los podras ver las veces
                     que quieras!!!
+                  </h2>
+                </div>
+                <div className="text-center pt-4">
+                  <Link to={"/landingpage/favorites"}>
+                    <button className="btn btn-light fw-bold">
+                      Presiona Aqui
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section className="row pb-5">
+            <article className="col-12 col-lg-12">
+              <div className="backgroundImage landingFavorites-container margin-container">
+                <div>
+                  <h1 className="text-center fontStyleTitle text-white">
+                    Mejores Goles
+                  </h1>
+                  <h2 className="fontStyleText text-center fs-4 pt-3 text-white">
+                    En esta seccion podras ver los mejores goles de todas las
+                    categorias
+                  </h2>
+                  <h2 className="fontStyleText text-center fs-4 text-white">
+                    seleccionados por el Ozzy
                   </h2>
                 </div>
                 <div className="text-center pt-4">
