@@ -32,6 +32,10 @@
     
 }
 
+.imagesHeight{
+    height: 600px;
+}
+
 .paddingSection {
     padding-top: 45px;
 }

@@ -2,9 +2,9 @@ import React from "react";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import ozzyfoto from "../assets/ozzy page.jpeg";
-import primera from "../assets/PRIMERA.jpeg";
-import c20 from "../assets/C20.jpeg";
-import c17 from "../assets/C17.jpeg";
+import primera from "../assets/PRIMERA-opacity.jpeg";
+import c20 from "../assets/C20-opacity.jpeg";
+import c17 from "../assets/C17-opacity.jpeg";
 import "./LandingPage.css";
 import { Link } from "react-router-dom";
 
@@ -54,7 +54,155 @@ export default function LandingPage() {
               />
             </article>
           </section>
-          <section className="row justify-content-lg-center paddingSection mt-5 grid-container">
+          <section className="row pt-5">
+            <article className="col-12 col-lg-12">
+              <div
+                id="carouselExampleControls"
+                className="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="/home/category/Primera">
+                      <div className="card border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
+                        <img
+                          src={primera}
+                          className="card-img imagesHeight"
+                          alt="..."
+                        />
+                        <div className="card-img-overlay mask styleImage fontStyleTitle">
+                          <h5 className="card-title">Primera</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="carousel-item">
+                    <a href="/home/category/C20">
+                      <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
+                        <img
+                          src={c20}
+                          className="card-img imagesHeight"
+                          alt="..."
+                        />
+                        <div className="card-img-overlay mask styleImage fontStyleTitle">
+                          <h5 className="card-title">C 20</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="carousel-item">
+                    <a href="/home/category/C17">
+                      <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
+                        <img
+                          src={c17}
+                          className="card-img imagesHeight"
+                          alt="..."
+                        />
+                        <div className="card-img-overlay mask styleImage fontStyleTitle">
+                          <h5 className="card-title">C 17</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="carousel-item">
+                    <a href="/home/category/C15">
+                      <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
+                        <img
+                          src={primera}
+                          className="card-img w-100 imagesHeight"
+                          alt="..."
+                        />
+                        <div className="card-img-overlay mask styleImage fontStyleTitle">
+                          <h5 className="card-title">C 15</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="carousel-item">
+                    <a href="/home/category/C13">
+                      <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
+                        <img
+                          src={c20}
+                          className="card-img imagesHeight"
+                          alt="..."
+                        />
+                        <div className="card-img-overlay mask styleImage fontStyleTitle">
+                          <h5 className="card-title">C 13</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="carousel-item">
+                    <a href="/home/category/C11">
+                      <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
+                        <img
+                          src={ozzyfoto}
+                          className="card-img imagesHeight"
+                          alt="..."
+                        />
+                        <div className="card-img-overlay mask styleImage fontStyleTitle">
+                          <h5 className="card-title">C 11</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="carousel-item">
+                    <a href="/home/category/C9">
+                      <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
+                        <img
+                          src={ozzyfoto}
+                          className="card-img imagesHeight"
+                          alt="..."
+                        />
+                        <div className="card-img-overlay mask styleImage fontStyleTitle">
+                          <h5 className="card-title">C 9</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div className="carousel-item">
+                    <a href="/home/category/C7">
+                      <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
+                        <img
+                          src={ozzyfoto}
+                          className="card-img imagesHeight"
+                          alt="..."
+                        />
+                        <div className="card-img-overlay mask styleImage fontStyleTitle">
+                          <h5 className="card-title">C 7</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <button
+                  className="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleControls"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    className="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Previous</span>
+                </button>
+                <button
+                  className="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleControls"
+                  data-bs-slide="next"
+                >
+                  <span
+                    className="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Next</span>
+                </button>
+              </div>
+            </article>
+          </section>
+          {/* <section className="row justify-content-lg-center paddingSection mt-5 grid-container">
             <article className="col-12 col-lg-4 paddingTopArticles">
               <a href="/home/category/C17">
                 <div className="card text-bg-dark border-0 bg-image hover-overlay ripple shadow-1-strong rounded">
@@ -136,7 +284,7 @@ export default function LandingPage() {
                 </div>
               </a>
             </article>
-          </section>
+          </section> */}
           <section className="row">
             <article className="col-12 col-lg-12">
               <div className="backgroundImage landingFavorites-container margin-container">
