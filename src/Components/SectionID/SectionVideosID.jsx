@@ -9,28 +9,37 @@ import "./SectionVideosID.css";
 
 export default function SectionVideosID() {
   const dispatch = useDispatch();
-  const sectionId = useSelector((state) => state.allSections);
+  const getSections = useSelector((state) => state.allSections);
+  const { id } = useParams();
 
+  const [video, setVideo] = useState(null);
   useEffect(() => {
     dispatch(getSection());
   }, []);
 
-  const { id } = useParams();
-  console.log(sectionId);
+  const sectionArray = Object.values(getSections);
+  const videosID = sectionArray.reduce((acc, curr) => {
+    if (curr.videos && curr.videos.data) {
+      const ids = curr.videos.data.map((e) => e.id);
+      return [...acc, ...ids];
+    } else {
+      return acc;
+    }
+  }, []);
 
-  const [video, setVideo] = useState(null);
+  console.log(videosID);
 
-  useEffect(() => {
-    // Buscar el video con el ID especificado
-    const selectedVideo = sectionId?.data?.attributes?.videos?.data?.find(
-      (e) => e.id === id
-    );
+  // useEffect(() => {
+  //   // Buscar el video con el ID especificado
+  //   const videosID = getSections?.data?.attributes?.videos?.data.map(
+  //     (e) => e.id
+  //   );
 
-    console.log(selectedVideo);
+  //   console.log(videosID);
 
-    // Guardar el video encontrado en el estado local
-    setVideo(selectedVideo);
-  }, [id, sectionId]);
+  //   // Guardar el video encontrado en el estado local
+  //   // setVideo(selectedVideo);
+  // }, [id]);
 
   const [videoFavorites, setVideoFavorites] = useState({});
 
