@@ -20,17 +20,13 @@ function App() {
           path="/landingpage/home/category/:category"
           element={<SectionCategory />}
         />
-        <Route path="/home/media/:id" element={<SectionID />} />
+        <Route path="/home/section/:id" element={<SectionID />} />
         <Route
           exact
           path="/home/media/:id/fotos"
           element={<SectionImagesID />}
         />
-        <Route
-          exact
-          path="/home/media/:id/videos"
-          element={<SectionVideosID />}
-        />
+        <Route exact path="/video/:id" element={<SectionVideosID />} />
         <Route exact path="/landingpage/favorites" element={<Favorites />} />
         <Route exact path="/favorites" element={<Favorites />} />
         <Route exact path="/landingpage/bestgoals" element={<BestGoals />} />
