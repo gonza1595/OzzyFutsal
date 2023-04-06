@@ -26,7 +26,11 @@ function App() {
           path="/home/media/:id/fotos"
           element={<SectionImagesID />}
         />
-        <Route exact path="/video/:id" element={<SectionVideosID />} />
+        <Route
+          exact
+          path="/home/section/:id/video/:videoid"
+          element={<SectionVideosID />}
+        />
         <Route exact path="/landingpage/favorites" element={<Favorites />} />
         <Route exact path="/favorites" element={<Favorites />} />
         <Route exact path="/landingpage/bestgoals" element={<BestGoals />} />

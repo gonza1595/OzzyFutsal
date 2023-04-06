@@ -23,7 +23,7 @@ export default function SectionID() {
 
   const handleVideoClick = (index) => {
     const videoId = sectionId.data.attributes.videos.data[index].id;
-    navigate(`/video/${videoId}`);
+    navigate(`/home/section/${id}/video/${videoId}`);
   };
 
   const sectionVideos = sectionId.data?.attributes.videos?.data?.map(

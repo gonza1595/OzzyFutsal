@@ -2,32 +2,24 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getSection } from "../../Redux/Actions";
+import { getSectionID } from "../../Redux/Actions";
 import { ReactComponent as IconHeart } from "../assets/suit-heart.svg";
 import { ReactComponent as IconHeartFill } from "../assets/suit-heart-fill.svg";
 import "./SectionVideosID.css";
 
 export default function SectionVideosID() {
   const dispatch = useDispatch();
-  const getSections = useSelector((state) => state.allSections);
+  const sectionId = useSelector((state) => state.sectionID);
   const { id } = useParams();
+  console.log(id);
+
+  useEffect(() => {
+    dispatch(getSectionID(id));
+  }, [id]);
+
+  console.log(sectionId);
 
   const [video, setVideo] = useState(null);
-  useEffect(() => {
-    dispatch(getSection());
-  }, []);
-
-  const sectionArray = Object.values(getSections);
-  const videosID = sectionArray.reduce((acc, curr) => {
-    if (curr.videos && curr.videos.data) {
-      const ids = curr.videos.data.map((e) => e.id);
-      return [...acc, ...ids];
-    } else {
-      return acc;
-    }
-  }, []);
-
-  console.log(videosID);
 
   // useEffect(() => {
   //   // Buscar el video con el ID especificado
@@ -81,5 +73,9 @@ export default function SectionVideosID() {
     return <h1>Cargando...</h1>;
   }
 
-  return <div></div>;
+  return (
+    <div>
+      <h1>HOLAAAAAAAAAAAAA</h1>
+    </div>
+  );
 }
