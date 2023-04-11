@@ -2,27 +2,29 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getSection } from "../../Redux/Actions";
+import { getSectionVideoID } from "../../Redux/Actions";
 import { ReactComponent as IconHeart } from "../assets/suit-heart.svg";
 import { ReactComponent as IconHeartFill } from "../assets/suit-heart-fill.svg";
 import "./SectionVideosID.css";
 
-export default function SectionVideosID({ selectedVideoId }) {
+export default function SectionVideosID({ idVideo }) {
   const dispatch = useDispatch();
-  const getSections = useSelector((state) => state.sections);
+  const getSectionVideo = useSelector((state) => state.sectionVideoID);
   const { id } = useParams();
+  console.log(id);
+  console.log(idVideo);
 
   const [video, setVideo] = useState(null);
 
   useEffect(() => {
-    dispatch(getSection());
-  }, []);
+    dispatch(getSectionVideoID(id, idVideo));
+  }, [id, idVideo]);
 
-  console.log(getSections);
+  console.log(getSectionVideo);
 
   useEffect(() => {
-    const selectedVideo = getSections.data?.attributes?.videos?.data?.find(
-      (e) => e.id === id
+    const selectedVideo = getSectionVideo.data?.attributes?.videos?.data?.find(
+      (e) => e.id === idVideo
     );
     console.log(selectedVideo);
     if (selectedVideo) {

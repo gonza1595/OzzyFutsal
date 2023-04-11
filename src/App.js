@@ -23,7 +23,7 @@ function App() {
         <Route path="/home/section/:id" element={<SectionID />} />
         <Route
           exact
-          path="/home/section/:id/video/:id"
+          path="/home/section/:id/video/:videoid"
           element={<SectionVideosID />}
         />
         <Route
