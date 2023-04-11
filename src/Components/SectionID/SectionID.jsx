@@ -18,15 +18,31 @@ export default function SectionID() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [isClicked, setIsClicked] = useState(false);
-  const [idVideo, setIdVideo] = useState();
+  const [idVideo, setIdVideo] = useState(null);
 
   useEffect(() => {
     dispatch(getSectionID(id));
   }, [id]);
 
+  // useEffect(() => {
+  //   if (idVideo) {
+  //     navigate(`/home/section/${id}/video/${idVideo}`);
+  //   }
+  // }, [idVideo]);
+
+  // useEffect(() => {
+  //   setIdVideo(idVideo);
+  // }, [idVideo]);
+
+  // const handleVideoClick = (index) => {
+  //   const videoId = sectionId.data?.attributes?.videos?.data[index].id;
+  //   setIdVideo(videoId);
+  //   setIsClicked(true);
+  // };
+
   const handleVideoClick = (index) => {
     const videoId = sectionId.data?.attributes?.videos?.data[index].id;
-    setIdVideo(videoId);
+    localStorage.setItem("idVideo", videoId); // Almacenar en localStorage
     navigate(`/home/section/${id}/video/${videoId}`);
     setIsClicked(true);
   };
@@ -151,7 +167,7 @@ export default function SectionID() {
         </div>
       ) : (
         <div>
-          <SectionVideosID setIdVideo={idVideo} idVideo={idVideo} />
+          <SectionVideosID idVideo={idVideo} />
         </div>
       )}
     </div>

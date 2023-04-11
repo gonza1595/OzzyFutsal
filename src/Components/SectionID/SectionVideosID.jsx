@@ -7,26 +7,34 @@ import { ReactComponent as IconHeart } from "../assets/suit-heart.svg";
 import { ReactComponent as IconHeartFill } from "../assets/suit-heart-fill.svg";
 import "./SectionVideosID.css";
 
-export default function SectionVideosID({ idVideo }) {
+export default function SectionVideosID() {
   const dispatch = useDispatch();
   const getSectionVideo = useSelector((state) => state.sectionVideoID);
   const { id } = useParams();
+  const storedIdVideo = localStorage.getItem("idVideo");
+  const [videoID, setVideoID] = useState(storedIdVideo);
   const [video, setVideo] = useState(null);
 
-  console.log(idVideo);
-
   useEffect(() => {
-    dispatch(getSectionVideoID(id, idVideo));
-  }, [id, idVideo]);
-
-  useEffect(() => {
-    const selectedVideo = getSectionVideo.data?.attributes?.videos?.data?.find(
-      (e) => e.id === idVideo
-    );
-    if (selectedVideo) {
-      setVideo(selectedVideo);
+    if (storedIdVideo) {
+      setVideoID(storedIdVideo);
     }
-  }, [id]);
+  }, []);
+
+  useEffect(() => {
+    dispatch(getSectionVideoID(id, videoID));
+  }, [id, videoID]);
+
+  // useEffect(() => {
+  //   const selectedVideo = getSectionVideo.data?.attributes?.videos?.data?.find(
+  //     (e) => e.id === idVideo
+  //   );
+  //   if (selectedVideo) {
+  //     setVideo(selectedVideo);
+  //   }
+  // }, [id]);
+
+  console.log(videoID);
 
   const [videoFavorites, setVideoFavorites] = useState({});
 
@@ -64,7 +72,9 @@ export default function SectionVideosID({ idVideo }) {
     setVideoFavorites({ ...videoFavorites, [id]: !videoFavorites[id] });
   }
 
-  if (!video) {
-    return <h1>Cargando...</h1>;
-  }
+  return (
+    <div>
+      <h1>El ID del Video es: {videoID}</h1>
+    </div>
+  );
 }
