@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getSectionID } from "../../Redux/Actions";
 import { useNavigate } from "react-router-dom";
 import SectionImagesID from "./SectionImagesID";
+import SectionVideosID from "./SectionVideosID";
 import { ReactComponent as IconHeart } from "../assets/suit-heart.svg";
 import { ReactComponent as IconHeartFill } from "../assets/suit-heart-fill.svg";
 import NavBar from "../NavBar/NavBar";
@@ -16,14 +17,16 @@ export default function SectionID() {
   const sectionId = useSelector((state) => state.sectionID);
   const { id } = useParams();
   const navigate = useNavigate();
+  const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     dispatch(getSectionID(id));
   }, [id]);
 
   const handleVideoClick = (index) => {
-    const videoId = sectionId.data.attributes.videos.data[index].id;
+    const videoId = sectionId.data?.attributes?.videos?.data[index].id;
     navigate(`/home/section/${id}/video/${videoId}`);
+    setIsClicked(true);
   };
 
   const sectionVideos = sectionId.data?.attributes.videos?.data?.map(
@@ -67,78 +70,88 @@ export default function SectionID() {
   }
 
   return (
-    <div className="bgSectionColor">
-      <NavBar />
-      <h1 className="text-uppercase text-center pt-5 fontSize fontStyleTitle">
-        <strong>{sectionId.data?.attributes.title}</strong>
-      </h1>
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-xxl-12 pt-4">
-            <h1 className="text-center pb-2 fontStyle">Fotos</h1>
-            <SectionImagesID />
-          </div>
-          <div className="col-12 col-xxl-12 pt-5">
-            <h1 className="text-center pb-3 fontStyle">Videos</h1>
-            <div>
-              {sectionVideos ? (
-                <article className="container">
-                  <div className="row">
-                    {sectionId.data ? (
-                      sectionId.data.attributes.videos.data.map((e, index) => (
-                        <div
-                          className="col-xxl-6 col-xl-4 col-lg-4 col-md-6 col-sm-12 pe-4 pb-4"
-                          key={index}
-                        >
-                          <div className="cardID position-relative">
-                            <div onClick={() => handleVideoClick(index)}>
-                              <video
-                                className="videoSize"
-                                src={`http://localhost:1337${e.attributes.url}`}
-                              />
-                            </div>
-                            <div
-                              className="circle position-absolute top-0 end-0"
-                              onClick={() => handleFavoriteClick(e.id)}
-                            >
-                              {videoFavorites[e.id] ? (
-                                <IconHeartFill className="iconHeart" />
-                              ) : (
-                                <IconHeart className="iconHeart" />
-                              )}
-                            </div>
+    <div>
+      {!isClicked ? (
+        <div className="bgSectionColor">
+          <NavBar />
+          <h1 className="text-uppercase text-center pt-5 fontSize fontStyleTitle">
+            <strong>{sectionId.data?.attributes.title}</strong>
+          </h1>
+          <div className="container">
+            <div className="row">
+              <div className="col-12 col-xxl-12 pt-4">
+                <h1 className="text-center pb-2 fontStyle">Fotos</h1>
+                <SectionImagesID />
+              </div>
+              <div className="col-12 col-xxl-12 pt-5">
+                <h1 className="text-center pb-3 fontStyle">Videos</h1>
+                <div>
+                  {sectionVideos ? (
+                    <article className="container">
+                      <div className="row">
+                        {sectionId.data ? (
+                          sectionId.data.attributes.videos.data.map(
+                            (e, index) => (
+                              <div
+                                className="col-xxl-6 col-xl-4 col-lg-4 col-md-6 col-sm-12 pe-4 pb-4"
+                                key={index}
+                              >
+                                <div className="cardID position-relative">
+                                  <div onClick={() => handleVideoClick(index)}>
+                                    <video
+                                      className="videoSize"
+                                      src={`http://localhost:1337${e.attributes.url}`}
+                                    />
+                                  </div>
+                                  <div
+                                    className="circle position-absolute top-0 end-0"
+                                    onClick={() => handleFavoriteClick(e.id)}
+                                  >
+                                    {videoFavorites[e.id] ? (
+                                      <IconHeartFill className="iconHeart" />
+                                    ) : (
+                                      <IconHeart className="iconHeart" />
+                                    )}
+                                  </div>
 
-                            <p className="card-text text-center video-title">
-                              {e.attributes.alternativeText}
-                            </p>
-                          </div>
-                        </div>
-                      ))
-                    ) : (
-                      <h1>Cargando...</h1>
-                    )}
-                  </div>
-                </article>
-              ) : (
-                <div className="no-videos-container">
-                  <i className="bi bi-camera-video-off-fill fs-1"></i>
-                  <h2 className="no-videos-title fontStyleTitle">
-                    Todavía no se han cargado videos de este partido
-                  </h2>
-                  <p className="no-videos-description fontStyleText">
-                    Por favor, vuelva a intentarlo más tarde o contacte al
-                    administrador del sitio.
-                  </p>
+                                  <p className="card-text text-center video-title">
+                                    {e.attributes.alternativeText}
+                                  </p>
+                                </div>
+                              </div>
+                            )
+                          )
+                        ) : (
+                          <h1>Cargando...</h1>
+                        )}
+                      </div>
+                    </article>
+                  ) : (
+                    <div className="no-videos-container">
+                      <i className="bi bi-camera-video-off-fill fs-1"></i>
+                      <h2 className="no-videos-title fontStyleTitle">
+                        Todavía no se han cargado videos de este partido
+                      </h2>
+                      <p className="no-videos-description fontStyleText">
+                        Por favor, vuelva a intentarlo más tarde o contacte al
+                        administrador del sitio.
+                      </p>
+                    </div>
+                  )}
                 </div>
-              )}
+                );
+              </div>
             </div>
-            );
+          </div>
+          <div className="pt-5">
+            <Footer />
           </div>
         </div>
-      </div>
-      <div className="pt-5">
-        <Footer />
-      </div>
+      ) : (
+        <div>
+          <SectionVideosID />
+        </div>
+      )}
     </div>
   );
 }

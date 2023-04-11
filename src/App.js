@@ -23,13 +23,13 @@ function App() {
         <Route path="/home/section/:id" element={<SectionID />} />
         <Route
           exact
-          path="/home/media/:id/fotos"
-          element={<SectionImagesID />}
+          path="/home/section/:id/video/:id"
+          element={<SectionVideosID />}
         />
         <Route
           exact
-          path="/home/section/:id/video/:videoid"
-          element={<SectionVideosID />}
+          path="/home/media/:id/fotos"
+          element={<SectionImagesID />}
         />
         <Route exact path="/landingpage/favorites" element={<Favorites />} />
         <Route exact path="/favorites" element={<Favorites />} />

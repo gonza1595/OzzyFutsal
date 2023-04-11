@@ -11,27 +11,24 @@ export default function SectionVideosID() {
   const dispatch = useDispatch();
   const sectionId = useSelector((state) => state.sectionID);
   const { id } = useParams();
-  console.log(id);
+  const { videoId } = useParams();
+
+  const [video, setVideo] = useState(null);
+
+  console.log(sectionId);
 
   useEffect(() => {
     dispatch(getSectionID(id));
   }, [id]);
 
-  console.log(sectionId);
-
-  const [video, setVideo] = useState(null);
-
-  // useEffect(() => {
-  //   // Buscar el video con el ID especificado
-  //   const videosID = getSections?.data?.attributes?.videos?.data.map(
-  //     (e) => e.id
-  //   );
-
-  //   console.log(videosID);
-
-  //   // Guardar el video encontrado en el estado local
-  //   // setVideo(selectedVideo);
-  // }, [id]);
+  useEffect(() => {
+    const selectedVideo = sectionId.data?.attributes?.videos?.data?.find(
+      (e) => e.id === id
+    );
+    if (selectedVideo) {
+      setVideo(selectedVideo);
+    }
+  }, [id]);
 
   const [videoFavorites, setVideoFavorites] = useState({});
 
@@ -72,10 +69,4 @@ export default function SectionVideosID() {
   if (!video) {
     return <h1>Cargando...</h1>;
   }
-
-  return (
-    <div>
-      <h1>HOLAAAAAAAAAAAAA</h1>
-    </div>
-  );
 }
