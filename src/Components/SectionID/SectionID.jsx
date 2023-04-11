@@ -18,19 +18,17 @@ export default function SectionID() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [isClicked, setIsClicked] = useState(false);
+  const [idVideo, setIdVideo] = useState();
 
   useEffect(() => {
     dispatch(getSectionID(id));
   }, [id]);
 
-  const [idVideo, setIdVideo] = useState();
-  let videoId = null;
-
   const handleVideoClick = (index) => {
-    videoId = sectionId.data?.attributes?.videos?.data[index].id;
+    const videoId = sectionId.data?.attributes?.videos?.data[index].id;
+    setIdVideo(videoId);
     navigate(`/home/section/${id}/video/${videoId}`);
     setIsClicked(true);
-    setIdVideo(videoId);
   };
 
   const sectionVideos = sectionId.data?.attributes.videos?.data?.map(
@@ -153,7 +151,7 @@ export default function SectionID() {
         </div>
       ) : (
         <div>
-          <SectionVideosID idVideo={idVideo} />
+          <SectionVideosID setIdVideo={idVideo} idVideo={idVideo} />
         </div>
       )}
     </div>

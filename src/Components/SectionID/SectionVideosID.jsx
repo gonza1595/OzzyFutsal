@@ -11,22 +11,18 @@ export default function SectionVideosID({ idVideo }) {
   const dispatch = useDispatch();
   const getSectionVideo = useSelector((state) => state.sectionVideoID);
   const { id } = useParams();
-  console.log(id);
-  console.log(idVideo);
-
   const [video, setVideo] = useState(null);
+
+  console.log(idVideo);
 
   useEffect(() => {
     dispatch(getSectionVideoID(id, idVideo));
   }, [id, idVideo]);
 
-  console.log(getSectionVideo);
-
   useEffect(() => {
     const selectedVideo = getSectionVideo.data?.attributes?.videos?.data?.find(
       (e) => e.id === idVideo
     );
-    console.log(selectedVideo);
     if (selectedVideo) {
       setVideo(selectedVideo);
     }
