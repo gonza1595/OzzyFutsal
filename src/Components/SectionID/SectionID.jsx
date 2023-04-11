@@ -157,7 +157,6 @@ export default function SectionID() {
                     </div>
                   )}
                 </div>
-                );
               </div>
             </div>
           </div>
