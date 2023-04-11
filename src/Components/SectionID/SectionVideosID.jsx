@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getSectionVideoID } from "../../Redux/Actions";
+import ReactPlayer from "react-player/lazy";
 import { ReactComponent as IconHeart } from "../assets/suit-heart.svg";
 import { ReactComponent as IconHeartFill } from "../assets/suit-heart-fill.svg";
 import "./SectionVideosID.css";
@@ -13,7 +14,6 @@ export default function SectionVideosID() {
   const { id } = useParams();
   const storedIdVideo = localStorage.getItem("idVideo");
   const [videoID, setVideoID] = useState(storedIdVideo);
-  const [video, setVideo] = useState(null);
 
   useEffect(() => {
     if (storedIdVideo) {
@@ -24,17 +24,6 @@ export default function SectionVideosID() {
   useEffect(() => {
     dispatch(getSectionVideoID(id, videoID));
   }, [id, videoID]);
-
-  // useEffect(() => {
-  //   const selectedVideo = getSectionVideo.data?.attributes?.videos?.data?.find(
-  //     (e) => e.id === idVideo
-  //   );
-  //   if (selectedVideo) {
-  //     setVideo(selectedVideo);
-  //   }
-  // }, [id]);
-
-  console.log(videoID);
 
   const [videoFavorites, setVideoFavorites] = useState({});
 
@@ -74,7 +63,22 @@ export default function SectionVideosID() {
 
   return (
     <div>
-      <h1>El ID del Video es: {videoID}</h1>
+      {getSectionVideo.data ? (
+        getSectionVideo.data.attributes.videos.data.map((e) => (
+          <div key={e.id}>
+            <h1>{e.attributes.name}</h1>
+            <video controls autoPlay>
+              <source
+                src={`http://localhost:1337${e.attributes.url}`}
+                type={e.attributes.mime}
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        ))
+      ) : (
+        <h1>No hay nada </h1>
+      )}
     </div>
   );
 }
