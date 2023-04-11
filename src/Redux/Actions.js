@@ -32,6 +32,22 @@ export function getSectionID(id) {
   };
 }
 
+export function getSectionVideoID(id, videoId) {
+  return async function (dispatch) {
+    try {
+      let getSectionVideoId = await axios.get(
+        `http://localhost:1337/api/sections/${id}/?populate[videos][filters][id][$eq]=${videoId}`
+      );
+      return dispatch({
+        type: "GET_SECTION_VIDEO_ID",
+        payload: getSectionVideoId.data,
+      });
+    } catch (error) {
+      alert("No se encuentra ese video en esta seccion");
+    }
+  };
+}
+
 // Filtros por categoria
 
 export function filterByCategory(category) {

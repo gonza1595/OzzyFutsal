@@ -23,15 +23,20 @@ export default function SectionID() {
     dispatch(getSectionID(id));
   }, [id]);
 
+  let selectedVideoId = "";
+
   const handleVideoClick = (index) => {
     const videoId = sectionId.data?.attributes?.videos?.data[index].id;
     navigate(`/home/section/${id}/video/${videoId}`);
     setIsClicked(true);
+    selectedVideoId = videoId;
   };
 
   const sectionVideos = sectionId.data?.attributes.videos?.data?.map(
     (e) => e.attributes.url
   );
+
+  console.log(selectedVideoId);
 
   const [videoFavorites, setVideoFavorites] = useState({});
 
@@ -149,7 +154,7 @@ export default function SectionID() {
         </div>
       ) : (
         <div>
-          <SectionVideosID />
+          <SectionVideosID selectedVideoId={selectedVideoId} />
         </div>
       )}
     </div>

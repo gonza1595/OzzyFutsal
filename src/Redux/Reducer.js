@@ -3,6 +3,7 @@ const initialState = {
   allSections: [],
   sectionID: [],
   filterByCategory: [],
+  sectionVideoID: [],
   currentPage: 1,
 };
 
@@ -23,6 +24,11 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         filterByCategory: action.payload,
+      };
+    case "GET_SECTION_VIDEO_ID":
+      return {
+        ...state,
+        sectionVideoID: action.payload,
       };
     default:
       return state;
