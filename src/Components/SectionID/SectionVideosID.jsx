@@ -6,6 +6,7 @@ import { getSectionVideoID } from "../../Redux/Actions";
 import ReactPlayer from "react-player/lazy";
 import { ReactComponent as IconHeart } from "../assets/suit-heart.svg";
 import { ReactComponent as IconHeartFill } from "../assets/suit-heart-fill.svg";
+import NavBar from "../NavBar/NavBar";
 import "./SectionVideosID.css";
 
 export default function SectionVideosID() {
@@ -61,24 +62,87 @@ export default function SectionVideosID() {
     setVideoFavorites({ ...videoFavorites, [id]: !videoFavorites[id] });
   }
 
+  function handleShareClick() {
+    navigator
+      .share({
+        title: "Título del video",
+        text: "Descripción del video",
+        url: "http://localhost:1337/...", // URL del video
+      })
+      .then(() => console.log("Compartido con éxito"))
+      .catch((error) => console.error("Error al compartir", error));
+  }
+
+  function handleDownloadClick(url, fileName) {
+    fetch(url)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const link = document.createElement("a");
+        link.href = window.URL.createObjectURL(new Blob([blob]));
+        link.download = fileName;
+        link.click();
+      });
+  }
+
   return (
     <div>
-      {getSectionVideo.data ? (
-        getSectionVideo.data.attributes.videos.data.map((e) => (
-          <div key={e.id}>
-            <h1>{e.attributes.name}</h1>
-            <video controls autoPlay>
-              <source
-                src={`http://localhost:1337${e.attributes.url}`}
-                type={e.attributes.mime}
-              />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        ))
-      ) : (
-        <h1>No hay nada </h1>
-      )}
+      <NavBar />
+      <div className="container-fluid">
+        {getSectionVideo.data ? (
+          getSectionVideo.data.attributes.videos.data.map((e) => (
+            <section className="row pt-5" key={e.id}>
+              <article className="col-12 col-lg-7">
+                <video
+                  controls
+                  autoPlay
+                  style={{ width: "100%", height: "100%" }}
+                >
+                  <source
+                    src={`http://localhost:1337${e.attributes.url}`}
+                    type={e.attributes.mime}
+                  />
+                  Su navegador no soporta la etiqueta de vídeo.
+                </video>
+                <div className="mt-3">
+                  <a
+                    href={`http://localhost:1337${e.attributes.url}`}
+                    download={e.attributes.url}
+                  >
+                    Descargar video
+                  </a>
+                  <button onClick={() => handleShareClick(e.attributes.url)}>
+                    Compartir
+                  </button>
+                </div>
+              </article>
+              <article className="col-12 col-lg-5 ps-4">
+                <h1 className="pt-4">
+                  {getSectionVideo.data.attributes.title}
+                </h1>
+                <h3 className="pt-3">{e.attributes.alternativeText}</h3>
+              </article>
+            </section>
+          ))
+        ) : (
+          <h1>No hay nada </h1>
+        )}
+      </div>
     </div>
   );
+}
+
+{
+  /* <article className="col-12 col-lg-12">
+<button
+  onClick={() => {
+    navigator.share({
+      title: "Título del video",
+      text: "Descripción del video",
+      url: window.location.href,
+    });
+  }}
+>
+  Compartir
+</button>
+</article> */
 }
