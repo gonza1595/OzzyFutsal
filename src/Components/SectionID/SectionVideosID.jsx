@@ -104,12 +104,17 @@ export default function SectionVideosID() {
                   Su navegador no soporta la etiqueta de vídeo.
                 </video>
                 <div className="mt-3">
-                  <a
-                    href={`http://localhost:1337${e.attributes.url}`}
-                    download={e.attributes.url}
+                  <button
+                    onClick={() =>
+                      handleDownloadClick(
+                        `http://localhost:1337${e.attributes.url}`,
+                        e.attributes.url
+                      )
+                    }
                   >
-                    Descargar video
-                  </a>
+                    Descargar
+                  </button>
+
                   <button onClick={() => handleShareClick(e.attributes.url)}>
                     Compartir
                   </button>
