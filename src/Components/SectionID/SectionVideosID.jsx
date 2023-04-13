@@ -111,7 +111,7 @@ export default function SectionVideosID() {
                 <h3 className="pt-3">{e.attributes.alternativeText}</h3>
                 <article className="col-12 col-lg-12 pt-5">
                   <button
-                    className="btn btn-light"
+                    className="btn btn-dark me-3"
                     onClick={() =>
                       handleDownloadClick(
                         `http://localhost:1337${e.attributes.url}`,
