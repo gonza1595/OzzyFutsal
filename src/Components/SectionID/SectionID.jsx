@@ -24,22 +24,6 @@ export default function SectionID() {
     dispatch(getSectionID(id));
   }, [id]);
 
-  // useEffect(() => {
-  //   if (idVideo) {
-  //     navigate(`/home/section/${id}/video/${idVideo}`);
-  //   }
-  // }, [idVideo]);
-
-  // useEffect(() => {
-  //   setIdVideo(idVideo);
-  // }, [idVideo]);
-
-  // const handleVideoClick = (index) => {
-  //   const videoId = sectionId.data?.attributes?.videos?.data[index].id;
-  //   setIdVideo(videoId);
-  //   setIsClicked(true);
-  // };
-
   const handleVideoClick = (index) => {
     const videoId = sectionId.data?.attributes?.videos?.data[index].id;
     localStorage.setItem("idVideo", videoId); // Almacenar en localStorage

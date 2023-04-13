@@ -87,7 +87,7 @@ export default function SectionVideosID() {
   return (
     <div>
       <NavBar />
-      <div className="container-fluid">
+      <div className="container">
         {getSectionVideo.data ? (
           getSectionVideo.data.attributes.videos.data.map((e) => (
             <section className="row pt-5" key={e.id}>
@@ -103,8 +103,15 @@ export default function SectionVideosID() {
                   />
                   Su navegador no soporta la etiqueta de vídeo.
                 </video>
-                <div className="mt-3">
+              </article>
+              <article className="col-12 col-lg-5 ps-4">
+                <h1 className="pt-4">
+                  {getSectionVideo.data.attributes.title}
+                </h1>
+                <h3 className="pt-3">{e.attributes.alternativeText}</h3>
+                <article className="col-12 col-lg-12 pt-5">
                   <button
+                    className="btn btn-light"
                     onClick={() =>
                       handleDownloadClick(
                         `http://localhost:1337${e.attributes.url}`,
@@ -118,13 +125,7 @@ export default function SectionVideosID() {
                   <button onClick={() => handleShareClick(e.attributes.url)}>
                     Compartir
                   </button>
-                </div>
-              </article>
-              <article className="col-12 col-lg-5 ps-4">
-                <h1 className="pt-4">
-                  {getSectionVideo.data.attributes.title}
-                </h1>
-                <h3 className="pt-3">{e.attributes.alternativeText}</h3>
+                </article>
               </article>
             </section>
           ))
