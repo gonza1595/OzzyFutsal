@@ -97,3 +97,31 @@ height: 800px;
   color: #fff;
   padding: 0.5rem;
 }
+
+.circleButtonFavorites {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(252, 252, 252);
+  justify-content: center;
+  align-items: center;
+}
+
+.circleButtonFavorites:hover {
+  opacity: 0.75 !important;
+}
+
+.iconHearth-video {
+  width: auto;
+  height: 30px;
+  color: blue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.iconSize {
+ font-size: 1.2em;
+}

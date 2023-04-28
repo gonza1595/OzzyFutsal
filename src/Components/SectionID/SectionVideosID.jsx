@@ -62,12 +62,12 @@ export default function SectionVideosID() {
     setVideoFavorites({ ...videoFavorites, [id]: !videoFavorites[id] });
   }
 
-  function handleShareClick() {
+  function handleShareClick(url) {
     navigator
       .share({
         title: "Título del video",
         text: "Descripción del video",
-        url: "http://localhost:1337/...", // URL del video
+        url: url, // URL del video
       })
       .then(() => console.log("Compartido con éxito"))
       .catch((error) => console.error("Error al compartir", error));
@@ -109,9 +109,9 @@ export default function SectionVideosID() {
                   {getSectionVideo.data.attributes.title}
                 </h1>
                 <h3 className="pt-3">{e.attributes.alternativeText}</h3>
-                <article className="col-12 col-lg-12 pt-5">
+                <article className="col-12 col-lg-12 pt-5 d-flex align-items-center">
                   <button
-                    className="btn btn-dark me-3"
+                    className="btn btn-primary me-3 btn-lg"
                     onClick={() =>
                       handleDownloadClick(
                         `http://localhost:1337${e.attributes.url}`,
@@ -119,11 +119,23 @@ export default function SectionVideosID() {
                       )
                     }
                   >
-                    Descargar
+                    <i className="bi bi-cloud-arrow-down-fill iconSize"></i>
                   </button>
-
-                  <button onClick={() => handleShareClick(e.attributes.url)}>
-                    Compartir
+                  <button
+                    className="btn btn-primary me-3 btn-lg"
+                    onClick={() => handleShareClick(e.attributes.url)}
+                  >
+                    <i className="bi bi-share-fill iconSize"></i>
+                  </button>
+                  <button
+                    className="circleButtonFavorites"
+                    onClick={() => handleFavoriteClick(e.id)}
+                  >
+                    {videoFavorites[e.id] ? (
+                      <IconHeartFill className="iconHearth-video" />
+                    ) : (
+                      <IconHeart className="iconHearth-video" />
+                    )}
                   </button>
                 </article>
               </article>
