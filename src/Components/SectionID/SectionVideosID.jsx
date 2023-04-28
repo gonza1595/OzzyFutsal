@@ -7,6 +7,7 @@ import ReactPlayer from "react-player/lazy";
 import { ReactComponent as IconHeart } from "../assets/suit-heart.svg";
 import { ReactComponent as IconHeartFill } from "../assets/suit-heart-fill.svg";
 import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer";
 import "./SectionVideosID.css";
 
 export default function SectionVideosID() {
@@ -145,22 +146,9 @@ export default function SectionVideosID() {
           <h1>No hay nada </h1>
         )}
       </div>
+      <div className="pt-5">
+        <Footer />
+      </div>
     </div>
   );
-}
-
-{
-  /* <article className="col-12 col-lg-12">
-<button
-  onClick={() => {
-    navigator.share({
-      title: "Título del video",
-      text: "Descripción del video",
-      url: window.location.href,
-    });
-  }}
->
-  Compartir
-</button>
-</article> */
 }
