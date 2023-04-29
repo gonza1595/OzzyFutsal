@@ -125,3 +125,9 @@ height: 800px;
 .iconSize {
  font-size: 1.2em;
 }
+
+.footerPosition {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

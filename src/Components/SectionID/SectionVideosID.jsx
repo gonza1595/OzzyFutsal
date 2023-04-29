@@ -86,8 +86,10 @@ export default function SectionVideosID() {
   }
 
   return (
-    <div>
-      <NavBar />
+    <main>
+      <div className="pb-4">
+        <NavBar />
+      </div>
       <div className="container">
         {getSectionVideo.data ? (
           getSectionVideo.data.attributes.videos.data.map((e) => (
@@ -146,9 +148,9 @@ export default function SectionVideosID() {
           <h1>No hay nada </h1>
         )}
       </div>
-      <div className="pt-5">
+      <section className="footerPosition">
         <Footer />
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
