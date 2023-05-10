@@ -3,10 +3,6 @@
     transition: all 0.3s ease-out;
 }
 
-.nav-item:hover {
-    color: white !important;
-}
-
 .nav-link {
     color: rgb(94, 94, 94) !important ;
     font-weight:700 !important;
