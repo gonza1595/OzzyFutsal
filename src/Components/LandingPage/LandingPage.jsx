@@ -235,31 +235,6 @@ export default function LandingPage() {
               </div>
             </article>
           </section>
-          <section className="row pb-5">
-            <article className="col-12 col-lg-12">
-              <div className="backgroundImage landingFavorites-container margin-container">
-                <div>
-                  <h1 className="text-center fontStyleTitle text-white">
-                    Mejores Goles
-                  </h1>
-                  <h2 className="fontStyleText text-center fs-4 pt-3 text-white">
-                    En esta seccion podras ver los mejores goles de todas las
-                    categorias
-                  </h2>
-                  <h2 className="fontStyleText text-center fs-4 text-white">
-                    seleccionados por el Ozzy
-                  </h2>
-                </div>
-                <div className="text-center pt-4">
-                  <Link to={"/landingpage/bestgoals"}>
-                    <button className="btn btn-light fw-bold">
-                      Presiona Aqui
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </article>
-          </section>
         </div>
       </main>
       <div>
