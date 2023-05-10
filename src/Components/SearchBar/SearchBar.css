@@ -3,7 +3,7 @@
 } 
 
 .form-control:focus {
-    border-color: black !important;
+    border-color: rgb(94, 94, 94) !important;
     box-shadow: none !important;
   }
 
