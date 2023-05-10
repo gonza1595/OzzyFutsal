@@ -90,7 +90,7 @@ export default function SectionVideosID() {
       <div className="pb-4">
         <NavBar />
       </div>
-      <div className="container">
+      <div className="container bgSectionColor">
         {getSectionVideo.data ? (
           getSectionVideo.data.attributes.videos.data.map((e) => (
             <section className="row pt-5" key={e.id}>

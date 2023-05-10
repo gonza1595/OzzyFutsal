@@ -1,10 +1,11 @@
 
 .colorBgSection {
-    background: linear-gradient(
-        131deg,
-        rgb(113, 223, 188) ,
-        rgb(128, 197, 191) 
-    ); 
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(
+      131deg,
+      rgba(250, 250, 250, 0.92),
+      rgb(255, 255, 255) 
+  ); 
 }
 
 .paddingSectionsCards {
