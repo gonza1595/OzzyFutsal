@@ -1,9 +1,10 @@
 import React from "react";
 import { MDBFooter, MDBContainer, MDBIcon, MDBBtn } from "mdb-react-ui-kit";
+import "./Footer.css";
 
 export default function Footer() {
   return (
-    <MDBFooter className="bg-dark text-center text-white">
+    <MDBFooter className="bgColor text-center text-white">
       <MDBContainer className="p-4 pb-0">
         <section className="mb-4">
           <MDBBtn
@@ -41,10 +42,7 @@ export default function Footer() {
         </section>
       </MDBContainer>
 
-      <div
-        className="text-center p-3 fontStyleFooter"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-      >
+      <div className="bgColor text-center p-3 fontStyleFooter">
         © 2023 Copyright:
         <a className="text-white text-decoration-none fontStyleFooter">
           {" "}
