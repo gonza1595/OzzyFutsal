@@ -12,7 +12,7 @@ export default function CardSection({
   return (
     <div>
       <Link className="text-decoration-none" to={`/home/section/${id}`}>
-        <div className="card border border border-dark border-0 mx-auto bg-white cardWidth bg-image rounded-0">
+        <div className="card border borderCard mx-auto bg-white cardWidth bg-image">
           <img
             src={`http://localhost:1337${image[0]}`}
             alt="Images"

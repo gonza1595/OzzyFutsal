@@ -10,6 +10,11 @@
     font-size:20px;
 }
 
+.borderCard {
+    border: 3px;
+    border-color: bisque;
+}
+
 @media screen and (max-width: 318px) {
     .cardWidth {
         width: auto !important;
