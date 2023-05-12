@@ -58,7 +58,7 @@ export default function Sections() {
         ) : null}
       </div>
       <div className="row">
-        {sectionsToShow && sectionsToShow.length < 0 ? (
+        {sectionsToShow && sectionsToShow.length > 0 ? (
           sectionsToShow.map((e) => (
             <article
               key={e.id}

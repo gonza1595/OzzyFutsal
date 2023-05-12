@@ -102,14 +102,14 @@ export default function Favorites() {
             </div>
           </article>
         ) : (
-          <div className="no-videos-container">
+          <div className="no-videos-container mb-5">
             <i className="bi bi-camera-video-off-fill fs-1"></i>
             <h2 className="no-videos-title fontStyleTitle">
               No has seleccionado ningun video como favorito
             </h2>
             <p className="no-videos-description fontStyleText">
-              Por favor, vuelve u elige las fotos que mas te gusten para poder
-              visualizarlas aqui.
+              Por favor, vuelve y elige los videos que mas te gusten para poder
+              visualizarlos aqui.
             </p>
           </div>
         )}

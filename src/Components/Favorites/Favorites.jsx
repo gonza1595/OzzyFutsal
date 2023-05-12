@@ -14,7 +14,7 @@ export default function Favorites() {
             <h1 className="text-center pb-2 fontStyle">Fotos Favoritas</h1>
             <FavoritesImages />
           </div>
-          <div className="col-12 col-xxl-12 pt-5">
+          <div className="col-12 col-xxl-12 pt-5 mb-4">
             <h1 className="text-center pb-3 fontStyle">Videos Favoritos</h1>
             <FavoritesVideos />
           </div>

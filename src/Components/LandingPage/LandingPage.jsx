@@ -209,7 +209,7 @@ export default function LandingPage() {
               </div>
             </article>
           </section>
-          <section className="row">
+          <section className="row mb-5">
             <article className="col-12 col-lg-12">
               <div className="backgroundImage landingFavorites-container margin-container">
                 <div>

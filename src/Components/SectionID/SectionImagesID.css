@@ -6,14 +6,6 @@
     padding: 13px;
 }
 
-.bgSectionColor {
-    background-image: linear-gradient(
-        131deg,
-        rgba(59, 209, 184, 0.92),
-        rgb(117, 218, 51) 
-    ); 
-}
-
 .circle {
     position: relative;
     width: 40px;
