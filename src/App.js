@@ -13,12 +13,9 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/landingpage" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<Home />} />
-        <Route
-          path="/landingpage/home/category/:category"
-          element={<SectionCategory />}
-        />
+        <Route path="/home/category/:category" element={<SectionCategory />} />
         <Route path="/home/section/:id" element={<SectionID />} />
         <Route
           exact
@@ -30,7 +27,7 @@ function App() {
           path="/home/media/:id/fotos"
           element={<SectionImagesID />}
         />
-        <Route exact path="/landingpage/favorites" element={<Favorites />} />
+        <Route exact path="/favorites" element={<Favorites />} />
         <Route exact path="/favorites" element={<Favorites />} />
       </Routes>
     </div>

@@ -6,7 +6,7 @@ export default function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg ">
       <div className="container">
-        <a className="navbar-brand" href="/landingpage">
+        <a className="navbar-brand" href="/">
           <img
             src={ozzyfoto}
             alt="Bootstrap"
@@ -30,7 +30,7 @@ export default function NavBar() {
               <a
                 className="nav-link active fs-4 text-uppercase fontStyleTitle"
                 aria-current="page"
-                href="/landingpage"
+                href="/"
               >
                 Inicio
               </a>
