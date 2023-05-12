@@ -9,7 +9,7 @@ export default function Footer() {
         <section className="mb-4">
           <MDBBtn
             outline
-            color="dark"
+            color="light"
             floating
             className="m-1"
             href="https://www.youtube.com/@ozzytio"
@@ -20,7 +20,7 @@ export default function Footer() {
 
           <MDBBtn
             outline
-            color="dark"
+            color="light"
             floating
             className="m-1"
             href="https://www.instagram.com/ozzytio/"
@@ -31,7 +31,7 @@ export default function Footer() {
 
           <MDBBtn
             outline
-            color="dark"
+            color="light"
             floating
             className="m-1"
             href="https://wa.me/5492613894469?text=Hola%20Ozzy%20!!%20Como%20estas%20?%20Me%20gustar%C3%ADa%20que%20me%20pasaras%20las%20fotos%20y%20los%20videos%20personalmente.%20Gracias%20!!"
@@ -42,9 +42,9 @@ export default function Footer() {
         </section>
       </MDBContainer>
 
-      <div className="text-dark bgColor text-center p-3 fontStyleFooter">
+      <div className="text-white bgColor text-center p-3 fontStyleFooter">
         © 2023 Copyright:
-        <a className="text-dark text-decoration-none fontStyleFooter">
+        <a className="text-white text-decoration-none fontStyleFooter">
           {" "}
           OzzyTioFutsal
         </a>
