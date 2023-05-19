@@ -7,6 +7,9 @@ import LandingPage from "./Components/LandingPage/LandingPage";
 import SectionImagesID from "./Components/SectionID/SectionImagesID";
 import SectionVideosID from "./Components/SectionID/SectionVideosID";
 import Favorites from "./Components/Favorites/Favorites";
+import axios from "axios";
+
+axios.defaults.baseURL = "https://strapi-production-72a0.up.railway.app";
 
 function App() {
   return (

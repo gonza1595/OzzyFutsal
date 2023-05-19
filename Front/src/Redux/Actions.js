@@ -4,7 +4,7 @@ export function getSection() {
   return async function (dispatch) {
     try {
       let getSection = await axios.get(
-        "http://localhost:1337/api/sections?populate=videos&&populate=images&&pagination[page]=1&pagination[pageSize]=1000"
+        "api/sections?populate=videos&&populate=images&&pagination[page]=1&pagination[pageSize]=1000"
       );
       return dispatch({
         type: "GET_SECTION",
@@ -20,7 +20,7 @@ export function getSectionID(id) {
   return async function (dispatch) {
     try {
       let getSectionId = await axios.get(
-        `http://localhost:1337/api/sections/${id}/?populate=videos&populate=images`
+        `/api/sections/${id}/?populate=videos&populate=images`
       );
       return dispatch({
         type: "GET_SECTION_ID",
@@ -36,7 +36,7 @@ export function getSectionVideoID(id, videoId) {
   return async function (dispatch) {
     try {
       let getSectionVideoId = await axios.get(
-        `http://localhost:1337/api/sections/${id}/?populate[videos][filters][id][$eq]=${videoId}`
+        `/api/sections/${id}/?populate[videos][filters][id][$eq]=${videoId}`
       );
       return dispatch({
         type: "GET_SECTION_VIDEO_ID",
@@ -54,7 +54,7 @@ export function filterByCategory(category) {
   return async function (dispatch) {
     try {
       let filterByCategory = await axios.get(
-        `http://localhost:1337/api/sections?filters[category][$eq]=${category}&&populate=videos&&populate=images`
+        `/api/sections?filters[category][$eq]=${category}&&populate=videos&&populate=images`
       );
 
       return dispatch({
