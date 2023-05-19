@@ -1,5 +1,4 @@
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import SectionID from "./Components/SectionID/SectionID";
