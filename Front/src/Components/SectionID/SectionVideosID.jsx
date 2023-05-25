@@ -148,7 +148,7 @@ export default function SectionVideosID() {
             </section>
           ))
         ) : (
-          <h1>No hay nada </h1>
+          <h1>Cargando... </h1>
         )}
       </div>
       <section className="footerPosition">
