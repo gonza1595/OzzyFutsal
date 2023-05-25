@@ -122,7 +122,10 @@ export default function SectionVideosID() {
                       )
                     }
                   >
-                    <i className="bi bi-cloud-arrow-down-fill iconSize"></i>
+                    <i className="bi bi-cloud-arrow-down-fill iconSize">
+                      {" "}
+                      Descargar
+                    </i>
                   </button>
                   <button
                     className="btn btn-primary me-3 btn-lg"
