@@ -9,7 +9,7 @@ import SectionVideosID from "./Components/SectionID/SectionVideosID";
 import Favorites from "./Components/Favorites/Favorites";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://strapi-production-72a0.up.railway.app";
+axios.defaults.baseURL = "http://localhost:1337";
 
 function App() {
   return (
